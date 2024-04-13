@@ -1,8 +1,4 @@
-#line 4 "/Users/Kirill.Vasilenko/dev/keyboard/miryoku_zmk/miryoku/miryoku.dtsi"
-
 #include <behaviors/mouse_key_press.dtsi>
-
-#line 18 "/Users/Kirill.Vasilenko/dev/keyboard/miryoku_zmk/miryoku/miryoku.dtsi"
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -137,8 +133,6 @@
         };
     };
 };
-
-#line 21 "/Users/Kirill.Vasilenko/dev/keyboard/miryoku_zmk/miryoku/
 
 miryoku_shift_functions.dtsi {
     "
@@ -294,8 +288,6 @@ miryoku_shift_functions.dtsi {
     };
 };
 
-#line 19 "/Users/Kirill.Vasilenko/dev/keyboard/miryoku_zmk/miryoku/
-
 miryoku_double_tap_guard.dtsi {
     "
 /
@@ -419,8 +411,6 @@ miryoku_double_tap_guard.dtsi {
     };
 };
 
-#line 4 "/Users/Kirill.Vasilenko/dev/keyboard/miryoku_zmk/miryoku/
-
 miryoku_mousekeys.dtsi {
     "
 /
@@ -459,8 +449,6 @@ miryoku_mousekeys.dtsi {
         };
     };
 };
-
-#line 4 "/Users/Kirill.Vasilenko/dev/keyboard/miryoku_zmk/miryoku/
 
 miryoku_behaviors.dtsi {
     "
