@@ -1,3 +1,12 @@
+# Miryoku 
+
+To set a stable process of working with the Miryoku layout for MoErgo Glove80, do the following:
+1. Get the Miryoku layout keymap - glove80.keymap
+   1. Follow the instructions from the author - https://www.reddit.com/r/ErgoMechKeyboards/comments/17ocntc/is_there_a_way_to_import_miryoku_in_a_zmk_visual/
+   2. Remove all the "#line ..." from the resulting file, otherwise it will not compile
+2. Replace config/glove80.keymap in this repo
+3. Connect the keymap editor (https://nickcoutsos.github.io/keymap-editor/) to this repo 
+
 # MoErgo Glove80 Custom Configuration for ZMK
 
 ![MoErgo Logo](moergo_logo.png)
