@@ -478,7 +478,7 @@
             bindings = <&mo>, <&shift_bksp_to_delete>;
         };
 
-        hold_layer_tap_mod_morph {
+        hold_layer_tap_mod_morph: hold_layer_tap_mod_morph {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_LAYER_TAP_MOD-MORPH";
             #binding-cells = <2>;
