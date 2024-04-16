@@ -26,12 +26,12 @@
         NAV {
             display-name = "Nav";
             bindings = <
-&none  &none        &none     &none        &none                                                                                &none      &none      &none      &none      &none
-&none  &none        &none     &none        &none         &none                                                   &none          &none      &none      &none      &none      &none
-&none  &bootloader  &none     &none        &u_to_U_BASE  &none                                                   &kp LS(LG(Z))  &kp LG(V)  &kp LG(C)  &kp LG(X)  &kp LG(Z)  &none
-&none  &kp LCTRL    &kp LALT  &kp LGUI     &kp LSHFT     &none                                                   &u_caps_word   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none
-&none  &none        &kp RALT  &u_to_U_NUM  &u_to_U_NAV   &none  &none  &none  &none  &none    &none     &none    &kp INS        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
-&none  &none        &none     &none        &none                &none  &none  &none  &kp RET  &kp BSPC  &kp DEL                 &none      &none      &none      &none      &none
+&none  &none        &none     &none        &none                                                                                          &none      &none      &none      &none      &none
+&none  &none        &none     &none        &none         &none                                                             &none          &none      &none      &none      &none      &none
+&none  &bootloader  &none     &none        &u_to_U_BASE  &none                                                             &kp LS(LG(Z))  &kp LG(V)  &kp LG(C)  &kp LG(X)  &kp LG(Z)  &none
+&none  &kp LCTRL    &kp LALT  &kp LGUI     &kp LSHFT     &none                                                             &u_caps_word   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none
+&none  &none        &kp RALT  &u_to_U_NUM  &u_to_U_NAV   &none  &none  &none  &none  &none  &none      &none               &kp INS        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
+&none  &none        &none     &none        &none                &none  &none  &none  &none  &kp ENTER  &bksp_shift_delete                 &none      &none      &none      &none      &none
             >;
         };
 
