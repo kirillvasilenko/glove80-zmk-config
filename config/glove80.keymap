@@ -62,12 +62,12 @@
         NUM {
             display-name = "Num";
             bindings = <
-&none  &none            &none            &none            &none                                                                                                 &none           &none      &none       &none        &none
-&none  &none            &none            &none            &none            &none                                                               &none            &none           &none      &none       &none        &none
-&none  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none            &kp PERCENT                                                         &kp BACKSLASH    &none           &kp CARET  &none       &bootloader  &none
-&none  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_EQUAL     &kp KP_MINUS                                                        &kp KP_DIVIDE    &kp LSHFT       &kp LGUI   &kp LALT    &kp LCTRL    &none
-&none  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0  &kp KP_PLUS   &none      &none          &none  &none  &none  &none  &kp KP_MULTIPLY  &kp UNDERSCORE  &kp COMMA  &kp PERIOD  &none        &none
-&none  &none            &none            &none            &none                          &kp SPACE  &kp BACKSPACE  &none  &none  &none  &none                   &none           &none      &none       &none        &none
+&none       &none            &none            &none            &none                                                                                             &none           &none      &none       &none        &none
+&none       &none            &none            &none            &none            &none                                                                     &none  &none           &none      &none       &none        &none
+&none       &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                                                              &none  &none           &none      &none       &bootloader  &none
+&kp ESCAPE  &kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS                                                               &none  &kp LSHFT       &kp LGUI   &kp LALT    &kp LCTRL    &none
+&none       &kp CARET        &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_EQUAL  &none            &none          &none  &none  &none  &none  &none  &kp UNDERSCORE  &kp COMMA  &kp PERIOD  &none        &none
+&none       &none            &none            &none            &none                          &kp KP_NUMBER_0  &kp BACKSPACE  &none  &none  &none  &none         &none           &none      &none       &none        &none
             >;
         };
 
@@ -77,8 +77,8 @@
 &none      &none            &none          &none             &none                                                                                             &none           &none                 &none                  &none          &none
 &none      &none            &none          &none             &none         &none                                                                &none          &none           &none                 &none                  &none          &none
 &none      &kp SQT          &kp LESS_THAN  &kp GREATER_THAN  &kp PERCENT   &kp BACKSLASH                                                        &kp AMPERSAND  &kp DOLLAR      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SEMICOLON  &none
-&kp GRAVE  &kp EXCLAMATION  &kp MINUS      &kp KP_PLUS       &kp EQUAL     &kp POUND                                                            &kp PIPE       &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp COLON      &kp DOUBLE_QUOTES
-&none      &kp LCTRL        &kp SLASH      &kp KP_MULTIPLY   &kp QUESTION  &none          &none      &none          &none  &none  &none  &none  &kp TILDE      &kp PERIOD      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN    &none
+&kp GRAVE  &kp EXCLAMATION  &kp MINUS      &kp PLUS          &kp EQUAL     &kp POUND                                                            &kp PIPE       &kp PERIOD      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp COLON      &kp DOUBLE_QUOTES
+&none      &kp LCTRL        &kp SLASH      &kp ASTERISK      &kp QUESTION  &none          &none      &none          &none  &none  &none  &none  &kp TILDE      &kp UNDERSCORE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN    &none
 &none      &none            &none          &none             &none                        &kp SPACE  &kp BACKSPACE  &none  &none  &none  &none                 &none           &none                 &none                  &none          &none
             >;
         };
