@@ -255,7 +255,7 @@
             label = "u_to_U_BASE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <&to 0>;
+            bindings = <&kp B>, <&to 0>;
         };
     };
 };
@@ -282,7 +282,7 @@
             label = "u_to_U_NAV";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <&to 1>;
+            bindings = <&kp A>, <&to 1>;
         };
     };
 };
