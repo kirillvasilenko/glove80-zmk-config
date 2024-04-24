@@ -26,12 +26,12 @@
         NAV {
             display-name = "Nav";
             bindings = <
-&none  &none        &none     &none        &none                                                                                          &none      &none      &none      &none      &none
-&none  &none        &none     &none        &none         &none                                                             &none          &none      &none      &none      &none      &none
-&none  &bootloader  &none     &none        &u_to_U_BASE  &none                                                             &kp LS(LG(Z))  &kp LG(V)  &kp LG(C)  &kp LG(X)  &kp LG(Z)  &none
-&none  &kp LCTRL    &kp LALT  &kp LGUI     &kp LSHFT     &none                                                             &u_caps_word   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none
-&none  &none        &kp RALT  &u_to_U_NUM  &u_to_U_NAV   &none  &none  &none  &none  &none  &none      &none               &kp INS        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
-&none  &none        &none     &none        &none                &none  &none  &none  &none  &kp ENTER  &bksp_shift_delete                 &none      &none      &none      &none      &none
+&none  &none        &none      &none      &none                                                                                             &none                   &none                   &none                 &none                    &none
+&none  &none        &none      &none      &none      &none                                                                    &none         &none                   &none                   &none                 &none                    &none
+&none  &bootloader  &none      &none      &none      &none                                                                    &kp LG(T)     &kp LG(LA(LEFT_ARROW))  &kp LG(LA(DOWN_ARROW))  &kp LG(LA(UP_ARROW))  &kp LG(LA(RIGHT_ARROW))  &none
+&none  &kp LCTRL    &kp LALT   &kp LGUI   &kp LSHFT  &u_to_U_BASE                                                             &u_caps_word  &kp LEFT                &kp DOWN                &kp UP                &kp RIGHT                &none
+&none  &kp LG(Z)    &kp LG(X)  &kp LG(C)  &kp LG(V)  &u_to_U_NAV   &none  &none  &none  &none  &none      &none               &kp INS       &kp HOME                &kp PG_DN               &kp PG_UP             &kp END                  &none
+&none  &none        &none      &none      &none                    &none  &none  &none  &none  &kp ENTER  &bksp_shift_delete                &none                   &none                   &none                 &none                    &none
             >;
         };
 
@@ -62,12 +62,12 @@
         NUM {
             display-name = "Num";
             bindings = <
-&none       &none         &none         &none         &none                                                                                       &none           &none      &none       &none        &none
-&none       &none         &none         &none         &none         &none                                                                  &none  &none           &none      &none       &none        &none
-&none       &none         &kp N7        &kp N8        &kp N9        &kp MINUS                                                              &none  &none           &none      &none       &bootloader  &none
-&kp ESCAPE  &kp ASTERISK  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS                                                               &none  &kp LSHFT       &kp LGUI   &kp LALT    &kp LCTRL    &none
-&none       &kp CARET     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &none            &none          &none  &none  &none  &none  &none  &kp UNDERSCORE  &kp COMMA  &kp PERIOD  &kp SLASH    &none
-&none       &none         &none         &none         &none                    &kp KP_NUMBER_0  &kp BACKSPACE  &none  &none  &none  &none         &none           &none      &none       &none        &none
+&none       &none         &none         &none         &none                                                                                              &none           &none      &none       &none        &none
+&none       &none         &none         &none         &none         &none                                                                  &none         &none           &none      &none       &none        &none
+&none       &kp SLASH     &kp N7        &kp N8        &kp N9        &kp MINUS                                                              &none         &none           &none      &none       &bootloader  &none
+&kp ESCAPE  &kp ASTERISK  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS                                                               &u_to_U_BASE  &kp LSHFT       &kp LGUI   &kp LALT    &kp LCTRL    &none
+&none       &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &none            &none          &none  &none  &none  &none  &u_to_U_NUM   &kp UNDERSCORE  &kp COMMA  &kp PERIOD  &kp SLASH    &none
+&none       &none         &none         &none         &none                    &kp KP_NUMBER_0  &kp BACKSPACE  &none  &none  &none  &none                &none           &none      &none       &none        &none
             >;
         };
 
