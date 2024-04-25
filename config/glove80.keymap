@@ -400,7 +400,7 @@
             flavor = "balanced";
             bindings = <&mo>, <&kp>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
         };
 
         bksp_shift_delete: bksp_shift_delete {
