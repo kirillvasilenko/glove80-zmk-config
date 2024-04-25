@@ -26,12 +26,12 @@
         NAV {
             display-name = "Nav";
             bindings = <
-&none        &none      &none      &none      &none                                                                                      &none                   &none                   &none                 &none                    &none
-&bootloader  &none      &none      &none      &none      &none                                                             &none         &none                   &none                   &none                 &none                    &none
-&none        &none      &none      &kp LCTRL  &none      &none                                                             &kp LG(T)     &kp LG(LA(LEFT_ARROW))  &kp LG(LA(DOWN_ARROW))  &kp LG(LA(UP_ARROW))  &kp LG(LA(RIGHT_ARROW))  &none
-&none        &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT  &none                                                             &u_caps_word  &kp LEFT                &kp DOWN                &kp UP                &kp RIGHT                &none
-&none        &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &none  &none  &to 0  &none  &none  &none      &none               &kp LG(F12)   &kp HOME                &kp PG_DN               &kp PG_UP             &kp END                  &none
-&none        &none      &none      &none      &none             &none  &none  &none  &none  &kp ENTER  &bksp_shift_delete                &none                   &none                   &none                 &none                    &none
+&none        &none      &none      &none      &none                                                                                           &none                   &none                   &none                 &none                    &none
+&bootloader  &none      &none      &none      &none      &none                                                             &none              &kp LG(T)               &none                   &none                 &none                    &none
+&none        &none      &none      &kp LCTRL  &none      &none                                                             &kp LG(LC(LA(S)))  &kp LG(LA(LEFT_ARROW))  &kp LG(LA(DOWN_ARROW))  &kp LG(LA(UP_ARROW))  &kp LG(LA(RIGHT_ARROW))  &none
+&none        &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT  &none                                                             &u_caps_word       &kp LEFT                &kp DOWN                &kp UP                &kp RIGHT                &none
+&none        &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &none  &none  &to 0  &none  &none  &none      &none               &kp LG(F12)        &kp HOME                &kp PG_DN               &kp PG_UP             &kp END                  &none
+&none        &none      &none      &none      &none             &none  &none  &none  &none  &kp ENTER  &bksp_shift_delete                     &none                   &none                   &none                 &none                    &none
             >;
         };
 
