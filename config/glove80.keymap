@@ -77,7 +77,7 @@
 &none  &none            &none          &none             &none        &none                                                                            &none          &none           &none                 &none                  &none         &bootloader
 &none  &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &none        &kp BACKSLASH                                                                    &kp AMPERSAND  &kp DOLLAR      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN   &none
 &none  &kp EXCLAMATION  &kp MINUS      &kp PLUS          &kp EQUAL    &kp POUND                                                                        &kp PIPE       &none           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp COLON     &kp DOUBLE_QUOTES
-&none  &kp LCTRL        &kp SLASH      &kp ASTERISK      &kp PERCENT  &none          &none          &none           &none         &none  &none  &none  &kp TILDE      &kp UNDERSCORE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp QUESTION  &none
+&none  &kp CARET        &kp SLASH      &kp ASTERISK      &kp PERCENT  &none          &none          &none           &none         &none  &none  &none  &kp TILDE      &kp UNDERSCORE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp QUESTION  &none
 &none  &none            &none          &none             &none                       &kp BACKSPACE  &kp LEFT_ARROW  &kp LEFT_ALT  &none  &none  &none                 &none           &none                 &none                  &none         &none
             >;
         };
