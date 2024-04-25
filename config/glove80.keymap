@@ -14,12 +14,12 @@
         BASE {
             display-name = "Base";
             bindings = <
-&kp F1      &kp F2         &kp F3        &kp F4        &kp F5                                                                                                                              &kp F6          &kp F7        &kp F8          &kp F9                 &kp F10
-&none       &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp N5                                                                                                 &kp NUMBER_6  &kp N7          &kp N8        &kp N9          &kp N0                 &kp F11
-&none       &kp Q          &kp W         &kp E         &kp R          &kp T                                                                                                  &kp Y         &kp U           &kp I         &kp O           &kp P                  &kp F12
-&kp ESCAPE  &u_mt LCTRL A  &u_mt LALT S  &u_mt LGUI D  &u_mt LSHFT F  &kp G                                                                                                  &kp H         &u_mt LSHFT J   &u_mt LGUI K  &u_mt LALT L    &u_mt LCTRL SEMICOLON  &kp SQT
-&none       &kp Z          &u_mt RALT X  &kp C         &kp V          &kp B   &sk LEFT_SHIFT  &none        &none           &none           &none          &sk RIGHT_SHIFT    &kp N         &kp M           &kp COMMA     &u_mt RALT DOT  &kp SLASH              &kp PAGE_UP
-&none       &none          &none         &none         &none                  &u_lt 1 SPACE   &u_lt 2 TAB  &u_lt 3 ESCAPE  &u_lt 6 DELETE  &u_lt 4 ENTER  &u_lt 5 BACKSPACE                &kp LEFT_ARROW  &kp DOWN      &kp UP_ARROW    &kp RIGHT              &kp PAGE_DOWN
+&kp F1      &kp F2         &kp F3        &kp F4        &kp F5                                                                                                                                 &kp F6          &kp F7        &kp F8          &kp F9                 &kp F10
+&none       &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4      &kp N5                                                                                                 &kp NUMBER_6  &kp N7          &kp N8        &kp N9          &kp N0                 &kp F11
+&none       &kp Q          &kp W         &kp E         &kp R             &kp T                                                                                                  &kp Y         &kp U           &kp I         &kp O           &kp P                  &kp F12
+&kp ESCAPE  &u_mt LCTRL A  &u_mt LALT S  &u_mt LGUI D  &u_mt LSHFT F     &kp G                                                                                                  &kp H         &u_mt LSHFT J   &u_mt LGUI K  &u_mt LALT L    &u_mt LCTRL SEMICOLON  &kp SQT
+&none       &kp Z          &u_mt RALT X  &kp C         &kp V             &kp B   &sk LEFT_SHIFT  &none        &none           &none           &none          &sk RIGHT_SHIFT    &kp N         &kp M           &kp COMMA     &u_mt RALT DOT  &kp SLASH              &kp PAGE_UP
+&none       &none          &none         &none         &tap_dance_a_b_c          &u_lt 1 SPACE   &u_lt 2 TAB  &u_lt 3 ESCAPE  &u_lt 6 DELETE  &u_lt 4 ENTER  &u_lt 5 BACKSPACE                &kp LEFT_ARROW  &kp DOWN      &kp UP_ARROW    &kp RIGHT              &kp PAGE_DOWN
             >;
         };
 
@@ -27,11 +27,11 @@
             display-name = "Nav";
             bindings = <
 &none        &none      &none      &none      &none                                                                                             &none                   &none                   &none                 &none                    &none
-&bootloader  &none      &none      &none      &none      &none                                                                    &none         &none                   &none                   &none                 &none                    &none
-&none        &none      &none      &kp LCTRL  &none      &none                                                                    &kp LG(T)     &kp LG(LA(LEFT_ARROW))  &kp LG(LA(DOWN_ARROW))  &kp LG(LA(UP_ARROW))  &kp LG(LA(RIGHT_ARROW))  &none
-&none        &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT  &u_to_U_BASE                                                             &u_caps_word  &kp LEFT                &kp DOWN                &kp UP                &kp RIGHT                &none
-&none        &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &u_to_U_NAV   &none  &none  &none  &none  &none      &none               &kp LG(F12)   &kp HOME                &kp PG_DN               &kp PG_UP             &kp END                  &none
-&none        &none      &none      &none      &none                    &none  &none  &none  &none  &kp ENTER  &bksp_shift_delete                &none                   &none                   &none                 &none                    &none
+&bootloader  &none      &none      &none      &none             &none                                                             &none         &none                   &none                   &none                 &none                    &none
+&none        &none      &none      &kp LCTRL  &none             &none                                                             &kp LG(T)     &kp LG(LA(LEFT_ARROW))  &kp LG(LA(DOWN_ARROW))  &kp LG(LA(UP_ARROW))  &kp LG(LA(RIGHT_ARROW))  &none
+&none        &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT         &to 0                                                             &u_caps_word  &kp LEFT                &kp DOWN                &kp UP                &kp RIGHT                &none
+&none        &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)         &to 1  &none  &none  &none  &none  &none      &none               &kp LG(F12)   &kp HOME                &kp PG_DN               &kp PG_UP             &kp END                  &none
+&none        &none      &none      &none      &tap_dance_a_b_c         &none  &none  &none  &none  &kp ENTER  &bksp_shift_delete                &none                   &none                   &none                 &none                    &none
             >;
         };
 
@@ -420,6 +420,13 @@
             tapping_term_ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&bksp_shift_delete>;
+        };
+
+        tap_dance_a_b_c: tap_dance_a_b_c {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_A_B_C";
+            #binding-cells = <0>;
+            bindings = <&kp A>, <&kp B>, <&kp C>;
         };
     };
 };
