@@ -26,12 +26,12 @@
         NAV {
             display-name = "Nav";
             bindings = <
-&none        &none      &none      &none      &none                                                                                           &none                   &none                   &none                 &none                    &none
-&bootloader  &none      &none      &none      &none      &none                                                             &none              &kp LG(T)               &none                   &none                 &none                    &none
-&none        &none      &none      &kp LCTRL  &none      &none                                                             &kp LG(LC(LA(S)))  &kp LG(LA(LEFT_ARROW))  &kp LG(LA(DOWN_ARROW))  &kp LG(LA(UP_ARROW))  &kp LG(LA(RIGHT_ARROW))  &none
-&none        &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT  &none                                                             &u_caps_word       &kp LEFT                &kp DOWN                &kp UP                &kp RIGHT                &none
-&none        &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &none  &none  &to 0  &none  &none  &none      &none               &kp LG(F12)        &kp HOME                &kp PG_DN               &kp PG_UP             &kp END                  &none
-&none        &none      &none      &none      &none             &none  &none  &none  &none  &kp ENTER  &bksp_shift_delete                     &none                   &none                   &none                 &none                    &none
+&none         &none             &none             &none             &none                                                                                                                  &none                   &none                   &none                 &none                    &none
+&bootloader   &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(N5)                                                                         &kp LG(NUMBER_6)  &kp LG(N7)              &kp LG(N8)              &kp LG(N9)            &kp LG(N0)               &none
+&none         &none             &none             &kp LCTRL         &none             &kp LC(LA(LG(S)))                                                                  &kp LG(U)         &kp LG(LA(LEFT_ARROW))  &kp LG(LA(DOWN_ARROW))  &kp LG(LA(UP_ARROW))  &kp LG(LA(RIGHT_ARROW))  &none
+&u_caps_word  &kp LCTRL         &kp LALT          &kp LGUI          &kp LSHFT         &kp LG(F12)                                                                        &kp LG(B)         &kp LEFT                &kp DOWN                &kp UP                &kp RIGHT                &kp F2
+&none         &kp LG(Z)         &kp LG(X)         &kp LG(C)         &kp LG(V)         &kp LG(TAB)        &none  &to 0  &none       &none  &none      &none               &kp F12           &kp HOME                &kp PG_DN               &kp PG_UP             &kp END                  &none
+&none         &none             &none             &none             &none                                &none  &none  &kp ESCAPE  &none  &kp ENTER  &bksp_shift_delete                    &none                   &none                   &none                 &none                    &none
             >;
         };
 
