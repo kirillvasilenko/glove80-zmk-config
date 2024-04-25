@@ -398,7 +398,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "u_lt";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             bindings = <&mo>, <&kp>;
 
             tapping-term-ms = <200>;
