@@ -28,7 +28,7 @@
             bindings = <
 &none        &none      &none      &none      &none                                                                                             &none                   &none                   &none                 &none                    &none
 &bootloader  &none      &none      &none      &none             &none                                                             &none         &none                   &none                   &none                 &none                    &none
-&none        &none      &none      &kp LCTRL  &none             &none                                                             &kp LG(T)     &kp LG(LA(LEFT_ARROW))  &kp LG(LA(DOWN_ARROW))  &kp LG(LA(UP_ARROW))  &kp LG(LA(RIGHT_ARROW))  &none
+&none        &none      &none      &kp LCTRL  &none             &to 4                                                             &kp LG(T)     &kp LG(LA(LEFT_ARROW))  &kp LG(LA(DOWN_ARROW))  &kp LG(LA(UP_ARROW))  &kp LG(LA(RIGHT_ARROW))  &none
 &none        &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT         &to 0                                                             &u_caps_word  &kp LEFT                &kp DOWN                &kp UP                &kp RIGHT                &none
 &to 0        &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)         &to 1  &none  &none  &none  &none  &none      &none               &kp LG(F12)   &kp HOME                &kp PG_DN               &kp PG_UP             &kp END                  &none
 &none        &none      &none      &none      &tap_dance_a_b_c         &none  &none  &none  &none  &kp ENTER  &bksp_shift_delete                &to 4                   &none                   &none                 &none                    &none
