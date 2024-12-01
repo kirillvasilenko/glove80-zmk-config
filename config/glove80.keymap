@@ -15,8 +15,9 @@
 #define MEH LC(LG(LALT))
 
 // layers
-#define DEFAULT 0
-#define MAGIC 1
+#define BASE 0
+#define NAV 1
+#define MAGIC 2
 
 / {
 
@@ -288,20 +289,23 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |  --   |  -- |  -- |  --  |  --  |                                                         |  --   |  --   |  --  |  --  |  --   |
-            // |  --   |  1  |  2  |  3   |  4   |  5   |                                           |  6   |   7   |   8   |  9   |   0  |  --   |
-            // |  --   |  Q  |  W  |  E   |  R   |  T   |                                           |  Y   |   U   |   I   |  O   |   P  |  --   |
-            // |  --   |  A  |  S  |  D   |  F   |  G   |                                           |  H   |   J   |   K   |  L   |   ;  |  --   |
-            // |  --   |  Z  |  X  |  C   |  V   |  B   | --    | --    | -- | | -- | --   | --     |  N   |   M   |   ,   |  .   |   /  |  --   |
-            // | MAGIC | --  | --  | --   | --   |      | BSPC  | DEL   | -- | | -- | RET  | SPACE  |      |  --   |  --   |  --  |  --  | MAGIC |
+        base {
+            bindings = <
+            &none          &none               &none             &none              &none                                                                                           &none               &none               &none              &none                   &none
+            &none          &kp N1              &kp N2            &kp N3             &kp N4             &kp N5                                                               &kp N6  &kp N7              &kp N8              &kp N9             &kp N0                  &none
+            &none          &kp Q               &kp W             &kp E              &kp R              &kp T                                                                &kp Y   &kp U               &kp I               &kp O              &kp P                   &none
+            &none          &left_pinky LSHFT A &left_ring LALT S &left_middy LGUI D &left_index LCTL F &kp G                                                                &kp H   &right_index LCTL J &right_middy LGUI K &right_ring LALT L &right_pinky LSHFT SEMI &none
+            &none          &kp Z               &kp X             &kp C              &kp V              &kp B   &none       &none       &none   &none  &none     &none       &kp N   &kp M               &kp COMMA           &kp DOT            &kp FSLH                &none
+            &magic MAGIC 0 &none               &none             &none              &none                      &kp BSPC    &kp DEL     &none   &none  &kp RET   &kp SPACE           &none               &none               &none              &none                   &magic MAGIC 0
+            >;
+        };
 
+        nav {
             bindings = <
             &none          &none    &none       &none       &none                                                                                    &none   &none       &none       &none       &none
             &none          &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                               &kp N6  &kp N7  &kp N8      &kp N9      &kp N0      &none
             &none          &kp Q    &kp W       &kp E       &kp R       &kp T                                                                &kp Y   &kp U   &kp I       &kp O       &kp P       &none
-            &none          &kp A    &kp S       &kp D       &left_index F D       &kp G                                                                &kp H   &kp J   &kp K       &kp L       &kp SEMI    &none
+            &none          &kp A    &kp S       &kp D       &left_index F LCTL       &kp G                                                                &kp H   &kp J   &kp K       &kp L       &kp SEMI    &none
             &none          &kp Z    &kp X       &kp C       &kp V       &kp B   &none       &none       &none   &none  &none     &none       &kp N   &kp M   &kp COMMA   &kp DOT     &kp FSLH    &none
             &magic MAGIC 0 &none    &none       &none       &none               &kp BSPC    &kp DEL     &none   &none  &kp RET   &kp SPACE           &none   &none       &none       &none       &magic MAGIC 0
             >;
