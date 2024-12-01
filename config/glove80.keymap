@@ -19,39 +19,6 @@
 #define MAGIC 1
 
 / {
-    keymap {
-        compatible = "zmk,keymap";
-
-        default_layer {
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |  --   |  -- |  -- |  --  |  --  |                                                         |  --   |  --   |  --  |  --  |  --   |
-            // |  --   |  1  |  2  |  3   |  4   |  5   |                                           |  6   |   7   |   8   |  9   |   0  |  --   |
-            // |  --   |  Q  |  W  |  E   |  R   |  T   |                                           |  Y   |   U   |   I   |  O   |   P  |  --   |
-            // |  --   |  A  |  S  |  D   |  F   |  G   |                                           |  H   |   J   |   K   |  L   |   ;  |  --   |
-            // |  --   |  Z  |  X  |  C   |  V   |  B   | --    | --    | -- | | -- | --   | --     |  N   |   M   |   ,   |  .   |   /  |  --   |
-            // | MAGIC | --  | --  | --   | --   |      | BSPC  | DEL   | -- | | -- | RET  | SPACE  |      |  --   |  --   |  --  |  --  | MAGIC |
-
-            bindings = <
-            &none          &none    &none       &none       &none                                                                                    &none   &none       &none       &none       &none
-            &none          &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                               &kp N6  &kp N7  &kp N8      &kp N9      &kp N0      &none
-            &none          &kp Q    &kp W       &kp E       &kp R       &kp T                                                                &kp Y   &kp U   &kp I       &kp O       &kp P       &none
-            &none          &kp A    &kp S       &kp D       li(F, LC)       &kp G                                                                &kp H   &kp J   &kp K       &kp L       &kp SEMI    &none
-            &none          &kp Z    &kp X       &kp C       &kp V       &kp B   &none       &none       &none   &none  &none     &none       &kp N   &kp M   &kp COMMA   &kp DOT     &kp FSLH    &none
-            &magic MAGIC 0 &none    &none       &none       &none               &kp BSPC    &kp DEL     &none   &none  &kp RET   &kp SPACE           &none   &none       &none       &none       &magic MAGIC 0
-            >;
-        };
-
-        magic_layer {
-            bindings = <
-            &bt BT_CLR        &none               &none           &none           &none                                                                                                           &none      &none      &none      &none      &bt BT_CLR_ALL
-            &none             &none               &none           &none           &none           &none                                                                                &none      &none      &none      &none      &none      &none
-            &none             &rgb_ug RGB_SPI     &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_TOG                                                                      &none      &none      &none      &none      &none      &none
-            &bootloader       &rgb_ug RGB_SPD     &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_EFF                                                                      &none      &none      &none      &none      &none      &bootloader
-            &sys_reset        &none               &none           &none           &none           &none           &bt_2     &bt_3     &none            &none     &none     &none       &none      &none      &none      &none      &none      &sys_reset
-            &none             &none               &none           &none           &none                           &bt_0     &bt_1     &out OUT_USB     &none     &none     &none                  &none      &none      &none      &none      &none
-            >;
-        };
-    };
 
     //
     // TAPPING_RESOLUTION specifies the maximum speed at which the keyboard
@@ -317,6 +284,40 @@
             bindings
                 = <&out OUT_BLE>,
                   <&bt BT_SEL 3>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            // ---------------------------------------------------------------------------------------------------------------------------------
+            // |  --   |  -- |  -- |  --  |  --  |                                                         |  --   |  --   |  --  |  --  |  --   |
+            // |  --   |  1  |  2  |  3   |  4   |  5   |                                           |  6   |   7   |   8   |  9   |   0  |  --   |
+            // |  --   |  Q  |  W  |  E   |  R   |  T   |                                           |  Y   |   U   |   I   |  O   |   P  |  --   |
+            // |  --   |  A  |  S  |  D   |  F   |  G   |                                           |  H   |   J   |   K   |  L   |   ;  |  --   |
+            // |  --   |  Z  |  X  |  C   |  V   |  B   | --    | --    | -- | | -- | --   | --     |  N   |   M   |   ,   |  .   |   /  |  --   |
+            // | MAGIC | --  | --  | --   | --   |      | BSPC  | DEL   | -- | | -- | RET  | SPACE  |      |  --   |  --   |  --  |  --  | MAGIC |
+
+            bindings = <
+            &none          &none    &none       &none       &none                                                                                    &none   &none       &none       &none       &none
+            &none          &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                               &kp N6  &kp N7  &kp N8      &kp N9      &kp N0      &none
+            &none          &kp Q    &kp W       &kp E       &kp R       &kp T                                                                &kp Y   &kp U   &kp I       &kp O       &kp P       &none
+            &none          &kp A    &kp S       &kp D       li(F, LC)       &kp G                                                                &kp H   &kp J   &kp K       &kp L       &kp SEMI    &none
+            &none          &kp Z    &kp X       &kp C       &kp V       &kp B   &none       &none       &none   &none  &none     &none       &kp N   &kp M   &kp COMMA   &kp DOT     &kp FSLH    &none
+            &magic MAGIC 0 &none    &none       &none       &none               &kp BSPC    &kp DEL     &none   &none  &kp RET   &kp SPACE           &none   &none       &none       &none       &magic MAGIC 0
+            >;
+        };
+
+        magic_layer {
+            bindings = <
+            &bt BT_CLR        &none               &none           &none           &none                                                                                                           &none      &none      &none      &none      &bt BT_CLR_ALL
+            &none             &none               &none           &none           &none           &none                                                                                &none      &none      &none      &none      &none      &none
+            &none             &rgb_ug RGB_SPI     &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_TOG                                                                      &none      &none      &none      &none      &none      &none
+            &bootloader       &rgb_ug RGB_SPD     &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_EFF                                                                      &none      &none      &none      &none      &none      &bootloader
+            &sys_reset        &none               &none           &none           &none           &none           &bt_2     &bt_3     &none            &none     &none     &none       &none      &none      &none      &none      &none      &sys_reset
+            &none             &none               &none           &none           &none                           &bt_0     &bt_1     &out OUT_USB     &none     &none     &none                  &none      &none      &none      &none      &none
+            >;
         };
     };
 };
