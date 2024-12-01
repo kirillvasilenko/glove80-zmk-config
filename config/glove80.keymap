@@ -243,7 +243,7 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
             // shift forgiveness
-            hold-while-undecided; // requires 24.08-beta1 or newer firmware
+            //hold-while-undecided; // requires 24.08-beta1 or newer firmware
             retro-tap; // tap on standalone hold
         };
 
@@ -258,7 +258,7 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
             // shift forgiveness
-            hold-while-undecided; // requires 24.08-beta1 or newer firmware
+            //hold-while-undecided; // requires 24.08-beta1 or newer firmware
             retro-tap; // tap on standalone hold
         };
 
