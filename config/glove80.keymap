@@ -117,7 +117,7 @@
                          70 53     56 73                 \
                           71 54   55 72
 
-    #define li(k1, k2) left_index k1 k2
+    #define li(k1, k2) &left_index k1 k2
 
     behaviors {
         thumb: thumb_layer_access {
