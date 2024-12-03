@@ -59,6 +59,23 @@
 #define _FIND_NEXT  _C(G)
 #define _FIND_PREV  _C(LS(G))
 
+
+//
+// The *_FINGER_MOD specify which modifiers are used by home row mod keys.
+// Here, we use Miryoku's "GACS" (Win, Alt, Ctrl, Shift) order by default,
+// unless OPERATING_SYSTEM is macOS, in which case Win & Ctrl are swapped,
+// unless MACOS_USE_GACS is also defined to suppress that Win & Ctrl swap.
+//
+#define PINKY_MOD LSFT
+#define RING_MOD LALT
+#if OPERATING_SYSTEM == 'M'
+  #define MIDDY_MOD LGUI
+  #define INDEX_MOD LCTL
+#else
+  #define MIDDY_MOD LCTL
+  #define INDEX_MOD LGUI
+#endif
+
 / {
 
     //
