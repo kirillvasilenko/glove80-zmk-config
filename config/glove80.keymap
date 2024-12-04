@@ -562,6 +562,26 @@ m_lh: macro_layer_hold_on_release {
         #ifndef COMBO_FIRING_DECAY
         #define COMBO_FIRING_DECAY 50
         #endif
+
+
+    combo_to_nav {
+        timeout-ms = <COMBO_FIRING_DECAY>;
+        key-positions = <POS_LH_T4 POS_LH_C5R4>;
+        bindings = <&tog NAV>;
+        layers = <BASE>;
+    };
+    combo_from_nav {
+        timeout-ms = <COMBO_FIRING_DECAY>;
+        key-positions = <POS_LH_T4 POS_LH_C4R4>;
+        bindings = <&tog NAV>;
+        layers = <NAV>;
+    };
+    combo_to_base_stub_left {
+        timeout-ms = <COMBO_FIRING_DECAY>;
+        key-positions = <POS_LH_T4 POS_LH_C4R4>;
+        bindings = <&none>;
+        layers = <BASE>;
+    };
     };
 
     keymap {
