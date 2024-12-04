@@ -18,7 +18,8 @@
 #define BASE 0
 #define NAV 1
 #define NUM 2
-#define MAGIC 2
+#define FUN 3
+#define MAGIC 4
 
 #ifndef OPERATING_SYSTEM
 //#define OPERATING_SYSTEM 'L' // linux
@@ -579,6 +580,18 @@
             bindings = <&tog NUM>;
             layers = <NAV>;
         };
+        combo_to_fun {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_LH_T1 POS_LH_C2R4>;
+            bindings = <&tog FUN>;
+            layers = <BASE>;
+        };
+        combo_from_fun {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_LH_T4 POS_LH_C3R4>;
+            bindings = <&tog FUN>;
+            layers = <NAV>;
+        };
         combo_to_base_stub_left {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_C3R4>;
@@ -602,7 +615,7 @@
             &none          &kp N1                  &kp N2                &kp N3                  &kp N4                  &kp N5                                                               &kp N6  &kp N7                   &kp N8                   &kp N9                 &kp N0                      &none
             &none          &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                &kp Y   &kp U                    &kp I                    &kp O                  &kp P                       &none
             &none          &left_pinky PINKY_MOD A &left_ring RING_MOD S &left_middy MIDDY_MOD D &left_index INDEX_MOD F &kp G                                                                &kp H   &right_index INDEX_MOD J &right_middy MIDDY_MOD K &right_ring RING_MOD L &right_pinky PINKY_MOD SEMI &none
-            &none          &kp Z                   &kp X                 &kp C                   &kp V                   &kp B   &kp ESC            &none           &none   &none  &none     &kp RET       &kp N   &kp M                    &kp COMMA                &kp DOT                &kp FSLH                    &none
+            &none          &kp Z                   &kp X                 &kp C                   &kp V                   &kp B   &thumb FUN ESC     &none           &none   &none  &none     &kp RET       &kp N   &kp M                    &kp COMMA                &kp DOT                &kp FSLH                    &none
             &magic MAGIC 0 &none                   &none                 &none                   &none                           &thumb NUM BSPC    &thumb NAV DEL  &none   &none  &kp TAB   &kp SPACE           &none                    &none                    &none                  &none                       &magic MAGIC 0
             >;
         };
@@ -626,6 +639,17 @@
             &none          &kp TAB       &kp RET       &kp SPACE      &kp BSPC       &none                                                                &kp PLUS        &kp N4    &kp N5     &kp N6          &kp MINUS  &none
             &none          &none         &none         &none          &none          &none   &none  &none  &none   &kp LT        &kp GT    &kp EQUAL      &kp ASTERISK    &kp N1    &kp N2     &kp N3          &kp SLASH  &none
             &none          &none         &none         &none          &none                  &none  &none  &none   &kp COMMA     &kp DOT   &kp N0                         &none     &none      &none           &none      &none
+            >;
+        };
+
+        fun {
+            bindings = <
+            &none          &none         &none         &none          &none                                                                                              &kp C_PP  &kp C_PREV &kp C_NEXT      &none      &none
+            &none          &none         &none         &none          &none          &none                                                                 &none         &none     &none      &none           &none      &none
+            &none          &none         &kp _REDO     &kp _UNDO      &none          &none                                                                 &none         &kp F7    &kp F8     &kp F9          &kp F10    &none
+            &none          &kp PINKY_MOD &kp RING_MOD  &kp MIDDY_MOD  &kp INDEX_MOD  &none                                                                 &kp C_BRI_DN  &kp F4    &kp F5     &kp F6          &kp F11    &none
+            &none          &none         &none         &none          &none          &none   &none  &none  &none   &kp C_PREV  &kp C_NEXT    &kp C_PP      &KP C_BRI_UP  &kp F1    &kp F2     &kp F3          &kp F12    &none
+            &none          &none         &none         &none          &none                  &none  &none  &none   &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP                &none     &none      &none           &none      &none
             >;
         };
 
