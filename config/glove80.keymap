@@ -622,7 +622,7 @@
             bindings = <
             &none          &none         &none         &none          &none                                                                                               &none     &none      &none           &none      &none
             &none          &none         &none         &none          &none          &none                                                                &none           &none     &none      &none           &none      &none
-            &none          &kp PINKY_MOD &kp RING_MOD  &kp MINDDY_MOD &kp INDEX_MOD  &none                                                                &kp PERCENT     &kp N7    &kp N8     &kp N9          &none      &none
+            &none          &kp PINKY_MOD &kp RING_MOD  &kp MIDDY_MOD  &kp INDEX_MOD  &none                                                                &kp PERCENT     &kp N7    &kp N8     &kp N9          &none      &none
             &none          &kp TAB       &kp RET       &kp SPACE      &kp BSPC       &none                                                                &kp PLUS        &kp N4    &kp N5     &kp N6          &kp MINUS  &none
             &none          &none         &none         &none          &none          &none   &none  &none  &none   &kp LT        &kp GT    &kp EQUAL      &kp ASTERISK    &kp N1    &kp N2     &kp N3          &kp SLASH  &none
             &none          &none         &none         &none          &none                  &none  &none  &none   &kp COMMA     &kp DOT   &kp N0                         &none     &none      &none           &none      &none
