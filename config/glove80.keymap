@@ -377,16 +377,6 @@
     };
 
     macros {
-m_lh: macro_layer_hold_on_release {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            wait-ms = <40>;
-            tap-ms = <40>;
-            bindings =
-                <&macro_pause_for_release>,
-                <&macro_param_1to1>,
-                <&macro_tap &to MACRO_PLACEHOLDER>;
-        };
         //
         // Mod+Tab application switcher - hold this down to keep menu open
         //
@@ -563,25 +553,31 @@ m_lh: macro_layer_hold_on_release {
         #define COMBO_FIRING_DECAY 50
         #endif
 
-
-    combo_to_nav {
-        timeout-ms = <COMBO_FIRING_DECAY>;
-        key-positions = <POS_LH_T4 POS_LH_C5R4>;
-        bindings = <&tog NAV>;
-        layers = <BASE>;
-    };
-    combo_from_nav {
-        timeout-ms = <COMBO_FIRING_DECAY>;
-        key-positions = <POS_LH_T4 POS_LH_C4R4>;
-        bindings = <&tog NAV>;
-        layers = <NAV>;
-    };
-    combo_to_base_stub_left {
-        timeout-ms = <COMBO_FIRING_DECAY>;
-        key-positions = <POS_LH_T4 POS_LH_C4R4>;
-        bindings = <&none>;
-        layers = <BASE>;
-    };
+        // Sticky layers
+        combo_to_nav {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_LH_T4 POS_LH_C2R4>;
+            bindings = <&tog NAV>;
+            layers = <BASE>;
+        };
+        combo_from_nav {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_LH_T4 POS_LH_C3R4>;
+            bindings = <&tog NAV>;
+            layers = <NAV>;
+        };
+        combo_to_base_stub_left {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_LH_T4 POS_LH_C3R4>;
+            bindings = <&none>;
+            layers = <BASE>;
+        };
+        combo_to_base_stub_right {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_RH_T4 POS_RH_C3R4>;
+            bindings = <&none>;
+            layers = <BASE>;
+        };
     };
 
     keymap {
@@ -601,10 +597,10 @@ m_lh: macro_layer_hold_on_release {
         nav {
             bindings = <
             &none          &none         &none         &none          &none                                                                                                                             &none             &none      &none              &none          &none
-            &none          &kp N1        &kp N2        &kp N3         &kp N4         &kp N5                                                                                              &kp N6         &kp N7            &kp N8     &kp N9             &kp N0         &none
-            &none          &none         &kp _REDO     &kp _UNDO      &none          &kp _CUT                                                                                            &kp _CUT       &kp _C(LA(LEFT))  &kp UP     &kp _C(LA(RIGHT))  &kp P          &none
-            &none          &kp PINKY_MOD &kp RING_MOD  &kp MIDDY_MOD  &kp INDEX_MOD  &kp _COPY                                                                                           &kp _COPY      &kp LEFT          &kp DOWN   &kp RIGHT          &kp LC(RIGHT)  &none
-            &none          &kp _C(A)     &select_line  &select_word   &m_lh NAV          &kp _PASTE   &mod_tab _A_TAB  &none          &none   &select_none  &extend_line   &extend_word      &kp _PASTE     &kp _HOME         &kp PG_UP  &kp PG_DN          &kp _END       &none
+            &none          &none         &none         &none          &none          &none                                                                                               &none          &none             &none      &none              &none          &none
+            &none          &none         &kp _REDO     &kp _UNDO      &none          &kp _CUT                                                                                            &kp _CUT       &none             &kp UP     &none              &none          &none
+            &none          &kp PINKY_MOD &kp RING_MOD  &kp MIDDY_MOD  &kp INDEX_MOD  &kp _COPY                                                                                           &kp _COPY      &kp LEFT          &kp DOWN   &kp RIGHT          &none          &none
+            &none          &kp _C(A)     &select_line  &select_word   &none          &kp _PASTE   &mod_tab _A_TAB  &none          &none   &select_none  &extend_line   &extend_word      &kp _PASTE     &kp _HOME         &kp PG_UP  &kp PG_DN          &kp _END       &none
             &none          &select_none  &extend_line  &extend_word   &none                       &kp BSPC         &mod_tab LCTL  &none   &kp _C(A)     &select_line   &select_word                     &none             &none      &none              &none          &none
             >;
         };
