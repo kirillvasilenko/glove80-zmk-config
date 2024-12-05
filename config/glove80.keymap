@@ -845,6 +845,21 @@
             bindings = <&none>;
             layers = <BASE>;
         };
+
+
+        combo_alt_tab_switcher {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_LH_T4 POS_LH_T1>;
+            bindings = <&mod_tab_chord _A_TAB SYMR>;
+            layers = <BASE>;
+        };
+
+        combo_ctrl_tab_switcher {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_LH_T4 POS_LH_T5>;
+            bindings = <&mod_tab_chord LCTL SYMR>;
+            layers = <BASE>;
+        };
     };
 
     keymap {
