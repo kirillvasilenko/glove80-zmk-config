@@ -17,11 +17,12 @@
 // layers
 #define BASE 0
 #define NAV 1
-#define SYMR 2
-#define SYML 3
-#define NUM 4
-#define FUN 5
-#define MAGIC 6
+#define MOU 2
+#define SYMR 3
+#define SYML 4
+#define NUM 5
+#define FUN 6
+#define MAGIC 7
 
 #ifndef OPERATING_SYSTEM
 //#define OPERATING_SYSTEM 'L' // linux
@@ -158,6 +159,128 @@
 #define POS_RH_C6R4 45
 #define POS_RH_C6R5 63
 #define POS_RH_C6R6 79
+
+/* Custom Device-tree */
+//////////////////////////////////////////////////////////////////////////
+//
+// Mouse keys (control mouse via keyboard) -- requires PR23 beta firmware:
+// select "community.pr23.mouse-keys" from the drop-down menu located at
+// Glove80 Layout Editor > Settings > Advanced Settings > Firmware Version
+//
+// - https://github.com/moergo-sc/zmk/pull/23
+// - https://gist.github.com/krissen/dd27082e7ab0575619c7a31f4d2ec7ae
+// - https://github.com/zmkfirmware/zmk/compare/main...urob:zmk:mouse-3.2
+//
+//////////////////////////////////////////////////////////////////////////
+
+//
+// MOUSE_MOTION_DELAY defines how long to wait (milliseconds) before starting
+// to move the mouse pointer.
+//
+#ifndef MOUSE_MOTION_DELAY
+#define MOUSE_MOTION_DELAY 0
+#endif
+
+//
+// MOUSE_MOTION_ACCELERATION_EXPONENT sets how the mouse pointer accelerates:
+//
+// acceleration exponent 0: uniform speed
+// acceleration exponent 1: uniform acceleration
+// acceleration exponent 2: uniform jerk
+//
+#ifndef MOUSE_MOTION_ACCELERATION_EXPONENT
+#define MOUSE_MOTION_ACCELERATION_EXPONENT 1
+#endif
+
+//
+// MOUSE_MOTION_TIME_TO_MAXIMUM_SPEED defines how long to wait (milliseconds)
+// before the mouse pointer speed is suddenly boosted to the maximum value.
+//
+#ifndef MOUSE_MOTION_TIME_TO_MAXIMUM_SPEED
+#define MOUSE_MOTION_TIME_TO_MAXIMUM_SPEED 300
+#endif
+
+//
+// MOUSE_MOTION_MAXIMUM_SPEED defines how quickly the mouse pointer can move.
+//
+#ifndef MOUSE_MOTION_MAXIMUM_SPEED
+#define MOUSE_MOTION_MAXIMUM_SPEED 600
+#endif
+
+//
+// MOUSE_SCROLL_DELAY defines how long to wait (milliseconds) before starting
+// to move the mouse pointer.
+//
+#ifndef MOUSE_SCROLL_DELAY
+#define MOUSE_SCROLL_DELAY 0
+#endif
+
+//
+// MOUSE_SCROLL_ACCELERATION_EXPONENT sets how the mouse pointer accelerates:
+//
+// acceleration exponent 0: uniform speed
+// acceleration exponent 1: uniform acceleration
+// acceleration exponent 2: uniform jerk
+//
+#ifndef MOUSE_SCROLL_ACCELERATION_EXPONENT
+#define MOUSE_SCROLL_ACCELERATION_EXPONENT 0
+#endif
+
+//
+// MOUSE_SCROLL_TIME_TO_MAXIMUM_SPEED defines how long to wait (milliseconds)
+// before the mouse pointer speed is suddenly boosted to the maximum value.
+//
+#ifndef MOUSE_SCROLL_TIME_TO_MAXIMUM_SPEED
+#define MOUSE_SCROLL_TIME_TO_MAXIMUM_SPEED 300
+#endif
+
+//
+// MOUSE_SCROLL_MAXIMUM_SPEED defines how quickly the mouse wheel can scroll.
+//
+#ifndef MOUSE_SCROLL_MAXIMUM_SPEED
+#define MOUSE_SCROLL_MAXIMUM_SPEED 10
+#endif
+
+#if __has_include(<zmk/events/mouse_tick.h>)
+  // ==== MOUSE-KEY <section begins> ====
+  #define ZMK_MOUSE_DEFAULT_MOVE_VAL MOUSE_MOTION_MAXIMUM_SPEED
+  #define ZMK_MOUSE_DEFAULT_SCRL_VAL MOUSE_SCROLL_MAXIMUM_SPEED
+  #include <dt-bindings/zmk/mouse.h>
+  &mmv {
+    delay-ms = <MOUSE_MOTION_DELAY>;
+    acceleration-exponent = <MOUSE_MOTION_ACCELERATION_EXPONENT>;
+    time-to-max-speed-ms = <MOUSE_MOTION_TIME_TO_MAXIMUM_SPEED>;
+  };
+  &msc {
+    delay-ms = <MOUSE_SCROLL_DELAY>;
+    acceleration-exponent = <MOUSE_SCROLL_ACCELERATION_EXPONENT>;
+    time-to-max-speed-ms = <MOUSE_SCROLL_TIME_TO_MAXIMUM_SPEED>;
+  };
+  // ==== MOUSE-KEY <section ends> =====
+#else
+  #define mkp none
+  #define mmv none
+  #define msc none
+  #define LCLK
+  #define MCLK
+  #define RCLK
+  #define MB1
+  #define MB2
+  #define MB3
+  #define MB4
+  #define MB5
+  #define MB6
+  #define MB7
+  #define MB8
+  #define MOVE_UP
+  #define MOVE_DOWN
+  #define MOVE_LEFT
+  #define MOVE_RIGHT
+  #define SCRL_UP
+  #define SCRL_DOWN
+  #define SCRL_LEFT
+  #define SCRL_RIGHT
+#endif
 
 / {
 
@@ -571,6 +694,19 @@
             bindings = <&tog NAV>;
             layers = <NAV>;
         };
+        // MOU
+        combo_to_mou {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_RH_T5 POS_LH_C2R4>;
+            bindings = <&tog MOU>;
+            layers = <BASE>;
+        };
+        combo_from_mou {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_LH_T4 POS_LH_C3R4>;
+            bindings = <&tog MOU>;
+            layers = <MOU>;
+        };
         // SYMR
         combo_to_symr {
             timeout-ms = <COMBO_FIRING_DECAY>;
@@ -582,7 +718,7 @@
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_C3R4>;
             bindings = <&tog SYMR>;
-            layers = <NAV>;
+            layers = <SYMR>;
         };
         // SYML
         combo_to_syml {
@@ -595,7 +731,7 @@
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_RH_T4 POS_RH_C3R4>;
             bindings = <&tog SYML>;
-            layers = <NAV>;
+            layers = <SYML>;
         };
         // NUM
         combo_to_num {
@@ -621,7 +757,7 @@
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_RH_T4 POS_RH_C3R4>;
             bindings = <&tog FUN>;
-            layers = <NAV>;
+            layers = <FUN>;
         };
         // Stubs for BASE
         combo_to_base_stub_left {
@@ -654,10 +790,23 @@
 
         nav {
             bindings = <
-            &none          &none         &kp _REDO     &kp _UNDO      &none          &kp _CUT                                                                                            &kp _CUT       &none             &kp UP     &none              &none          &none
+            &none          &none         &none         &none          &none                                                                                                                             &none             &none      &none              &none          &none
+            &none          &none         &none         &none          &none          &none                                                                                               &none          &none             &none      &none              &none          &none
+            &none          &none         &kp _REDO     &kp _UNDO      &none          &kp _CUT                                                                                            &kp _CUT       &kp _HOME         &kp UP     &kp _END           &none          &none
             &none          &kp PINKY_MOD &kp RING_MOD  &kp MIDDY_MOD  &kp INDEX_MOD  &kp _COPY                                                                                           &kp _COPY      &kp LEFT          &kp DOWN   &kp RIGHT          &none          &none
-            &none          &kp _C(A)     &select_line  &select_word   &none          &kp _PASTE   &mod_tab _A_TAB  &none          &none   &select_none  &extend_line   &extend_word      &kp _PASTE     &kp _HOME         &kp PG_UP  &kp PG_DN          &kp _END       &none
+            &none          &kp _C(A)     &select_line  &select_word   &none          &kp _PASTE   &mod_tab _A_TAB  &none          &none   &select_none  &extend_line   &extend_word      &kp _PASTE     &kp PG_UP         &kp PG_DN  &kp _UNDO          &kp _REDO      &none
             &none          &select_none  &extend_line  &extend_word   &none                       &kp BSPC         &mod_tab LCTL  &none   &kp _C(A)     &select_line   &select_word                     &none             &none      &none              &none          &none
+            >;
+        };
+
+        mou {
+            bindings = <
+            &none   &none      &none           &none            &none                                                                                           &none          &none                 &none             &none          &none
+            &none   &none      &none           &none            &none             &none                                                             &none       &none          &none                 &none             &none          &none
+            &none   &none      &msc SCRL_LEFT  &mmv MOVE_UP     &msc SCRL_RIGHT   &kp _CUT                                                          &kp _CUT    &none          &kp _UNDO             &kp _REDO         &none          &none
+            &none   &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &kp _COPY                                                         &kp _COPY   &kp INDEX_MOD  &kp MIDDY_MOD         &kp RING_MOD      &kp PINKY_MOD  &none
+            &none   &kp _REDO  &kp _UNDO       &msc SCRL_DOWN   &msc SCRL_UP      &kp _PASTE  &mkp MCLK  &none       &none  &none   &none   &none   &kp _PASTE  &none          &select_word          &select_line      &kp _C(A)      &none
+            &none   &none      &none           &none            &none                         &mkp LCLK  &mkp RCLK   &none  &none   &none   &none               &none          &extend_word          &extend_line      &select_none   &none
             >;
         };
 
