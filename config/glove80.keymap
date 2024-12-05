@@ -18,7 +18,7 @@
 #define BASE 0
 #define NAV 1
 #define SYMR 2
-#define SYMR 3
+#define SYML 3
 #define NUM 4
 #define FUN 5
 #define MAGIC 6
