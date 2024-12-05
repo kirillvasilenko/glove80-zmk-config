@@ -18,9 +18,10 @@
 #define BASE 0
 #define NAV 1
 #define SYMR 2
-#define NUM 3
-#define FUN 4
-#define MAGIC 5
+#define SYMR 3
+#define NUM 4
+#define FUN 5
+#define MAGIC 6
 
 #ifndef OPERATING_SYSTEM
 //#define OPERATING_SYSTEM 'L' // linux
@@ -557,6 +558,7 @@
         #endif
 
         // Sticky layers
+        // NAV
         combo_to_nav {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T5 POS_LH_C2R4>;
@@ -569,6 +571,7 @@
             bindings = <&tog NAV>;
             layers = <NAV>;
         };
+        // SYMR
         combo_to_symr {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_C2R4>;
@@ -581,6 +584,20 @@
             bindings = <&tog SYMR>;
             layers = <NAV>;
         };
+        // SYML
+        combo_to_syml {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_RH_T4 POS_RH_C2R4>;
+            bindings = <&tog SYML>;
+            layers = <BASE>;
+        };
+        combo_from_syml {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_RH_T4 POS_RH_C3R4>;
+            bindings = <&tog SYML>;
+            layers = <NAV>;
+        };
+        // NUM
         combo_to_num {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T1 POS_LH_C2R4>;
@@ -593,6 +610,7 @@
             bindings = <&tog NUM>;
             layers = <NAV>;
         };
+        // FUN
         combo_to_fun {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_RH_T1 POS_RH_C2R4>;
@@ -605,6 +623,7 @@
             bindings = <&tog FUN>;
             layers = <NAV>;
         };
+        // Stubs for BASE
         combo_to_base_stub_left {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_C3R4>;
@@ -628,8 +647,8 @@
             &none          &kp N1                  &kp N2                &kp N3                  &kp N4                  &kp N5                                                                                &kp N6      &kp N7                   &kp N8                   &kp N9                 &kp N0                      &none
             &none          &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                                 &kp Y       &kp U                    &kp I                    &kp O                  &kp P                       &none
             &none          &left_pinky PINKY_MOD A &left_ring RING_MOD S &left_middy MIDDY_MOD D &left_index INDEX_MOD F &kp G                                                                                 &kp H       &right_index INDEX_MOD J &right_middy MIDDY_MOD K &right_ring RING_MOD L &right_pinky PINKY_MOD SEMI &none
-            &none          &kp Z                   &kp X                 &kp C                   &kp V                   &kp B   &thumb NUM ESC      &none           &none   &none  &none     &thumb FUN RET   &kp N       &kp M                    &kp COMMA                &kp DOT                &kp FSLH                    &none
-            &magic MAGIC 0 &none                   &none                 &none                   &none                           &thumb SYMR BSPC    &thumb NAV DEL  &none   &none  &kp TAB   &kp SPACE                    &none                    &none                    &none                  &none                       &magic MAGIC 0
+            &none          &kp Z                   &kp X                 &kp C                   &kp V                   &kp B   &thumb NUM ESC      &none           &none   &none  &none     &thumb FUN  RET   &kp N       &kp M                    &kp COMMA                &kp DOT                &kp FSLH                    &none
+            &magic MAGIC 0 &none                   &none                 &none                   &none                           &thumb SYMR BSPC    &thumb NAV DEL  &none   &none  &kp TAB   &thumb SYML SPACE                    &none                    &none                    &none                  &none                       &magic MAGIC 0
             >;
         };
 
@@ -652,6 +671,17 @@
             &none          &kp TAB       &kp RET       &kp SPACE      &kp BSPC       &kp J                                                                &kp N1          &kp DQT   &kp LPAR   &kp RPAR        &kp QMARK  &none
             &none          &kp R         &kp C         &kp LEFT       &kp RIGHT      &kp I   &none  &none  &none   &none     &none        &kp SEMI        &kp N0          &kp GRAVE &kp LBKT   &kp RBKT        &none      &none
             &none          &none         &none         &none          &none                  &none  &none  &none   &none     &kp COLON    &kp DOT                         &none     &none      &none           &none      &none
+            >;
+        };
+
+        syml {
+            bindings = <
+            &none          &none         &none         &none          &none                                                                                               &none           &none           &none           &none              &none
+            &none          &none         &none         &none          &none          &none                                                                &none           &none           &none           &none           &none              &none
+            &none          &kp HASH      &kp AMPS      &kp PLUS       &kp STAR       &none                                                                &none           &kp INDEX_MOD   &kp MIDDY_MOD   &kp RING_MOD    &kp PINKY_MOD      &none
+            &kp AT         &kp EXCL      &kp CARET     &kp DLLR       &kp SLASH      &kp BSLH                                                             &none           &kp BSPC        &kp SPACE       &kp RET         &kp TAB            &none
+            &none          &kp LT        &kp PIPE      &kp MINUS      &kp GT         &kp TILDE   &kp PRCNT  &none      &none   &none     &none    &none   &none           &kp LEFT        &kp RIGHT       &none           &none              &none
+            &none          &none         &none         &none          &none                      &kp EQUAL  &kp UNDER  &none   &none     &none    &none                   &none           &none           &none           &none              &none
             >;
         };
 
