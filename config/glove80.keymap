@@ -16,13 +16,18 @@
 
 // layers
 #define BASE 0
-#define NAV 1
-#define MOU 2
-#define SYMR 3
-#define SYML 4
-#define NUM 5
-#define FUN 6
-#define MAGIC 7
+#define BASE_RUS 1
+#define BASE_EXTRA 2
+#define NAV 3
+#define MOU 4
+#define SYMR 5
+#define SYMR_RUS 6
+#define SYML 7
+#define SYML_RUS 8
+#define NUM 9
+#define NUM_RUS 10
+#define FUN 11
+#define MAGIC 12
 
 #ifndef OPERATING_SYSTEM
 //#define OPERATING_SYSTEM 'L' // linux
@@ -700,7 +705,7 @@
         tog_rus: tog_rus_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(SPACE) &tog NAV>;
+            bindings = <&kp LC(SPACE) &tog BASE_RUS>;
         };
 
         rgb_ug_status_macro: rgb_ug_status_macro_0 {
@@ -886,6 +891,28 @@
             >;
         };
 
+        base_rus {
+            bindings = <
+            &none          &none                   &none                 &none                   &none                                                                                                                                    &none                    &none                    &none                  &none                       &none
+            &none          &kp N1                  &kp N2                &kp N3                  &kp N4                  &kp N5                                                                                               &kp N6      &kp N7                   &kp N8                   &kp N9                 &kp N0                      &none
+            &none          &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                                                &kp Y       &kp U                    &kp I                    &kp O                  &kp P                       &none
+            &caps_word     &left_pinky PINKY_MOD A &left_ring RING_MOD S &left_middy MIDDY_MOD D &left_index INDEX_MOD F &kp G                                                                                                &kp H       &right_index INDEX_MOD J &right_middy MIDDY_MOD K &right_ring RING_MOD L &right_pinky PINKY_MOD SEMI &none
+            &tog_rus       &kp Z                   &kp X                 &kp C                   &left_index MEH V       &kp B   &thumb NAV ESC      &none                  &none   &none  &none           &thumb MOU RET     &kp N       &right_index MEH M       &kp COMMA                &kp DOT                &kp FSLH                    &none
+            &magic MAGIC 0 &none                   &none                 &none                   &none                           &thumb SYMR BSPC    &thumb_mo_sk NUM LSFT  &none   &none  &thumb FUN TAB  &thumb SYML SPACE              &none                    &none                    &none                  &none                       &magic MAGIC 0
+            >;
+        };
+
+        base_extra {
+            bindings = <
+            &none          &none                   &none                 &none                   &none                                                                                                                                    &none                    &none                    &none                  &none                       &none
+            &none          &kp N1                  &kp N2                &kp N3                  &kp N4                  &kp N5                                                                                               &kp N6      &kp N7                   &kp N8                   &kp N9                 &kp N0                      &none
+            &none          &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                                                &kp Y       &kp U                    &kp I                    &kp O                  &kp P                       &none
+            &caps_word     &left_pinky PINKY_MOD A &left_ring RING_MOD S &left_middy MIDDY_MOD D &left_index INDEX_MOD F &kp G                                                                                                &kp H       &right_index INDEX_MOD J &right_middy MIDDY_MOD K &right_ring RING_MOD L &right_pinky PINKY_MOD SEMI &none
+            &tog_rus       &kp Z                   &kp X                 &kp C                   &left_index MEH V       &kp B   &thumb NAV ESC      &none                  &none   &none  &none           &thumb MOU RET     &kp N       &right_index MEH M       &kp COMMA                &kp DOT                &kp FSLH                    &none
+            &magic MAGIC 0 &none                   &none                 &none                   &none                           &thumb SYMR BSPC    &thumb_mo_sk NUM LSFT  &none   &none  &thumb FUN TAB  &thumb SYML SPACE              &none                    &none                    &none                  &none                       &magic MAGIC 0
+            >;
+        };
+
         nav {
             bindings = <
             &none          &none         &none         &none          &none                                                                                                                             &none             &none      &none              &none          &none
@@ -919,6 +946,17 @@
             >;
         };
 
+        symr_rus {
+            bindings = <
+            &none          &none         &none         &none          &none                                                                                                                 &none     &none      &none           &none      &none
+            &none          &none         &none         &none          &none          &none                                                                                  &none           &kp N0    &kp N1     &kp N2          &none      &none
+            &none          &kp PINKY_MOD &kp RING_MOD  &kp MIDDY_MOD  &kp INDEX_MOD  &kp K                                                                                  &none           &kp SQT   &kp LBRC   &kp RBRC        &none      &none
+            &none          &kp TAB       &kp RET       &kp SPACE      &kp BSPC       &kp J                                                                                  &kp EXCL        &kp DQT   &kp LPAR   &kp RPAR        &kp QMARK  &none
+            &none          &kp R         &kp C         &kp LEFT       &kp RIGHT      &kp I   &mod_tab _A_TAB  &none          &none   &none     &none        &kp SEMI        &none           &kp GRAVE &kp LBKT   &kp RBKT        &kp PLUS   &none
+            &none          &none         &none         &none          &none                  &none            &mod_tab LCTL  &none   &none     &kp COLON    &kp DOT                         &none     &none      &none           &none      &none
+            >;
+        };
+
         syml {
             bindings = <
             &none          &none         &none         &none          &none                                                                                               &none           &none           &none           &none              &none
@@ -930,7 +968,29 @@
             >;
         };
 
+        syml_rus {
+            bindings = <
+            &none          &none         &none         &none          &none                                                                                               &none           &none           &none           &none              &none
+            &none          &none         &none         &none          &none          &none                                                                &none           &none           &none           &none           &none              &none
+            &none          &kp HASH      &kp AMPS      &kp PLUS       &kp STAR       &kp TILDE                                                                &none           &kp INDEX_MOD   &kp MIDDY_MOD   &kp RING_MOD    &kp PINKY_MOD      &none
+            &kp AT         &kp EXCL      &kp CARET     &kp DLLR       &kp SLASH      &kp PRCNT                                                            &none           &kp BSPC        &kp SPACE       &kp RET         &kp TAB            &none
+            &none          &kp LT        &kp PIPE      &kp MINUS      &kp GT         &none       &kp BSLH   &none      &none   &none     &none    &none   &none           &kp LEFT        &kp RIGHT       &none           &none              &none
+            &none          &none         &none         &none          &none                      &kp EQUAL  &kp UNDER  &none   &none     &none    &none                   &none           &none           &none           &none              &none
+            >;
+        };
+
         num {
+            bindings = <
+            &none          &none         &none         &none          &none                                                                                               &none     &none      &none           &none      &none
+            &none          &none         &none         &none          &none          &none                                                                &none           &none     &none      &none           &none      &none
+            &none          &kp PINKY_MOD &kp RING_MOD  &kp MIDDY_MOD  &kp INDEX_MOD  &none                                                                &kp PERCENT     &kp N7    &kp N8     &kp N9          &none      &none
+            &none          &kp TAB       &kp RET       &kp SPACE      &kp BSPC       &none                                                                &kp PLUS        &kp N4    &kp N5     &kp N6          &kp MINUS  &none
+            &none          &none         &none         &none          &none          &none   &none  &none  &none   &kp LT        &kp GT    &kp EQUAL      &kp ASTERISK    &kp N1    &kp N2     &kp N3          &kp SLASH  &none
+            &none          &none         &none         &none          &none                  &none  &none  &none   &kp COMMA     &kp DOT   &kp N0                         &none     &none      &none           &none      &none
+            >;
+        };
+
+        num_rus {
             bindings = <
             &none          &none         &none         &none          &none                                                                                               &none     &none      &none           &none      &none
             &none          &none         &none         &none          &none          &none                                                                &none           &none     &none      &none           &none      &none
