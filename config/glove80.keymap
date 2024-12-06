@@ -784,6 +784,7 @@
             bindings = <&tog NAV>;
             layers = <NAV>;
         };
+
         // MOU
         combo_to_mou {
             timeout-ms = <COMBO_FIRING_DECAY>;
@@ -791,12 +792,19 @@
             bindings = <&tog MOU>;
             layers = <BASE>;
         };
-        combo_from_mou {
+        combo_from_mou_right {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_RH_T4 POS_RH_C3R4>;
             bindings = <&tog MOU>;
             layers = <MOU>;
         };
+        combo_from_mou_left {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_LH_T4 POS_LH_C3R4>;
+            bindings = <&tog MOU>;
+            layers = <MOU>;
+        };
+
         // SYMR
         combo_to_symr {
             timeout-ms = <COMBO_FIRING_DECAY>;
@@ -804,12 +812,39 @@
             bindings = <&tog SYMR>;
             layers = <BASE>;
         };
-        combo_from_symr {
+        combo_from_symr_left {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_C3R4>;
             bindings = <&tog SYMR>;
             layers = <SYMR>;
         };
+        combo_from_symr_right {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_RH_T4 POS_RH_C3R4>;
+            bindings = <&tog SYMR>;
+            layers = <SYMR>;
+        };
+
+        // SYMR_RUS
+        combo_to_symr {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_LH_T4 POS_LH_C2R3>;
+            bindings = <&tog SYMR_RUS>;
+            layers = <BASE_RUS>;
+        };
+        combo_from_symr_left {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_LH_T4 POS_LH_C3R4>;
+            bindings = <&tog SYMR_RUS>;
+            layers = <SYMR_RUS>;
+        };
+        combo_from_symr_right {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_RH_T4 POS_RH_C3R4>;
+            bindings = <&tog SYMR_RUS>;
+            layers = <SYMR_RUS>;
+        };
+
         // SYML
         combo_to_syml {
             timeout-ms = <COMBO_FIRING_DECAY>;
@@ -817,12 +852,39 @@
             bindings = <&tog SYML>;
             layers = <BASE>;
         };
-        combo_from_syml {
+        combo_from_syml_left {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_LH_T4 POS_LH_C3R4>;
+            bindings = <&tog SYML>;
+            layers = <SYML>;
+        };
+        combo_from_syml_right {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_RH_T4 POS_RH_C3R4>;
             bindings = <&tog SYML>;
             layers = <SYML>;
         };
+
+        // SYML_RUS
+        combo_to_syml {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_RH_T4 POS_RH_C2R3>;
+            bindings = <&tog SYML_RUS>;
+            layers = <BASE_RUS>;
+        };
+        combo_from_syml_left {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_LH_T4 POS_LH_C3R4>;
+            bindings = <&tog SYML_RUS>;
+            layers = <SYML_RUS>;
+        };
+        combo_from_syml_right {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_RH_T4 POS_RH_C3R4>;
+            bindings = <&tog SYML_RUS>;
+            layers = <SYML_RUS>;
+        };
+
         // NUM
         combo_to_num {
             timeout-ms = <COMBO_FIRING_DECAY>;
@@ -830,12 +892,39 @@
             bindings = <&tog NUM>;
             layers = <BASE>;
         };
-        combo_from_num {
+        combo_from_num_left {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_C3R4>;
             bindings = <&tog NUM>;
             layers = <NAV>;
         };
+        combo_from_num_right {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_RH_T4 POS_RH_C3R4>;
+            bindings = <&tog NUM>;
+            layers = <NAV>;
+        };
+
+        // NUM_RUS
+        combo_to_num {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_LH_T5 POS_LH_C2R4>;
+            bindings = <&tog NUM_RUS>;
+            layers = <BASE_RUS>;
+        };
+        combo_from_num_left {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_LH_T4 POS_LH_C3R4>;
+            bindings = <&tog NUM_RUS>;
+            layers = <NAV_RUS>;
+        };
+        combo_from_num_right {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_RH_T4 POS_RH_C3R4>;
+            bindings = <&tog NUM_RUS>;
+            layers = <NAV_RUS>;
+        };
+
         // FUN
         combo_to_fun {
             timeout-ms = <COMBO_FIRING_DECAY>;
@@ -843,12 +932,19 @@
             bindings = <&tog FUN>;
             layers = <BASE>;
         };
-        combo_from_fun {
+        combo_from_fun_left {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_LH_T4 POS_LH_C3R4>;
+            bindings = <&tog FUN>;
+            layers = <FUN>;
+        };
+        combo_from_fun_right {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_RH_T4 POS_RH_C3R4>;
             bindings = <&tog FUN>;
             layers = <FUN>;
         };
+
         // Stubs for BASE
         combo_to_base_stub_left {
             timeout-ms = <COMBO_FIRING_DECAY>;
@@ -893,12 +989,12 @@
 
         base_rus {
             bindings = <
-            &none          &none                   &none                 &none                   &none                                                                                                                                    &none                    &none                    &none                  &none                       &none
-            &none          &kp N1                  &kp N2                &kp N3                  &kp N4                  &kp N5                                                                                               &kp N6      &kp N7                   &kp N8                   &kp N9                 &kp N0                      &none
-            &none          &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                                                &kp Y       &kp U                    &kp I                    &kp O                  &kp P                       &none
-            &caps_word     &left_pinky PINKY_MOD A &left_ring RING_MOD S &left_middy MIDDY_MOD D &left_index INDEX_MOD F &kp G                                                                                                &kp H       &right_index INDEX_MOD J &right_middy MIDDY_MOD K &right_ring RING_MOD L &right_pinky PINKY_MOD SEMI &none
-            &tog_rus       &kp Z                   &kp X                 &kp C                   &left_index MEH V       &kp B   &thumb NAV ESC      &none                  &none   &none  &none           &thumb MOU RET     &kp N       &right_index MEH M       &kp COMMA                &kp DOT                &kp FSLH                    &none
-            &magic MAGIC 0 &none                   &none                 &none                   &none                           &thumb SYMR BSPC    &thumb_mo_sk NUM LSFT  &none   &none  &thumb FUN TAB  &thumb SYML SPACE              &none                    &none                    &none                  &none                       &magic MAGIC 0
+            &none          &none                   &none                 &none                   &none                                                                                                                                            &none                    &none                    &none                  &none                       &none
+            &none          &kp N1                  &kp N2                &kp N3                  &kp N4                  &kp N5                                                                                                       &kp N6      &kp N7                   &kp N8                   &kp N9                 &kp N0                      &none
+            &none          &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                                                        &kp Y       &kp U                    &kp I                    &kp O                  &kp P                       &none
+            &caps_word     &left_pinky PINKY_MOD A &left_ring RING_MOD S &left_middy MIDDY_MOD D &left_index INDEX_MOD F &kp G                                                                                                        &kp H       &right_index INDEX_MOD J &right_middy MIDDY_MOD K &right_ring RING_MOD L &right_pinky PINKY_MOD SEMI &none
+            &tog_rus       &kp Z                   &kp X                 &kp C                   &left_index MEH V       &kp B   &thumb NAV ESC          &none                      &none   &none  &none           &thumb MOU RET     &kp N       &right_index MEH M       &kp COMMA                &kp DOT                &kp FSLH                    &none
+            &magic MAGIC 0 &none                   &none                 &none                   &none                           &thumb SYMR_RUS BSPC    &thumb_mo_sk NUM_RUS LSFT  &none   &none  &thumb FUN TAB  &thumb SYML_RUS SPACE          &none                    &none                    &none                  &none                       &magic MAGIC 0
             >;
         };
 
