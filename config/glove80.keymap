@@ -282,9 +282,6 @@
   #define SCRL_RIGHT
 #endif
 
-#define CONFIG_ZMK_COMBO_MAX_COMBOS_PER_KEY 250
-
-
 / {
 
     //
@@ -842,25 +839,10 @@
             bindings = <&kp P>;
             layers = <BASE>;
         };
-        /* combo_to_base_stub_left { */
-        /*     timeout-ms = <COMBO_FIRING_DECAY>; */
-        /*     key-positions = <POS_LH_T4 POS_LH_C3R4>; */
-        /*     bindings = <&kp P>; */
-        /*     layers = <BASE>; */
-        /* }; */
         combo_to_base_stub_right {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_RH_T4 POS_RH_C3R4>;
             bindings = <&none>;
-            layers = <BASE>;
-        };
-
-        combo_alt_tab_trister {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_LH_C2R1 POS_LH_C2R2>;
-            bindings = <&kp O>;
-            layers = <BASE>;
-        };
 
         combo_alt_tab_switcher {
             timeout-ms = <COMBO_FIRING_DECAY>;
@@ -868,7 +850,6 @@
             bindings = <&mod_tab_chord _A_TAB SYMR>;
             layers = <BASE>;
         };
-
         combo_ctrl_tab_switcher {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_T5>;
