@@ -770,13 +770,13 @@
         // MOU
         combo_to_mou {
             timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_RH_T4 POS_LH_C2R4>;
+            key-positions = <POS_RH_T4 POS_RH_C2R4>;
             bindings = <&tog MOU>;
             layers = <BASE>;
         };
         combo_from_mou {
             timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_LH_T4 POS_LH_C3R4>;
+            key-positions = <POS_RH_T4 POS_RH_C3R4>;
             bindings = <&tog MOU>;
             layers = <MOU>;
         };
