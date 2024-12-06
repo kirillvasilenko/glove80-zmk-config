@@ -896,13 +896,13 @@
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_C3R4>;
             bindings = <&tog NUM>;
-            layers = <NAV>;
+            layers = <NUM>;
         };
         combo_from_num_right {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_RH_T4 POS_RH_C3R4>;
             bindings = <&tog NUM>;
-            layers = <NAV>;
+            layers = <NUM>;
         };
 
         // NUM_RUS
@@ -916,13 +916,13 @@
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_C3R4>;
             bindings = <&tog NUM_RUS>;
-            layers = <NAV_RUS>;
+            layers = <NUM_RUS>;
         };
         combo_from_num_right_rus {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_RH_T4 POS_RH_C3R4>;
             bindings = <&tog NUM_RUS>;
-            layers = <NAV_RUS>;
+            layers = <NUM_RUS>;
         };
 
         // FUN
@@ -950,26 +950,26 @@
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_C3R4>;
             bindings = <&none>;
-            layers = <BASE BASE_RUS>;
+            layers = <BASE BASE_RUS BASE_EXTRA>;
         };
         combo_to_base_stub_right {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_RH_T4 POS_RH_C3R4>;
             bindings = <&none>;
-            layers = <BASE BASE_RUS>;
+            layers = <BASE BASE_RUS BASE_EXTRA>;
         };
 
         combo_alt_tab_switcher {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_T1>;
             bindings = <&mod_tab_chord _A_TAB SYMR>;
-            layers = <BASE BASE_RUS>;
+            layers = <BASE BASE_RUS BASE_EXTRA>;
         };
         combo_ctrl_tab_switcher {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_T5>;
             bindings = <&mod_tab_chord LCTL SYMR>;
-            layers = <BASE BASE_RUS>;
+            layers = <BASE BASE_RUS BASE_EXTRA>;
         };
     };
 
