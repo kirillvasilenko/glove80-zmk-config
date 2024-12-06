@@ -836,7 +836,7 @@
         combo_to_base_stub_left {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_C3R4>;
-            bindings = <&none>;
+            bindings = <&kp P>;
             layers = <BASE>;
         };
         combo_to_base_stub_right {
@@ -849,7 +849,7 @@
         combo_alt_tab_trister {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_C2R1 POS_LH_C2R2>;
-            bindings = <&mod_tab_chord _A_TAB SYMR>;
+            bindings = <&kp O>;
             layers = <BASE>;
         };
 
