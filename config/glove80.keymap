@@ -900,9 +900,9 @@
             bindings = <
             &none          &none         &none         &none          &none                                                                                                                 &none     &none      &none           &none      &none
             &none          &none         &none         &none          &none          &none                                                                                  &none           &none     &none      &none           &none      &none
-            &none          &kp PINKY_MOD &kp RING_MOD  &kp MIDDY_MOD  &kp INDEX_MOD  &kp K                                                                                  &kp N2          &kp SQT   &kp LBRC   &kp RBRC        &none      &none
+            &none          &kp PINKY_MOD &kp RING_MOD  &kp MIDDY_MOD  &kp INDEX_MOD  &kp K                                                                                  &kp N2          &kp SQT   &kp LBRC   &kp RBRC        &kp PLUS   &none
             &none          &kp TAB       &kp RET       &kp SPACE      &kp BSPC       &kp J                                                                                  &kp N1          &kp DQT   &kp LPAR   &kp RPAR        &kp QMARK  &none
-            &none          &kp R         &kp C         &kp LEFT       &kp RIGHT      &kp I   &mod_tab _A_TAB  &none          &none   &none     &none        &kp SEMI        &kp N0          &kp GRAVE &kp LBKT   &kp RBKT        &none      &none
+            &none          &kp R         &kp C         &kp LEFT       &kp RIGHT      &kp I   &mod_tab _A_TAB  &none          &none   &none     &none        &kp SEMI        &kp N0          &kp GRAVE &kp LBKT   &kp RBKT        &kp EXCL   &none
             &none          &none         &none         &none          &none                  &none            &mod_tab LCTL  &none   &none     &kp COLON    &kp DOT                         &none     &none      &none           &none      &none
             >;
         };
