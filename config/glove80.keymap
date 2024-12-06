@@ -757,7 +757,7 @@
         // NAV
         combo_to_nav {
             timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_LH_T5 POS_LH_C2R4>;
+            key-positions = <POS_LH_T4 POS_LH_C2R4>;
             bindings = <&tog NAV>;
             layers = <BASE>;
         };
@@ -770,7 +770,7 @@
         // MOU
         combo_to_mou {
             timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_RH_T5 POS_LH_C2R4>;
+            key-positions = <POS_RH_T4 POS_LH_C2R4>;
             bindings = <&tog MOU>;
             layers = <BASE>;
         };
@@ -783,7 +783,7 @@
         // SYMR
         combo_to_symr {
             timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_LH_T4 POS_LH_C2R4>;
+            key-positions = <POS_LH_T4 POS_LH_C2R3>;
             bindings = <&tog SYMR>;
             layers = <BASE>;
         };
@@ -796,7 +796,7 @@
         // SYML
         combo_to_syml {
             timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_RH_T4 POS_RH_C2R4>;
+            key-positions = <POS_RH_T4 POS_RH_C2R3>;
             bindings = <&tog SYML>;
             layers = <BASE>;
         };
@@ -809,7 +809,7 @@
         // NUM
         combo_to_num {
             timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_LH_T1 POS_LH_C2R4>;
+            key-positions = <POS_LH_T5 POS_LH_C2R4>;
             bindings = <&tog NUM>;
             layers = <BASE>;
         };
@@ -822,7 +822,7 @@
         // FUN
         combo_to_fun {
             timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_RH_T1 POS_RH_C2R4>;
+            key-positions = <POS_RH_T5 POS_RH_C2R4>;
             bindings = <&tog FUN>;
             layers = <BASE>;
         };
@@ -869,8 +869,8 @@
             &none          &kp N1                  &kp N2                &kp N3                  &kp N4                  &kp N5                                                                                               &kp N6      &kp N7                   &kp N8                   &kp N9                 &kp N0                      &none
             &none          &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                                                &kp Y       &kp U                    &kp I                    &kp O                  &kp P                       &none
             &caps_word     &left_pinky PINKY_MOD A &left_ring RING_MOD S &left_middy MIDDY_MOD D &left_index INDEX_MOD F &kp G                                                                                                &kp H       &right_index INDEX_MOD J &right_middy MIDDY_MOD K &right_ring RING_MOD L &right_pinky PINKY_MOD SEMI &none
-            &none          &kp Z                   &kp X                 &kp C                   &left_index MEH V       &kp B   &thumb NUM ESC      &none                  &none   &none  &none           &thumb FUN RET     &kp N       &right_index MEH M       &kp COMMA                &kp DOT                &kp FSLH                    &none
-            &magic MAGIC 0 &none                   &none                 &none                   &none                           &thumb SYMR BSPC    &thumb_mo_sk NAV LSFT  &none   &none  &thumb MOU TAB  &thumb SYML SPACE              &none                    &none                    &none                  &none                       &magic MAGIC 0
+            &none          &kp Z                   &kp X                 &kp C                   &left_index MEH V       &kp B   &thumb NAV ESC      &none                  &none   &none  &none           &thumb MOU RET     &kp N       &right_index MEH M       &kp COMMA                &kp DOT                &kp FSLH                    &none
+            &magic MAGIC 0 &none                   &none                 &none                   &none                           &thumb SYMR BSPC    &thumb_mo_sk NUM LSFT  &none   &none  &thumb FUN TAB  &thumb SYML SPACE              &none                    &none                    &none                  &none                       &magic MAGIC 0
             >;
         };
 
