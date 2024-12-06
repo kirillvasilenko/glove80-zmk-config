@@ -784,7 +784,7 @@
         combo_to_symr {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_C2R4>;
-            bindings = <&tog SYMR>;
+            bindings = <&kp P>;
             layers = <BASE>;
         };
         combo_from_symr {
