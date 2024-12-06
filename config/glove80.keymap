@@ -843,6 +843,8 @@
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_RH_T4 POS_RH_C3R4>;
             bindings = <&none>;
+            layers = <BASE>;
+        };
 
         combo_alt_tab_switcher {
             timeout-ms = <COMBO_FIRING_DECAY>;
