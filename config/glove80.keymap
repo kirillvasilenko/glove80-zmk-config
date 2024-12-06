@@ -846,6 +846,12 @@
             layers = <BASE>;
         };
 
+        combo_alt_tab_trister {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_LH_C2R1 POS_LH_C2R2>;
+            bindings = <&mod_tab_chord _A_TAB SYMR>;
+            layers = <BASE>;
+        };
 
         combo_alt_tab_switcher {
             timeout-ms = <COMBO_FIRING_DECAY>;
