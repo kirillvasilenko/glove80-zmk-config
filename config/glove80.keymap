@@ -794,44 +794,44 @@
             layers = <SYMR>;
         };
         // SYML
-        combo_to_syml {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_RH_T4 POS_RH_C2R4>;
-            bindings = <&tog SYML>;
-            layers = <BASE>;
-        };
-        combo_from_syml {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_RH_T4 POS_RH_C3R4>;
-            bindings = <&tog SYML>;
-            layers = <SYML>;
-        };
+        /* combo_to_syml { */
+        /*     timeout-ms = <COMBO_FIRING_DECAY>; */
+        /*     key-positions = <POS_RH_T4 POS_RH_C2R4>; */
+        /*     bindings = <&tog SYML>; */
+        /*     layers = <BASE>; */
+        /* }; */
+        /* combo_from_syml { */
+        /*     timeout-ms = <COMBO_FIRING_DECAY>; */
+        /*     key-positions = <POS_RH_T4 POS_RH_C3R4>; */
+        /*     bindings = <&tog SYML>; */
+        /*     layers = <SYML>; */
+        /* }; */
         // NUM
-        combo_to_num {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_LH_T1 POS_LH_C2R4>;
-            bindings = <&tog NUM>;
-            layers = <BASE>;
-        };
-        combo_from_num {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_LH_T4 POS_LH_C3R4>;
-            bindings = <&tog NUM>;
-            layers = <NAV>;
-        };
+        /* combo_to_num { */
+        /*     timeout-ms = <COMBO_FIRING_DECAY>; */
+        /*     key-positions = <POS_LH_T1 POS_LH_C2R4>; */
+        /*     bindings = <&tog NUM>; */
+        /*     layers = <BASE>; */
+        /* }; */
+        /* combo_from_num { */
+        /*     timeout-ms = <COMBO_FIRING_DECAY>; */
+        /*     key-positions = <POS_LH_T4 POS_LH_C3R4>; */
+        /*     bindings = <&tog NUM>; */
+        /*     layers = <NAV>; */
+        /* }; */
         // FUN
-        combo_to_fun {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_RH_T1 POS_RH_C2R4>;
-            bindings = <&tog FUN>;
-            layers = <BASE>;
-        };
-        combo_from_fun {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_RH_T4 POS_RH_C3R4>;
-            bindings = <&tog FUN>;
-            layers = <FUN>;
-        };
+        /* combo_to_fun { */
+        /*     timeout-ms = <COMBO_FIRING_DECAY>; */
+        /*     key-positions = <POS_RH_T1 POS_RH_C2R4>; */
+        /*     bindings = <&tog FUN>; */
+        /*     layers = <BASE>; */
+        /* }; */
+        /* combo_from_fun { */
+        /*     timeout-ms = <COMBO_FIRING_DECAY>; */
+        /*     key-positions = <POS_RH_T4 POS_RH_C3R4>; */
+        /*     bindings = <&tog FUN>; */
+        /*     layers = <FUN>; */
+        /* }; */
         // Stubs for BASE
         combo_to_base_stub_left {
             timeout-ms = <COMBO_FIRING_DECAY>;
