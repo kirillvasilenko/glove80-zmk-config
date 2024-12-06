@@ -787,6 +787,12 @@
             bindings = <&kp P>;
             layers = <BASE>;
         };
+        combo_to_base_stub_left {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_LH_T4 POS_LH_C3R4>;
+            bindings = <&kp P>;
+            layers = <BASE>;
+        };
         combo_from_symr {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_C3R4>;
@@ -833,12 +839,12 @@
             layers = <FUN>;
         };
         // Stubs for BASE
-        combo_to_base_stub_left {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_LH_T4 POS_LH_C3R4>;
-            bindings = <&kp P>;
-            layers = <BASE>;
-        };
+        /* combo_to_base_stub_left { */
+        /*     timeout-ms = <COMBO_FIRING_DECAY>; */
+        /*     key-positions = <POS_LH_T4 POS_LH_C3R4>; */
+        /*     bindings = <&kp P>; */
+        /*     layers = <BASE>; */
+        /* }; */
         combo_to_base_stub_right {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_RH_T4 POS_RH_C3R4>;
