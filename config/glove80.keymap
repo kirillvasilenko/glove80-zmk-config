@@ -826,19 +826,19 @@
         };
 
         // SYMR_RUS
-        combo_to_symr {
+        combo_to_symr_rus {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_C2R3>;
             bindings = <&tog SYMR_RUS>;
             layers = <BASE_RUS>;
         };
-        combo_from_symr_left {
+        combo_from_symr_left_rus {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_C3R4>;
             bindings = <&tog SYMR_RUS>;
             layers = <SYMR_RUS>;
         };
-        combo_from_symr_right {
+        combo_from_symr_right_rus {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_RH_T4 POS_RH_C3R4>;
             bindings = <&tog SYMR_RUS>;
@@ -866,19 +866,19 @@
         };
 
         // SYML_RUS
-        combo_to_syml {
+        combo_to_syml_rus {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_RH_T4 POS_RH_C2R3>;
             bindings = <&tog SYML_RUS>;
             layers = <BASE_RUS>;
         };
-        combo_from_syml_left {
+        combo_from_syml_left_rus {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_C3R4>;
             bindings = <&tog SYML_RUS>;
             layers = <SYML_RUS>;
         };
-        combo_from_syml_right {
+        combo_from_syml_right_rus {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_RH_T4 POS_RH_C3R4>;
             bindings = <&tog SYML_RUS>;
@@ -906,19 +906,19 @@
         };
 
         // NUM_RUS
-        combo_to_num {
+        combo_to_num_rus {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T5 POS_LH_C2R4>;
             bindings = <&tog NUM_RUS>;
             layers = <BASE_RUS>;
         };
-        combo_from_num_left {
+        combo_from_num_left_rus {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_C3R4>;
             bindings = <&tog NUM_RUS>;
             layers = <NAV_RUS>;
         };
-        combo_from_num_right {
+        combo_from_num_right_rus {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_RH_T4 POS_RH_C3R4>;
             bindings = <&tog NUM_RUS>;
@@ -950,26 +950,26 @@
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_C3R4>;
             bindings = <&none>;
-            layers = <BASE>;
+            layers = <BASE BASE_RUS>;
         };
         combo_to_base_stub_right {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_RH_T4 POS_RH_C3R4>;
             bindings = <&none>;
-            layers = <BASE>;
+            layers = <BASE BASE_RUS>;
         };
 
         combo_alt_tab_switcher {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_T1>;
             bindings = <&mod_tab_chord _A_TAB SYMR>;
-            layers = <BASE>;
+            layers = <BASE BASE_RUS>;
         };
         combo_ctrl_tab_switcher {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_T5>;
             bindings = <&mod_tab_chord LCTL SYMR>;
-            layers = <BASE>;
+            layers = <BASE BASE_RUS>;
         };
     };
 
