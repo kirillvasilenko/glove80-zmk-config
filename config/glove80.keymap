@@ -697,6 +697,12 @@
             bindings = <&kp LS(UP) &kp LS(_HOME)>;
         )
 
+        tog_rus: tog_rus_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(SPACE) &tog NAV>;
+        };
+
         rgb_ug_status_macro: rgb_ug_status_macro_0 {
             label = "RGB_UG_STATUS";
             compatible = "zmk,behavior-macro";
@@ -875,7 +881,7 @@
             &none          &kp N1                  &kp N2                &kp N3                  &kp N4                  &kp N5                                                                                               &kp N6      &kp N7                   &kp N8                   &kp N9                 &kp N0                      &none
             &none          &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                                                &kp Y       &kp U                    &kp I                    &kp O                  &kp P                       &none
             &caps_word     &left_pinky PINKY_MOD A &left_ring RING_MOD S &left_middy MIDDY_MOD D &left_index INDEX_MOD F &kp G                                                                                                &kp H       &right_index INDEX_MOD J &right_middy MIDDY_MOD K &right_ring RING_MOD L &right_pinky PINKY_MOD SEMI &none
-            &none          &kp Z                   &kp X                 &kp C                   &left_index MEH V       &kp B   &thumb NAV ESC      &none                  &none   &none  &none           &thumb MOU RET     &kp N       &right_index MEH M       &kp COMMA                &kp DOT                &kp FSLH                    &none
+            &tog_rus       &kp Z                   &kp X                 &kp C                   &left_index MEH V       &kp B   &thumb NAV ESC      &none                  &none   &none  &none           &thumb MOU RET     &kp N       &right_index MEH M       &kp COMMA                &kp DOT                &kp FSLH                    &none
             &magic MAGIC 0 &none                   &none                 &none                   &none                           &thumb SYMR BSPC    &thumb_mo_sk NUM LSFT  &none   &none  &thumb FUN TAB  &thumb SYML SPACE              &none                    &none                    &none                  &none                       &magic MAGIC 0
             >;
         };
