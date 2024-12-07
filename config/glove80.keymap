@@ -991,7 +991,7 @@
             bindings = <
             &none          &none                   &none                 &none                   &none                                                                                                                                            &none                    &none                    &none                  &none                       &none
             &none          &none                   &none                 &none                   &none                   &none                                                                                                        &none       &none                    &kp LBKT                 &kp RBKT               &none                       &none
-            &kp TILDE      &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                                                        &kp Y       &kp U                    &kp I                    &kp O                  &kp P                       &none
+            &kp GRAVE      &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                                                        &kp Y       &kp U                    &kp I                    &kp O                  &kp P                       &none
             &caps_word     &left_pinky PINKY_MOD A &left_ring RING_MOD S &left_middy MIDDY_MOD D &left_index INDEX_MOD F &kp G                                                                                                        &kp H       &right_index INDEX_MOD J &right_middy MIDDY_MOD K &right_ring RING_MOD L &right_pinky PINKY_MOD SEMI &kp SQT 
             &tog_rus       &kp Z                   &kp X                 &kp C                   &left_index MEH V       &kp B   &thumb NAV ESC          &none                      &none   &none  &none           &thumb MOU RET     &kp N       &right_index MEH M       &kp COMMA                &kp DOT                &kp FSLH                    &none
             &magic MAGIC 0 &none                   &none                 &none                   &none                           &thumb SYMR_RUS BSPC    &thumb_mo_sk NUM_RUS LSFT  &none   &none  &thumb FUN TAB  &thumb SYML_RUS SPACE          &none                    &none                    &none                  &none                       &magic MAGIC 0
@@ -1042,14 +1042,21 @@
             >;
         };
 
+        #define COLON_RUS CARET
+        #define DOT_RUS SLASH
+        #define SEMI_RUS QMARK
+        #define SQT_RUS RA(O)
+        #define DQT_RUS LS(N2)
+        #define GRAVE_RUS LC(RA(N2))
+
         symr_rus {
             bindings = <
             &none          &none         &none         &none          &none                                                                                                                 &none     &none      &none           &none      &none
             &none          &none         &none         &none          &none          &none                                                                                  &none           &kp N0    &kp N1     &kp N2          &none      &none
-            &none          &kp PINKY_MOD &kp RING_MOD  &kp MIDDY_MOD  &kp INDEX_MOD  &kp K                                                                                  &none           &kp SQT   &kp LBRC   &kp RBRC        &none      &none
-            &none          &kp TAB       &kp RET       &kp SPACE      &kp BSPC       &kp J                                                                                  &kp EXCL        &kp DQT   &kp LPAR   &kp RPAR        &kp QMARK  &none
-            &none          &kp R         &kp C         &kp LEFT       &kp RIGHT      &kp I   &mod_tab _A_TAB  &none          &none   &none     &none        &kp SEMI        &none           &kp GRAVE &kp LBKT   &kp RBKT        &kp PLUS   &none
-            &none          &none         &none         &none          &none                  &none            &mod_tab LCTL  &none   &none     &kp COLON    &kp DOT                         &none     &none      &none           &none      &none
+            &none          &kp PINKY_MOD &kp RING_MOD  &kp MIDDY_MOD  &kp INDEX_MOD  &none                                                                                  &none           &kp SQT_RUS   &kp LBRC   &kp RBRC        &none      &none
+            &none          &kp TAB       &kp RET       &kp SPACE      &kp BSPC       &none                                                                                  &kp EXCL        &kp DQT_RUS   &kp LPAR   &kp RPAR        &kp QMARK  &none
+            &none          &none         &none         &kp LEFT       &kp RIGHT      &none   &mod_tab _A_TAB  &none          &none   &none     &none        &kp SEMI_RUS       &none           &kp GRAVE_RUS &kp LBKT   &kp RBKT        &kp PLUS   &none
+            &none          &none         &none         &none          &none                  &none            &mod_tab LCTL  &none   &none     &kp COLON_RUS    &kp DOT_RUS                       &none     &none      &none           &none      &none
             >;
         };
 
