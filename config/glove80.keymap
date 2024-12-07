@@ -1044,6 +1044,7 @@
 
         #define COLON_RUS CARET
         #define DOT_RUS SLASH
+        #define COMMA_RUS LS(SLASH)
         #define SEMI_RUS QMARK
         #define SQT_RUS RA(O)
         #define DQT_RUS LS(N2)
