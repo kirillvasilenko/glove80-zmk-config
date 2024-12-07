@@ -1089,7 +1089,7 @@
             bindings = <
             &none          &none         &none         &none          &none                                                                                               &none           &none           &none           &none              &none
             &none          &none         &none         &none          &none          &none                                                                &none           &none           &none           &none           &none              &none
-            &none          &kp HASH      &kp AMPS      &kp PLUS       &kp STAR       &kp TILDE                                                                &none           &kp INDEX_MOD   &kp MIDDY_MOD   &kp RING_MOD    &kp PINKY_MOD      &none
+            &none          &kp HASH      &kp AMPS      &kp PLUS       &kp STAR       &kp TILDE                                                            &none           &kp INDEX_MOD   &kp MIDDY_MOD   &kp RING_MOD    &kp PINKY_MOD      &none
             &kp AT         &kp EXCL      &kp CARET     &kp DLLR       &kp SLASH      &kp PRCNT                                                            &none           &kp BSPC        &kp SPACE       &kp RET         &kp TAB            &none
             &none          &kp LT        &kp PIPE      &kp MINUS      &kp GT         &none       &kp BSLH   &none      &none   &none     &none    &none   &none           &kp LEFT        &kp RIGHT       &none           &none              &none
             &none          &none         &none         &none          &none                      &kp EQUAL  &kp UNDER  &none   &none     &none    &none                   &none           &none           &none           &none              &none
@@ -1111,21 +1111,21 @@
             bindings = <
             &none          &none         &none         &none          &none                                                                                               &none     &none      &none           &none      &none
             &none          &none         &none         &none          &none          &none                                                                &none           &none     &none      &none           &none      &none
-            &none          &kp PINKY_MOD &kp RING_MOD  &kp MIDDY_MOD  &kp INDEX_MOD  &none                                                                &kp PERCENT     &kp N7    &kp N8     &kp N9          &none      &none
+            &none          &kp PINKY_MOD &kp RING_MOD  &kp MIDDY_MOD  &kp INDEX_MOD  &none                                                                &kp PRCNT       &kp N7    &kp N8     &kp N9          &none      &none
             &none          &kp TAB       &kp RET       &kp SPACE      &kp BSPC       &none                                                                &kp PLUS        &kp N4    &kp N5     &kp N6          &kp MINUS  &none
-            &none          &none         &none         &none          &none          &none   &none  &none  &none   &kp LT        &kp GT    &kp EQUAL      &kp ASTERISK    &kp N1    &kp N2     &kp N3          &kp SLASH  &none
+            &none          &none         &none         &none          &none          &none   &none  &none  &none   &kp LT        &kp GT    &kp EQUAL      &kp STAR        &kp N1    &kp N2     &kp N3          &kp SLASH  &none
             &none          &none         &none         &none          &none                  &none  &none  &none   &kp COMMA     &kp DOT   &kp N0                         &none     &none      &none           &none      &none
             >;
         };
 
         num_rus {
             bindings = <
-            &none          &none         &none         &none          &none                                                                                               &none     &none      &none           &none      &none
-            &none          &none         &none         &none          &none          &none                                                                &none           &none     &none      &none           &none      &none
-            &none          &kp PINKY_MOD &kp RING_MOD  &kp MIDDY_MOD  &kp INDEX_MOD  &none                                                                &kp PERCENT     &kp N7    &kp N8     &kp N9          &none      &none
-            &none          &kp TAB       &kp RET       &kp SPACE      &kp BSPC       &none                                                                &kp PLUS        &kp N4    &kp N5     &kp N6          &kp MINUS  &none
-            &none          &none         &none         &none          &none          &none   &none  &none  &none   &kp LT        &kp GT    &kp EQUAL      &kp ASTERISK    &kp N1    &kp N2     &kp N3          &kp SLASH  &none
-            &none          &none         &none         &none          &none                  &none  &none  &none   &kp COMMA     &kp DOT   &kp N0                         &none     &none      &none           &none      &none
+            &none          &none         &none         &none          &none                                                                                                           &none     &none      &none           &none              &none
+            &none          &none         &none         &none          &none          &none                                                                            &none           &none     &none      &none           &none              &none
+            &none          &kp PINKY_MOD &kp RING_MOD  &kp MIDDY_MOD  &kp INDEX_MOD  &none                                                                            &kp PRCNT_RUS   &kp N7    &kp N8     &kp N9          &none              &none
+            &none          &kp TAB       &kp RET       &kp SPACE      &kp BSPC       &none                                                                            &kp PLUS_RUS    &kp N4    &kp N5     &kp N6          &kp MINUS_RUS      &none
+            &none          &none         &none         &none          &none          &none   &none  &none  &none   &kp LT_RUS        &kp GT_RUS    &kp EQUAL_RUS      &kp STAR_RUS    &kp N1    &kp N2     &kp N3          &kp SLASH_RUS      &none
+            &none          &none         &none         &none          &none                  &none  &none  &none   &kp COMMA_RUS     &kp DOT_RUS   &kp N0                             &none     &none      &none           &none              &none
             >;
         };
 
