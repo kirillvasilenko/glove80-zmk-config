@@ -1052,7 +1052,7 @@
         #define RBRC_RUS LS(RA(N0))
         #define LBKT_RUS RA(GRAVE)
         #define RBKT_RUS LS(RA(GRAVE))
-        #define QMRK_RUS LS(N7)
+        #define QMARK_RUS LS(N7)
 
         symr_rus {
             bindings = <
