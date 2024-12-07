@@ -1047,16 +1047,21 @@
         #define SEMI_RUS QMARK
         #define SQT_RUS RA(O)
         #define DQT_RUS LS(N2)
-        #define GRAVE_RUS LC(RA(N2))
+        #define GRAVE_RUS LC(RA(GRAVE))
+        #define LBRC_RUS LS(RA(N9))
+        #define RBRC_RUS LS(RA(N0))
+        #define LBKT_RUS RA(GRAVE)
+        #define RBKT_RUS LS(RA(GRAVE))
+        #define QMRK_RUS LS(N7)
 
         symr_rus {
             bindings = <
-            &none          &none         &none         &none          &none                                                                                                                 &none     &none      &none           &none      &none
-            &none          &none         &none         &none          &none          &none                                                                                  &none           &kp N0    &kp N1     &kp N2          &none      &none
-            &none          &kp PINKY_MOD &kp RING_MOD  &kp MIDDY_MOD  &kp INDEX_MOD  &none                                                                                  &none           &kp SQT_RUS   &kp LBRC   &kp RBRC        &none      &none
-            &none          &kp TAB       &kp RET       &kp SPACE      &kp BSPC       &none                                                                                  &kp EXCL        &kp DQT_RUS   &kp LPAR   &kp RPAR        &kp QMARK  &none
-            &none          &none         &none         &kp LEFT       &kp RIGHT      &none   &mod_tab _A_TAB  &none          &none   &none     &none        &kp SEMI_RUS       &none           &kp GRAVE_RUS &kp LBKT   &kp RBKT        &kp PLUS   &none
-            &none          &none         &none         &none          &none                  &none            &mod_tab LCTL  &none   &none     &kp COLON_RUS    &kp DOT_RUS                       &none     &none      &none           &none      &none
+            &none          &none         &none         &none          &none                                                                                                                        &none         &none          &none               &none          &none
+            &none          &none         &none         &none          &none          &none                                                                                         &none           &kp N0        &kp N1         &kp N2              &none          &none
+            &none          &kp PINKY_MOD &kp RING_MOD  &kp MIDDY_MOD  &kp INDEX_MOD  &none                                                                                         &none           &kp SQT_RUS   &kp LBRC_RUS   &kp RBRC_RUS        &none          &none
+            &none          &kp TAB       &kp RET       &kp SPACE      &kp BSPC       &none                                                                                         &kp EXCL        &kp DQT_RUS   &kp LPAR_RUS   &kp RPAR_RUS        &kp QMARK_RUS  &none
+            &none          &none         &none         &kp LEFT       &kp RIGHT      &none   &mod_tab _A_TAB  &none          &none   &none     &none            &kp SEMI_RUS       &none           &kp GRAVE_RUS &kp LBKT_RUS   &kp RBKT_RUS        &kp PLUS       &none
+            &none          &none         &none         &none          &none                  &none            &mod_tab LCTL  &none   &none     &kp COLON_RUS    &kp DOT_RUS                        &none         &none          &none               &none          &none
             >;
         };
 
