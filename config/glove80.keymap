@@ -20,14 +20,12 @@
 #define BASE_EXTRA 2
 #define NAV 3
 #define MOU 4
-#define SYMR 5
-#define SYMR_RUS 6
-#define SYML 7
-#define SYML_RUS 8
-#define NUM 9
-#define NUM_RUS 10
-#define FUN 11
-#define MAGIC 12
+#define SYM 5
+#define SYM_RUS 6
+#define NUM 7
+#define NUM_RUS 8
+#define FUN 9
+#define MAGIC 10
 
 #ifndef OPERATING_SYSTEM
 //#define OPERATING_SYSTEM 'L' // linux
@@ -821,84 +819,44 @@
             layers = <MOU>;
         };
 
-        // SYMR
-        combo_to_symr {
+        // SYM
+        combo_to_sym {
             timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_LH_T4 POS_LH_C2R3>;
-            bindings = <&tog SYMR>;
+            key-positions = <POS_LH_T4 POS_LH_C2R5>;
+            bindings = <&tog SYM>;
             layers = <BASE>;
         };
-        combo_from_symr_left {
+        combo_from_sym_left {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_C3R4>;
-            bindings = <&tog SYMR>;
-            layers = <SYMR>;
+            bindings = <&tog SYM>;
+            layers = <SYM>;
         };
-        combo_from_symr_right {
+        combo_from_sym_right {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_RH_T4 POS_RH_C3R4>;
-            bindings = <&tog SYMR>;
-            layers = <SYMR>;
+            bindings = <&tog SYM>;
+            layers = <SYM>;
         };
 
-        // SYMR_RUS
-        combo_to_symr_rus {
+        // SYM_RUS
+        combo_to_sym_rus {
             timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_LH_T4 POS_LH_C2R3>;
-            bindings = <&tog SYMR_RUS>;
+            key-positions = <POS_LH_T4 POS_LH_C2R5>;
+            bindings = <&tog SYM_RUS>;
             layers = <BASE_RUS>;
         };
-        combo_from_symr_left_rus {
+        combo_from_sym_left_rus {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_C3R4>;
-            bindings = <&tog SYMR_RUS>;
-            layers = <SYMR_RUS>;
+            bindings = <&tog SYM_RUS>;
+            layers = <SYM_RUS>;
         };
-        combo_from_symr_right_rus {
+        combo_from_sym_right_rus {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_RH_T4 POS_RH_C3R4>;
-            bindings = <&tog SYMR_RUS>;
-            layers = <SYMR_RUS>;
-        };
-
-        // SYML
-        combo_to_syml {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_RH_T4 POS_RH_C2R3>;
-            bindings = <&tog SYML>;
-            layers = <BASE>;
-        };
-        combo_from_syml_left {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_LH_T4 POS_LH_C3R4>;
-            bindings = <&tog SYML>;
-            layers = <SYML>;
-        };
-        combo_from_syml_right {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_RH_T4 POS_RH_C3R4>;
-            bindings = <&tog SYML>;
-            layers = <SYML>;
-        };
-
-        // SYML_RUS
-        combo_to_syml_rus {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_RH_T4 POS_RH_C2R3>;
-            bindings = <&tog SYML_RUS>;
-            layers = <BASE_RUS>;
-        };
-        combo_from_syml_left_rus {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_LH_T4 POS_LH_C3R4>;
-            bindings = <&tog SYML_RUS>;
-            layers = <SYML_RUS>;
-        };
-        combo_from_syml_right_rus {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_RH_T4 POS_RH_C3R4>;
-            bindings = <&tog SYML_RUS>;
-            layers = <SYML_RUS>;
+            bindings = <&tog SYM_RUS>;
+            layers = <SYM_RUS>;
         };
 
         // NUM
@@ -998,7 +956,7 @@
             &none                    &none                   &none                 &none                   &none                   &none                                                                      &none  &none                    &none                    &none                  &none                       &none
             &sk_qrel LSFT            &kp Q                   &kp W                 &lm_kp_kp MEH E         &kp R                   &kp T                                                                      &kp Y  &kp U                    &rm_kp_kp MEH I          &kp O                  &kp P                       &sk_qrel LSFT
             &none                    &lp_kp_kp PINKY_MOD A   &lr_kp_kp RING_MOD S  &lm_kp_kp MIDDY_MOD D   &li_kp_kp INDEX_MOD F   &kp G                                                                      &kp H  &ri_kp_kp INDEX_MOD J    &rm_kp_kp MIDDY_MOD K    &rr_kp_kp RING_MOD L   &rp_kp_kp PINKY_MOD SEMI    &none
-            &tog_rus                 &kp Z                   &kp X                 &kp C                   &li_mo_kp SYMR V        &kp B   &kp ESC      &none       &none  &none  &none        &kp RET        &kp N  &ri_mo_kp SYML M         &kp COMMA                &kp DOT                &kp FSLH                    &none
+            &tog_rus                 &kp Z                   &kp X                 &kp C                   &li_mo_kp SYM V         &kp B   &kp ESC      &none       &none  &none  &none        &kp RET        &kp N  &ri_mo_kp SYM M          &kp COMMA                &kp DOT                &kp FSLH                    &none
             &magic MAGIC 0           &none                   &none                 &none                   &none                           &th NAV BSPC &th NUM DEL &none  &none  &th FUN TAB  &th MOU SPACE         &none                    &none                    &none                  &none                       &magic MAGIC 0
             >;
         };
@@ -1010,7 +968,7 @@
             &kp GRAVE      &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                                                        &kp Y       &kp U                    &kp I                    &kp O                  &kp P                       &none
             &caps_word     &lp_kp_kp PINKY_MOD A &lr_kp_kp RING_MOD S &lm_kp_kp MIDDY_MOD D &li_kp_kp INDEX_MOD F &kp G                                                                                                        &kp H       &ri_kp_kp INDEX_MOD J &rm_kp_kp MIDDY_MOD K &rr_kp_kp RING_MOD L &rp_kp_kp PINKY_MOD SEMI &kp SQT 
             &tog_rus       &kp Z                   &kp X                 &kp C                   &li_kp_kp MEH V       &kp B   &th NAV ESC          &none                      &none   &none  &none           &th MOU RET     &kp N       &ri_kp_kp MEH M       &kp COMMA                &kp DOT                &kp FSLH                    &none
-            &magic MAGIC 0 &none                   &none                 &none                   &none                           &th SYMR_RUS BSPC    &th NUM_RUS LSFT  &none   &none  &th FUN TAB  &th SYML_RUS SPACE          &none                    &none                    &none                  &none                       &magic MAGIC 0
+            &magic MAGIC 0 &none                   &none                 &none                   &none                           &th SYM_RUS BSPC    &th NUM_RUS LSFT  &none   &none  &th FUN TAB  &th SYM_RUS SPACE          &none                    &none                    &none                  &none                       &magic MAGIC 0
             >;
         };
 
@@ -1021,7 +979,7 @@
             &none          &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                                                &kp Y       &kp U                    &kp I                    &kp O                  &kp P                       &none
             &caps_word     &lp_kp_kp PINKY_MOD A &lr_kp_kp RING_MOD S &lm_kp_kp MIDDY_MOD D &li_kp_kp INDEX_MOD F &kp G                                                                                                &kp H       &ri_kp_kp INDEX_MOD J &rm_kp_kp MIDDY_MOD K &rr_kp_kp RING_MOD L &rp_kp_kp PINKY_MOD SEMI &none
             &tog_rus       &kp Z                   &kp X                 &kp C                   &li_kp_kp MEH V       &kp B   &th NAV ESC      &none                  &none   &none  &none           &th MOU RET     &kp N       &ri_kp_kp MEH M       &kp COMMA                &kp DOT                &kp FSLH                    &none
-            &magic MAGIC 0 &none                   &none                 &none                   &none                           &th SYMR BSPC    &th NUM LSFT  &none   &none  &th FUN TAB  &th SYML SPACE              &none                    &none                    &none                  &none                       &magic MAGIC 0
+            &magic MAGIC 0 &none                   &none                 &none                   &none                           &th SYM BSPC    &th NUM LSFT  &none   &none  &th FUN TAB  &th SYM SPACE              &none                    &none                    &none                  &none                       &magic MAGIC 0
             >;
         };
 
@@ -1047,14 +1005,14 @@
             >;
         };
 
-        symr {
+        sym {
             bindings = <
-            &none          &none         &none         &none          &none                                                                                                                 &none     &none      &none           &none      &none
-            &none          &none         &none         &none          &none          &none                                                                                  &none           &kp N0    &kp N1     &kp N2          &none      &none
-            &none          &kp PINKY_MOD &kp RING_MOD  &kp MIDDY_MOD  &kp INDEX_MOD  &kp K                                                                                  &none           &kp SQT   &kp LBRC   &kp RBRC        &none      &none
-            &none          &kp TAB       &kp RET       &kp SPACE      &kp BSPC       &kp J                                                                                  &kp EXCL        &kp DQT   &kp LPAR   &kp RPAR        &kp QMARK  &none
-            &none          &kp R         &kp C         &kp LEFT       &kp RIGHT      &kp I   &mod_tab _A_TAB  &none          &none   &none     &none        &kp SEMI        &none           &kp GRAVE &kp LBKT   &kp RBKT        &kp PLUS   &none
-            &none          &none         &none         &none          &none                  &none            &mod_tab LCTL  &none   &none     &kp COLON    &kp DOT                         &none     &none      &none           &none      &none
+            &none       &none         &none         &none          &none                                                                                                  &none     &none      &none       &none      &none
+            &none       &none         &none         &none          &none          &none                                                                       &none       &none     &none      &none       &none      &none
+            &none       &kp BSLH      &kp PRCNT     &kp LT         &kp GT         &none                                                                       &none       &kp SQT   &kp RBKT   &kp LBKT    &kp GRAVE  &none
+            &kp AT      &kp EXCL      &kp AMPS      &kp MINUS      &kp PLUS       &kp TILDE                                                                   &kp SEMI    &kp QMARK &kp RPAR   &kp LPAR    &kp DQT    &none
+            &none       &kp HASH      &kp PIPE      &kp SLASH      &kp STAR       &none      &none      &none      &none   &none     &none      &none         &none       &kp DLLR  &kp RBRC   &kp LBRC    &kp CARET  &none
+            &none       &none         &none         &none          &none                     &kp EQUAL  &kp UNDER  &none   &none     &kp DOT    &kp COLON                 &none     &none      &none       &none      &none
             >;
         };
 
@@ -1091,36 +1049,14 @@
         #define LPAR_RUS LPAR
         #define RPAR_RUS RPAR
 
-        symr_rus {
+        sym_rus {
             bindings = <
-            &none          &none         &none         &none          &none                                                                                                                        &none         &none          &none               &none          &none
-            &none          &none         &none         &none          &none          &none                                                                                         &none           &kp N0        &kp N1         &kp N2              &none          &none
-            &none          &kp PINKY_MOD &kp RING_MOD  &kp MIDDY_MOD  &kp INDEX_MOD  &none                                                                                         &none           &kp SQT_RUS   &kp LBRC_RUS   &kp RBRC_RUS        &none          &none
-            &none          &kp TAB       &kp RET       &kp SPACE      &kp BSPC       &none                                                                                         &kp EXCL_RUS    &kp DQT_RUS   &kp LPAR_RUS   &kp RPAR_RUS        &kp QMARK_RUS  &none
-            &none          &none         &none         &kp LEFT       &kp RIGHT      &none   &mod_tab _A_TAB  &none          &none   &none     &none            &kp SEMI_RUS       &none           &kp GRAVE_RUS &kp LBKT_RUS   &kp RBKT_RUS        &kp PLUS_RUS   &none
-            &none          &none         &none         &none          &none                  &none            &mod_tab LCTL  &none   &none     &kp COLON_RUS    &kp DOT_RUS                        &none         &none          &none               &none          &none
-            >;
-        };
-
-        syml {
-            bindings = <
-            &none          &none         &none         &none          &none                                                                                               &none           &none           &none           &none              &none
-            &none          &none         &none         &none          &none          &none                                                                &none           &none           &none           &none           &none              &none
-            &none          &kp HASH      &kp AMPS      &kp PLUS       &kp STAR       &kp TILDE                                                            &none           &kp INDEX_MOD   &kp MIDDY_MOD   &kp RING_MOD    &kp PINKY_MOD      &none
-            &kp AT         &kp EXCL      &kp CARET     &kp DLLR       &kp SLASH      &kp PRCNT                                                            &none           &kp BSPC        &kp SPACE       &kp RET         &kp TAB            &none
-            &none          &kp LT        &kp PIPE      &kp MINUS      &kp GT         &none       &kp BSLH   &none      &none   &none     &none    &none   &none           &kp LEFT        &kp RIGHT       &none           &none              &none
-            &none          &none         &none         &none          &none                      &kp EQUAL  &kp UNDER  &none   &none     &none    &none                   &none           &none           &none           &none              &none
-            >;
-        };
-
-        syml_rus {
-            bindings = <
-            &none          &none         &none         &none          &none                                                                                                       &none           &none           &none           &none              &none
-            &none          &none         &none         &none          &none          &none                                                                        &none           &none           &none           &none           &none              &none
-            &none          &kp HASH_RUS  &kp AMPS_RUS  &kp PLUS_RUS   &kp STAR_RUS   &kp TILDE_RUS                                                                &none           &kp INDEX_MOD   &kp MIDDY_MOD   &kp RING_MOD    &kp PINKY_MOD      &none
-            &kp AT_RUS     &kp EXCL_RUS  &kp CARET_RUS &kp DLLR_RUS   &kp SLASH_RUS  &kp PRCNT_RUS                                                                &none           &kp BSPC        &kp SPACE       &kp RET         &kp TAB            &none
-            &none          &kp LT_RUS    &kp PIPE_RUS  &kp MINUS_RUS  &kp GT_RUS     &none       &kp BSLH_RUS   &none          &none   &none     &none    &none   &none           &kp LEFT        &kp RIGHT       &none           &none              &none
-            &none          &none         &none         &none          &none                      &kp EQUAL_RUS  &kp UNDER_RUS  &none   &none     &none    &none                   &none           &none           &none           &none              &none
+            &none       &none         &none         &none          &none                                                                                                               &none         &none          &none           &none          &none
+            &none       &none         &none         &none          &none          &none                                                                                   &none        &none         &none          &none           &none          &none
+            &none       &kp BSLH_RUS  &kp PRCNT_RUS &kp LT_RUS     &kp GT_RUS     &none                                                                                   &none        &kp SQT_RUS   &kp RBKT_RUS   &kp LBKT_RUS    &kp GRAVE_RUS  &none
+            &kp AT_RUS  &kp EXCL_RUS  &kp AMPS_RUS  &kp MINUS_RUS  &kp PLUS_RUS   &kp TILDE_RUS                                                                           &kp SEMI_RUS &kp QMARK_RUS &kp RPAR_RUS   &kp LPAR_RUS    &kp DQT_RUS    &none
+            &none       &kp HASH_RUS  &kp PIPE_RUS  &kp SLASH_RUS  &kp STAR_RUS   &none      &none          &none          &none   &none     &none          &none         &none        &kp DLLR_RUS  &kp RBRC_RUS   &kp LBRC_RUS    &kp CARET_RUS  &none
+            &none       &none         &none         &none          &none                     &kp EQUAL_RUS  &kp UNDER_RUS  &none   &none     &kp DOT_RUS    &kp COLON_RUS              &none         &none          &none           &none          &none
             >;
         };
 
