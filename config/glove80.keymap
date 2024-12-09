@@ -936,13 +936,13 @@
         combo_alt_tab_switcher {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_T1>;
-            bindings = <&mod_tab_chord _A_TAB SYMR>;
+            bindings = <&mod_tab_chord _A_TAB NAV>;
             layers = <BASE BASE_RUS BASE_EXTRA>;
         };
         combo_ctrl_tab_switcher {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_T5>;
-            bindings = <&mod_tab_chord LCTL SYMR>;
+            bindings = <&mod_tab_chord LCTL NAV>;
             layers = <BASE BASE_RUS BASE_EXTRA>;
         };
     };
