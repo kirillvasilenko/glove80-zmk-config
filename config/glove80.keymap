@@ -945,6 +945,19 @@
             bindings = <&mod_tab_chord LCTL NAV>;
             layers = <BASE BASE_RUS BASE_EXTRA>;
         };
+
+        combo_right_thumb_meh {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_RH_T4 POS_RH_T1>;
+            bindings = <&sk_qrel MEH>;
+            layers = <BASE BASE_RUS BASE_EXTRA>;
+        };
+        combo_right_thumb_hyper {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_RH_T4 POS_RH_T5>;
+            bindings = <&sk_qrel HYPER>;
+            layers = <BASE BASE_RUS BASE_EXTRA>;
+        };
     };
 
     keymap {
