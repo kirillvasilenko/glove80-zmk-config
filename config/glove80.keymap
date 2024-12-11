@@ -613,6 +613,12 @@
                 , <&macro_release &mo MACRO_PLACEHOLDER>
                 ;
         };
+       
+        vim_y_paste: vim_y_paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DQT &kp N0 &kp P>;
+        };
 
         //////////////////////////////////////////////////////////////////////////
         //
@@ -1025,7 +1031,7 @@
             &none       &kp BSLH      &kp PRCNT     &kp LT         &kp GT         &none                                                                       &none       &kp SQT   &kp RBKT   &kp LBKT    &kp GRAVE  &none
             &kp AT      &kp EXCL      &kp AMPS      &kp MINUS      &kp PLUS       &kp TILDE                                                                   &kp SEMI    &kp QMARK &kp RPAR   &kp LPAR    &kp DQT    &none
             &none       &kp HASH      &kp PIPE      &kp SLASH      &kp STAR       &none      &none      &none      &none   &none     &none      &none         &none       &kp DLLR  &kp RBRC   &kp LBRC    &kp CARET  &none
-            &none       &none         &none         &none          &none                     &kp EQUAL  &kp UNDER  &none   &none     &kp DOT    &kp COLON                 &none     &none      &none       &none      &none
+            &none       &none         &none         &none          &vim_y_paste              &kp EQUAL  &kp UNDER  &none   &none     &kp DOT    &kp COLON                 &none     &none      &none       &none      &none
             >;
         };
 
