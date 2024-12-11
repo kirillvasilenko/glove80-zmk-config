@@ -1005,7 +1005,7 @@
             &sk_qrel LSFT            &kp V                   &kp W                 &kp D                   &kp L                   &kp X                                                                          &kp SEMI      &kp U                    &kp O                    &kp Y                  &kp B                       &sk_qrel LSFT
             &kp Q                    &lp_kp_kp PINKY_MOD S   &lr_kp_kp RING_MOD N  &lm_kp_kp MIDDY_MOD T   &li_kp_kp INDEX_MOD H   &kp K                                                                          &kp COMMA     &ri_kp_kp INDEX_MOD A    &rm_kp_kp MIDDY_MOD E    &rr_kp_kp RING_MOD I   &rp_kp_kp PINKY_MOD C       &kp Z
             &none                    &kp F                   &kp P                 &kp G                   &li_mo_kp SYM M         &kp J   &kp ESC      &none        &none     &none  &kp _C(RET)  &th FUN RET    &kp SLASH     &ri_mo_kp SYM DOT        &kp EQUAL                &kp MINUS              &kp SQT                     &none
-            &magic MAGIC 0           &tog_rus                &vim_y_paste          &kp DEL                 &kp LC(LA(LG(SPACE)))           &th NAV R    &th NUM BSPC &none     &none  &key_repeat  &th MOU SPACE                &kp TAB                  &kp UNDER                &caps_word             &plus_paste                 &magic MAGIC 0
+            &magic MAGIC 0           &tog_rus                &vim_y_paste          &kp DEL                 &kp LC(LA(LG(SPACE)))           &th NAV R    &th NUM BSPC &none     &none  &key_repeat  &th MOU SPACE                &kp TAB                  &kp UNDER                &caps_word             &vim_plus_paste                 &magic MAGIC 0
             >;
         };
 
