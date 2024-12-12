@@ -626,7 +626,7 @@
             bindings = <&kp DQT &kp PLUS &kp P>;
         };
 
-        vim_plus_yank: vim_plus_paste {
+        vim_plus_yank: vim_plus_yank {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp DQT &kp PLUS &kp Y>;
