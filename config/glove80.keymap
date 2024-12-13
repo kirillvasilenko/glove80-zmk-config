@@ -873,7 +873,7 @@
         // FUN
         combo_to_fun {
             timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_LH_T5 POS_LH_C2R4>;
+            key-positions = <POS_LH_T1 POS_LH_C2R4>;
             bindings = <&tog FUN>;
             layers = <BASE>;
         };
@@ -1056,12 +1056,12 @@
 
         fun {
             bindings = <
-            &none          &none         &none         &none          &none                                                                                                        &none          &none          &none         &none          &none
-            &none          &none         &none         &none          &none             &none                                                                        &none         &none          &none          &none         &none          &none
-            &none          &none         &kp _UNDO     &kp _REDO      &none             &none                                                                        &kp C_BRI_UP  &kp F7         &kp F8         &kp F9        &kp F10        &none
-            &none          &kp PINKY_MOD &kp RING_MOD  &kp MIDDY_MOD  &kp INDEX_MOD     &none                                                                        &kp C_BRI_DN  &kp F4         &kp F5         &kp F6        &kp F11        &none
-            &none          &none         &none         &none          &none             &none   &none  &none  &none   &kp C_PREV  &kp C_NEXT    &kp C_PP             &none         &kp F1         &kp F2         &kp F3        &kp F12        &none
-            &none          &none         &none         &none          &none                     &none  &none  &none   &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP                       &none          &none          &none         &none          &none
+            &none          &none         &none         &none          &none                                                                                                           &none          &none          &none         &none          &none
+            &none          &none         &none         &none          &none             &none                                                                           &none         &none          &none          &none         &none          &none
+            &none          &none         &kp _UNDO     &kp _REDO      &none             &none                                                                           &kp C_BRI_UP  &kp F7         &kp F8         &kp F9        &kp F10        &none
+            &none          &kp PINKY_MOD &kp RING_MOD  &kp MIDDY_MOD  &kp INDEX_MOD     &none                                                                           &kp C_BRI_DN  &kp F4         &kp F5         &kp F6        &kp F11        &none
+            &none          &none         &none         &none          &none             &none   &none     &none  &none   &kp C_PREV  &kp C_NEXT    &kp C_PP             &none         &kp F1         &kp F2         &kp F3        &kp F12        &none
+            &none          &none         &none         &none          &none                     &tog FUN  &none  &none   &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP                       &none          &none          &none         &none          &none
             >;
         };
 
