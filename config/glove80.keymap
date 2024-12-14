@@ -642,6 +642,7 @@
 
         scroll_down: scroll_down {
             compatible = "zmk,behavior-macro";
+            wait-ms = <20>;
             #binding-cells = <0>;
             bindings = <&kp LC(LA(LG(SEMI))) &kp DOWN>;
         };
