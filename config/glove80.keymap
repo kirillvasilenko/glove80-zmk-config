@@ -591,112 +591,112 @@
         // - https://sunaku.github.io/engram-keyboard-layout.html
         //
 
-        one_tilde: one_tilde {
+        engram_1: engram_1 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N1>, <&kp TILDE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        lpar_at: lpar_at {
+        engram_2: engram_2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LPAR>, <&kp AT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        rpar_hash: rpar_hash {
+        engram_3: engram_3 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RPAR>, <&kp HASH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        caret_pipe: caret_pipe {
+        engram_4: engram_4 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp CARET>, <&kp PIPE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        bslh_dllr_lbrc: bslh_dllr_lbrc {
+        engram_5: engram_5 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp BSLH>, <&dllr_lbrc>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        rpar_turbo: rpar_turbo {
+        engram_6: engram_6 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&rpar_colon>, <&rpar_space_rbrc_ret>;
+            bindings = <&rpar_colon>, <&rpar_space_lbrc_ret>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        amps_dllr: amps_dllr {
+        engram_7: engram_7 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp AMPS>, <&kp DLLR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        zero_grave: zero_grave {
+        engram_0: engram_0 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N0>, <&kp GRAVE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        slash_star: slash_star {
+        engram_lc1: engram_lc1 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp SLASH>, <&kp STAR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        comma_semi: comma_semi {
+        engram_lc2: engram_lc2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp SEMI>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        qmark_excl: qmark_excl {
+        engram_lc3: engram_lc3 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp QMARK>, <&kp EXCL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        minus_plus: minus_plus {
+        engram_rc1: engram_rc1 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp MINUS>, <&kp PLUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        dot_colon: dot_colon {
+        engram_rc2: engram_rc2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp COLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        under_lt: under_lt {
+        engram_rb1: engram_rb1 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp UNDER>, <&kp LT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        equal_rarrow: equal_rarrow {
+        engram_rb2: engram_rb2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp EQUAL>, <&rarrow>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        prcnt_gt: prcnt_gt {
+        engram_rb3: engram_rb3 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp PRCNT>, <&kp GT>;
