@@ -619,10 +619,10 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        bslh_dllr_rbrc: bslh_dllr_rbrc {
+        bslh_dllr_lbrc: bslh_dllr_lbrc {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp BSLH>, <&dllr_rbrc>;
+            bindings = <&kp BSLH>, <&dllr_lbrc>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
