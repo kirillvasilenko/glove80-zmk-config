@@ -619,6 +619,20 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        bslh_dllr_rbrc: bslh_dllr_rbrc {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BSLH>, <&dllr_rbrc>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        rpar_turbo: rpar_turbo {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&rpar_colon>, <&rpar_space_rbrc_ret>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         amps_dllr: amps_dllr {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
