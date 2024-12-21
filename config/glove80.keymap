@@ -970,54 +970,6 @@
             bindings = <&tog NAV>;
             layers = <BASE>;
         };
-        combo_from_nav_left {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_LH_T4 POS_LH_C3R4>;
-            bindings = <&tog NAV>;
-            layers = <NAV>;
-        };
-        combo_from_nav_right {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_RH_T4 POS_RH_C3R4>;
-            bindings = <&tog NAV>;
-            layers = <NAV>;
-        };
-
-        // MOU
-        combo_to_mou {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_RH_T4 POS_RH_C2R4>;
-            bindings = <&tog MOU>;
-            layers = <BASE>;
-        };
-        combo_from_mou_right {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_RH_T4 POS_RH_C3R4>;
-            bindings = <&tog MOU>;
-            layers = <MOU>;
-        };
-        combo_from_mou_left {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_LH_T4 POS_LH_C3R4>;
-            bindings = <&tog MOU>;
-            layers = <MOU>;
-        };
-
-        // SYM
-        combo_to_sym {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_RH_T4 POS_RH_C2R4>;
-            bindings = <&tog SYM>;
-            layers = <BASE>;
-        };
-
-        // SYM_RUS
-        combo_to_sym_rus {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_RH_T4 POS_RH_C2R4>;
-            bindings = <&tog SYM_RUS>;
-            layers = <BASE_RUS>;
-        };
 
         // NUM
         combo_to_num {
@@ -1043,43 +995,66 @@
             layers = <BASE>;
         };
 
-        // Stubs for BASE
-        combo_to_base_stub_left {
+        // SYM
+        combo_to_sym {
             timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_LH_T4 POS_LH_C3R4>;
-            bindings = <&none>;
-            layers = <BASE BASE_RUS BASE_EXTRA>;
+            key-positions = <POS_RH_T4 POS_RH_C2R4>;
+            bindings = <&tog SYM>;
+            layers = <BASE>;
         };
-        combo_to_base_stub_right {
+
+        // SYM_RUS
+        combo_to_sym_rus {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_RH_T4 POS_RH_C2R4>;
+            bindings = <&tog SYM_RUS>;
+            layers = <BASE_RUS>;
+        };
+
+        // MOU
+        combo_to_mou {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_RH_T5 POS_RH_C2R4>;
+            bindings = <&tog MOU>;
+            layers = <BASE>;
+        };
+
+        combo_alt_tab_switcher_left {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_LH_T4 POS_LH_C2R5>;
+            bindings = <&mod_tab _A_TAB>;
+            layers = <BASE BASE_RUS BASE_EXTRA NAV>;
+        };
+        combo_ctrl_tab_switcher_left {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_LH_T5 POS_LH_C2R5>;
+            bindings = <&mod_tab LCTL>;
+            layers = <BASE BASE_RUS BASE_EXTRA NAV>;
+        };
+
+        combo_alt_tab_switcher_right {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_RH_T4 POS_RH_C2R5>;
+            bindings = <&mod_tab _A_TAB>;
+            layers = <BASE BASE_RUS BASE_EXTRA NAV>;
+        };
+        combo_ctrl_tab_switcher_right {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_RH_T5 POS_RH_C2R5>;
+            bindings = <&mod_tab LCTL>;
+            layers = <BASE BASE_RUS BASE_EXTRA NAV>;
+        };
+
+        combo_meh_right {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_RH_T4 POS_RH_C3R4>;
-            bindings = <&none>;
-            layers = <BASE BASE_RUS BASE_EXTRA>;
-        };
-
-        combo_alt_tab_switcher {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_LH_T4 POS_LH_T1>;
-            bindings = <&mod_tab_chord _A_TAB NAV>;
-            layers = <BASE BASE_RUS BASE_EXTRA>;
-        };
-        combo_ctrl_tab_switcher {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_LH_T4 POS_LH_T5>;
-            bindings = <&mod_tab_chord LCTL NAV>;
-            layers = <BASE BASE_RUS BASE_EXTRA>;
-        };
-
-        combo_right_thumb_meh {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_RH_T4 POS_RH_T1>;
             bindings = <&sk_qrel MEH>;
             layers = <BASE BASE_RUS BASE_EXTRA>;
         };
-        combo_right_thumb_hyper {
+        combo_meh_left {
             timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_RH_T4 POS_RH_T5>;
-            bindings = <&sk_qrel HYPER>;
+            key-positions = <POS_LH_T4 POS_LH_C3R4>;
+            bindings = <&sk_qrel MEH>;
             layers = <BASE BASE_RUS BASE_EXTRA>;
         };
     };
@@ -1138,7 +1113,7 @@
             &none   &none      &msc SCRL_LEFT  &mmv MOVE_UP     &msc SCRL_RIGHT   &kp _CUT                                                                          &kp _CUT    &none          &kp _UNDO             &kp _REDO         &none          &none
             &none   &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &kp _COPY                                                                         &kp _COPY   &kp INDEX_MOD  &kp MIDDY_MOD         &kp RING_MOD      &kp PINKY_MOD  &none
             &none   &kp _REDO  &kp _UNDO       &msc SCRL_DOWN   &msc SCRL_UP      &kp _PASTE  &mkp MCLK  &none       &none  &none   &none         &mod_tab _A_TAB   &kp _PASTE  &none          &select_word          &select_line      &kp _C(A)      &none
-            &none   &none      &none           &none            &none                         &mkp LCLK  &mkp RCLK   &none  &none   &mod_tab LCTL &none                         &none          &extend_word          &extend_line      &select_none   &none
+            &none   &none      &none           &none            &none                         &mkp LCLK  &mkp RCLK   &none  &none   &tog MOU      &none                         &none          &extend_word          &extend_line      &select_none   &none
             >;
         };
 
