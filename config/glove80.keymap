@@ -1079,7 +1079,7 @@
             >;
         };
 
-        base {
+        base_extra {
             bindings = <
             &none                    &none                   &none                 &none                   &none                                                                                                                              &none                    &none                    &none                  &none                       &none
             &none                    &kp N1                  &none                 &none                   &none                   &none                                                                                               &none  &none                    &none                    &none                  &kp N0                      &none
