@@ -1064,23 +1064,23 @@
 
         base {
             bindings = <
-            &none                    &none                   &none                 &none                   &none                                                                                                                              &none                    &none                    &none                  &none                       &none
-            &none                    &kp N1                  &none                 &none                   &none                   &none                                                                                               &none  &none                    &none                    &none                  &kp N0                      &none
-            &none                    &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                                               &kp Y  &kp U                    &kp I                    &kp O                  &kp P                       &none
-            &none                    &lp_kp_kp PINKY_MOD A   &lr_kp_kp RING_MOD S  &lm_kp_kp MIDDY_MOD D   &li_kp_kp INDEX_MOD F   &kp G                                                                                               &kp H  &ri_kp_kp INDEX_MOD J    &rm_kp_kp MIDDY_MOD K    &rr_kp_kp RING_MOD L   &rp_kp_kp PINKY_MOD SEMI    &none
-            &none                    &kp Z                   &kp X                 &kp C                   &kp V                   &kp B   &th FUN ESC  &kp DEL            &tog_rus  &caps_word  &kp TAB      &kp RET                  &kp N  &kp M                    &kp COMMA                &kp DOT                &kp FSLH                    &none
-            &magic MAGIC 0           &vim_y_paste            &sk_qrel LGUI         &scroll_down            &kp LC(LA(LG(SPACE)))           &th NAV BSPC &th_mo_sk NUM LSFT &none     &none       &key_repeat  &th_no_repeat SYM SPACE         &kp UNDER                &none                    &none                  &none                       &magic MAGIC 0
-            >;
-        };
-
-        base_extra {
-            bindings = <
             &none                    &none                   &none                 &none                   &none                                                                                                                                              &none                    &none                    &none                  &none                       &none
             &none                    &engram_1               &engram_2             &engram_3               &engram_4               &engram_5                                                                                                    &engram_6     &engram_7                &kp LBKT                 &kp RBKT               &engram_0                   &none
             &none                    &kp V                   &kp W                 &kp D                   &kp L                   &engram_lc1                                                                                                  &engram_rc1   &kp U                    &kp O                    &kp Y                  &kp B                       &none
             &none                    &lp_kp_kp PINKY_MOD N   &lr_kp_kp RING_MOD S  &lm_kp_kp MIDDY_MOD T   &li_kp_kp INDEX_MOD H   &engram_lc2                                                                                                  &engram_rc2   &ri_kp_kp INDEX_MOD A    &rm_kp_kp MIDDY_MOD E    &rr_kp_kp RING_MOD I   &rp_kp_kp PINKY_MOD C       &none
             &none                    &kp P                   &kp F                 &kp M                   &kp R                   &engram_lc3   &th FUN ESC  &kp DEL            &tog_rus     &caps_word  &kp TAB      &kp RET                  &kp SQT       &kp K                    &kp J                    &kp X                  &kp G                       &none
             &magic MAGIC 0           &kp Q                   &sk_qrel LGUI         &scroll_down            &kp LC(LA(LG(SPACE)))                 &th NAV BSPC &th_mo_sk NUM LSFT &none        &none       &key_repeat  &th_no_repeat SYM SPACE                &engram_rb1              &engram_rb2              &engram_rb3            &kp Z                       &magic MAGIC 0
+            >;
+        };
+
+        base_extra {
+            bindings = <
+            &none                    &none                   &none                 &none                   &none                                                                                                                              &none                    &none                    &none                  &none                       &none
+            &none                    &kp N1                  &none                 &none                   &none                   &none                                                                                               &none  &none                    &none                    &none                  &kp N0                      &none
+            &none                    &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                                               &kp Y  &kp U                    &kp I                    &kp O                  &kp P                       &none
+            &none                    &lp_kp_kp PINKY_MOD A   &lr_kp_kp RING_MOD S  &lm_kp_kp MIDDY_MOD D   &li_kp_kp INDEX_MOD F   &kp G                                                                                               &kp H  &ri_kp_kp INDEX_MOD J    &rm_kp_kp MIDDY_MOD K    &rr_kp_kp RING_MOD L   &rp_kp_kp PINKY_MOD SEMI    &none
+            &none                    &kp Z                   &kp X                 &kp C                   &kp V                   &kp B   &th FUN ESC  &kp DEL            &tog_rus  &caps_word  &kp TAB      &kp RET                  &kp N  &kp M                    &kp COMMA                &kp DOT                &kp FSLH                    &none
+            &magic MAGIC 0           &vim_y_paste            &sk_qrel LGUI         &scroll_down            &kp LC(LA(LG(SPACE)))           &th NAV BSPC &th_mo_sk NUM LSFT &none     &none       &key_repeat  &th_no_repeat SYM SPACE         &kp UNDER                &none                    &none                  &none                       &magic MAGIC 0
             >;
         };
 
