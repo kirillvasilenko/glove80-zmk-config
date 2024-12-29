@@ -968,7 +968,7 @@
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_C2R4>;
             bindings = <&tog NAV>;
-            layers = <BASE>;
+            layers = <BASE BASE_RUS BASE_EXTRA>;
         };
 
         // NUM
@@ -976,7 +976,7 @@
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T5 POS_LH_C2R4>;
             bindings = <&tog NUM>;
-            layers = <BASE>;
+            layers = <BASE BASE_EXTRA>;
         };
 
         // NUM_RUS
@@ -992,7 +992,7 @@
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T1 POS_LH_C2R4>;
             bindings = <&tog FUN>;
-            layers = <BASE>;
+            layers = <BASE BASE_EXTRA BASE_RUS>;
         };
 
         // SYM
@@ -1000,7 +1000,7 @@
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_RH_T4 POS_RH_C2R4>;
             bindings = <&tog SYM>;
-            layers = <BASE>;
+            layers = <BASE BASE_EXTRA>;
         };
 
         // SYM_RUS
@@ -1016,7 +1016,7 @@
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_RH_T5 POS_RH_C2R4>;
             bindings = <&tog MOU>;
-            layers = <BASE>;
+            layers = <BASE BASE_EXTRA BASE_RUS>;
         };
 
         combo_alt_tab_switcher_left {
