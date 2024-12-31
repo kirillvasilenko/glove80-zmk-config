@@ -388,7 +388,7 @@
     #define COLON_RUS CARET
     #define DOT_RUS SLASH
     #define COMMA_RUS LS(SLASH)
-    #define SEMI_RUS QMARK
+    #define SEMI_RUS LS(N4)
     #define SQT_RUS RA(O)
     #define DQT_RUS LS(N2)
     #define GRAVE_RUS LC(RA(GRAVE))
@@ -1200,7 +1200,7 @@
             &none                    &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                                                       &kp Y     &kp U                    &kp I                    &kp O                  &kp P                       &none
             &none                    &lp_kp_kp PINKY_MOD A   &lr_kp_kp RING_MOD S  &lm_kp_kp MIDDY_MOD D   &li_kp_kp INDEX_MOD F   &kp G                                                                                                       &kp H     &ri_kp_kp INDEX_MOD J    &rm_kp_kp MIDDY_MOD K    &rr_kp_kp RING_MOD L   &rp_kp_kp PINKY_MOD SEMI    &none
             &none                    &kp Z                   &kp X                 &kp C                   &kp V                   &kp B   &th FUN ESC  &kp DEL                 &tog_rus  &caps_word  &kp TAB      &kp RET                     &kp N     &kp M                    &kp COMMA                &kp DOT                &kp LBKT                    &none
-            &magic MAGIC 0           &kp GRAVE               &rus_lb3              &rus_lb2                &rus_lb3                        &th NAV BSPC &th_mo_sk NUM_RUS LSFT  &none     &none       &key_repeat  &th_no_repeat SYM_RUS SPACE           &rus_rb1                 &rus_rb2                 &kp RBKT               &kp SEMI                    &magic MAGIC 0
+            &magic MAGIC 0           &kp GRAVE               &rus_lb3              &rus_lb2                &rus_lb1                        &th NAV BSPC &th_mo_sk NUM_RUS LSFT  &none     &none       &key_repeat  &th_no_repeat SYM_RUS SPACE           &rus_rb1                 &rus_rb2                 &kp RBKT               &kp SQT                     &magic MAGIC 0
             >;
         };
 
