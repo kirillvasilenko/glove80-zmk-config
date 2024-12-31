@@ -785,6 +785,13 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        rus_3: rus_3 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RPAR_RUS>, <&kp RPAR_RUS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         rus_8: rus_8 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
