@@ -384,6 +384,46 @@
                          70 53     56 73                 \
                           71 54   55 72
 
+    // Rus symbols
+    #define COLON_RUS CARET
+    #define DOT_RUS SLASH
+    #define COMMA_RUS LS(SLASH)
+    #define SEMI_RUS QMARK
+    #define SQT_RUS RA(O)
+    #define DQT_RUS LS(N2)
+    #define GRAVE_RUS LC(RA(GRAVE))
+    #define LBRC_RUS LS(RA(N9))
+    #define RBRC_RUS LS(RA(N0))
+    #define LBKT_RUS RA(GRAVE)
+    #define RBKT_RUS LS(RA(GRAVE))
+    #define QMARK_RUS LS(N7)
+    #define AT_RUS RA(N2)
+    #define HASH_RUS RA(N3)
+    #define EXCL_RUS EXCL
+    #define LT_RUS LS(RA(COMMA))
+    #define GT_RUS LS(RA(DOT))
+    #define AMPS_RUS RA(N7)
+    #define CARET_RUS RA(N6)
+    #define PIPE_RUS LS(RA(BSLH))
+    #define PLUS_RUS PLUS
+    #define DLLR_RUS RA(N4)
+    #define MINUS_RUS MINUS
+    #define STAR_RUS STAR
+    #define SLASH_RUS LS(BSLH)
+    #define TILDE_RUS D // did not find a way to get TILDE on rus
+    #define PRCNT_RUS PRCNT
+    #define BSLH_RUS BSLH
+    #define EQUAL_RUS EQUAL
+    #define UNDER_RUS UNDER
+    #define LPAR_RUS LPAR
+    #define RPAR_RUS RPAR
+    #define MID_DASH_RUS RA(MINUS) 
+    #define LON_DASH_RUS LS(RA(MINUS))
+    #define LQT1_RUS RA(RBRC)
+    #define RQT1_RUS LS(RA(RBRC))
+    #define LQT2_RUS LS(RA(O))
+    #define RQT2_RUS RA(LBRC)
+
     behaviors {
         th: thumb_layer_access {
             compatible = "zmk,behavior-hold-tap";
@@ -1189,45 +1229,6 @@
             &kp AT         &kp AMPS       &kp LBKT      &kp RBKT       &kp PLUS                    &kp PRCNT  &kp COLON  &kp SEMI   &none     &none      &tog SYM            &none           &none           &none          &none           &none
             >;
         };
-
-        #define COLON_RUS CARET
-        #define DOT_RUS SLASH
-        #define COMMA_RUS LS(SLASH)
-        #define SEMI_RUS QMARK
-        #define SQT_RUS RA(O)
-        #define DQT_RUS LS(N2)
-        #define GRAVE_RUS LC(RA(GRAVE))
-        #define LBRC_RUS LS(RA(N9))
-        #define RBRC_RUS LS(RA(N0))
-        #define LBKT_RUS RA(GRAVE)
-        #define RBKT_RUS LS(RA(GRAVE))
-        #define QMARK_RUS LS(N7)
-        #define AT_RUS RA(N2)
-        #define HASH_RUS RA(N3)
-        #define EXCL_RUS EXCL
-        #define LT_RUS LS(RA(COMMA))
-        #define GT_RUS LS(RA(DOT))
-        #define AMPS_RUS RA(N7)
-        #define CARET_RUS RA(N6)
-        #define PIPE_RUS LS(RA(BSLH))
-        #define PLUS_RUS PLUS
-        #define DLLR_RUS RA(N4)
-        #define MINUS_RUS MINUS
-        #define STAR_RUS STAR
-        #define SLASH_RUS LS(BSLH)
-        #define TILDE_RUS D // did not find a way to get TILDE on rus
-        #define PRCNT_RUS PRCNT
-        #define BSLH_RUS BSLH
-        #define EQUAL_RUS EQUAL
-        #define UNDER_RUS UNDER
-        #define LPAR_RUS LPAR
-        #define RPAR_RUS RPAR
-        #define MID_DASH_RUS RA(MINUS) 
-        #define LON_DASH_RUS LS(RA(MINUS))
-        #define LQT1_RUS RA(RBRC)
-        #define RQT1_RUS LS(RA(RBRC))
-        #define LQT2_RUS LS(RA(O))
-        #define RQT2_RUS RA(LBRC)
 
         sym_rus {
             bindings = <
