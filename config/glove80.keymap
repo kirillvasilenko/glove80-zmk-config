@@ -419,10 +419,10 @@
     #define RPAR_RUS RPAR
     #define MID_DASH_RUS RA(MINUS) 
     #define LON_DASH_RUS LS(RA(MINUS))
-    #define LQT1_RUS RA(RBRC)
-    #define RQT1_RUS LS(RA(RBRC))
+    #define LQT1_RUS RA(RBKT)
+    #define RQT1_RUS LS(RA(RBKT))
     #define LQT2_RUS LS(RA(O))
-    #define RQT2_RUS RA(LBRC)
+    #define RQT2_RUS RA(LBKT)
 
     behaviors {
         th: thumb_layer_access {
@@ -1196,7 +1196,7 @@
         base_rus {
             bindings = <
             &none                    &none                   &none                 &none                   &none                                                                                                                                         &none                    &none                    &none                  &none                       &none
-            &none                    &kp N1                  &rus_2                &rus_3                  &none                   &none                                                                                                       &none     &none                    &kp LQT1_RUS             &kp RQT1_RUS           &kp N0                      &none
+            &none                    &kp N1                  &rus_2                &rus_3                  &none                   &none                                                                                                       &none     &none                    &rus_8                   &rus_9                 &kp N0                      &none
             &none                    &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                                                       &kp Y     &kp U                    &kp I                    &kp O                  &kp P                       &none
             &none                    &lp_kp_kp PINKY_MOD A   &lr_kp_kp RING_MOD S  &lm_kp_kp MIDDY_MOD D   &li_kp_kp INDEX_MOD F   &kp G                                                                                                       &kp H     &ri_kp_kp INDEX_MOD J    &rm_kp_kp MIDDY_MOD K    &rr_kp_kp RING_MOD L   &rp_kp_kp PINKY_MOD SEMI    &none
             &none                    &kp Z                   &kp X                 &kp C                   &kp V                   &kp B   &th FUN ESC  &kp DEL                 &tog_rus  &caps_word  &kp TAB      &kp RET                     &kp N     &kp M                    &kp COMMA                &kp DOT                &kp LBKT                    &none
