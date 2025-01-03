@@ -1261,12 +1261,12 @@
 
         num_rus {
             bindings = <
-            &none          &none         &none         &none          &none                                                                                                    &none         &none          &none           &none          &none
-            &none          &none         &none         &none          &none          &none                                                                     &none           &kp CARET_RUS &kp K          &kp J           &none          &none
-            &none          &kp PINKY_MOD &kp RING_MOD  &kp MIDDY_MOD  &kp INDEX_MOD  &none                                                                     &kp STAR_RUS    &kp N7        &kp N8         &kp N9          &kp LS(G)      &kp E
-            &none          &kp TAB       &kp BSPC      &kp RET        &kp SPACE      &none                                                                     &kp PLUS_RUS    &kp N4        &kp N5         &kp N6          &kp MINUS_RUS  &none
-            &none          &none         &kp DEL       &none          &none          &none   &none         &none  &none   &none  &none        &kp EQUAL_RUS    &kp PRCNT_RUS   &kp N1        &kp N2         &kp N3          &kp SLASH_RUS  &none
-            &none          &none         &none         &none          &none                  &tog NUM_RUS  &none  &none   &none  &kp DOT_RUS  &kp N0                           &kp UNDER_RUS &kp RPAR_RUS   &kp LPAR_RUS    &none          &none
+            &none          &none         &none         &none          &none                                                                                                                 &none         &none          &none           &none          &none
+            &none          &none         &none         &none          &none          &none                                                                                  &none           &kp CARET_RUS &kp K          &kp J           &none          &none
+            &none          &none         &none         &none          &none          &none                                                                                  &kp STAR_RUS    &kp N7        &kp N8         &kp N9          &kp LS(G)      &kp E
+            &none          &none         &kp TAB       &kp RET        &kp SPACE      &none                                                                                  &kp PLUS_RUS    &kp N4        &kp N5         &kp N6          &kp MINUS_RUS  &none
+            &none          &none         &none         &none          &none          &none   &trans  &trans         &none      &none          &none        &kp EQUAL_RUS    &kp PRCNT_RUS   &kp N1        &kp N2         &kp N3          &kp SLASH_RUS  &none
+            &none          &none         &trans        &trans         &trans                 &trans  &sk_qrel LSFT  &tog NUM   &kp COMMA_RUS  &kp DOT_RUS  &kp N0                           &kp UNDER_RUS &kp RPAR_RUS   &kp LPAR_RUS    &none          &none
             >;
         };
 
