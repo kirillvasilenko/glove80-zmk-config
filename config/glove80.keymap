@@ -1250,12 +1250,12 @@
 
         num {
             bindings = <
-            &none          &none         &none         &none          &none                                                                                        &none     &none      &none           &none      &none
-            &none          &none         &none         &none          &none          &none                                                         &none           &kp CARET &kp K      &kp J           &none      &none
-            &none          &none         &kp DEL          &none          &none          &none                                                         &kp STAR        &kp N7    &kp N8     &kp N9          &kp LS(G)  &kp E
-            &none          &kp TAB       &kp BSPC      &kp RET        &kp SPACE      &none                                                         &kp PLUS        &kp N4    &kp N5     &kp N6          &kp MINUS  &none
-            &none          &sk_qrel PINKY_MOD         &sk_qrel RING_MOD       &sk_qrel MIDDY_MOD          &sk_qrel INDEX_MOD          &none   &none     &none  &none   &none  &none    &kp EQUAL    &kp PRCNT       &kp N1    &kp N2     &kp N3          &kp SLASH  &none
-            &none          &none         &none         &none          &none                  &tog NUM  &none  &none   &kp COMMA  &kp DOT  &kp N0                       &kp UNDER &kp RPAR   &kp LPAR        &none      &none
+            &none          &none         &none         &none          &none                                                                                                      &none     &none      &none           &none      &none
+            &none          &none         &none         &none          &none          &none                                                                       &none           &kp CARET &kp K      &kp J           &none      &none
+            &none          &none         &none         &none          &none          &none                                                                       &kp STAR        &kp N7    &kp N8     &kp N9          &kp LS(G)  &kp E
+            &none          &none         &kp TAB       &kp RET        &kp SPACE      &none                                                                       &kp PLUS        &kp N4    &kp N5     &kp N6          &kp MINUS  &none
+            &none          &none         &none         &none          &none          &none   &trans  &trans          &none      &none      &none    &kp EQUAL    &kp PRCNT       &kp N1    &kp N2     &kp N3          &kp SLASH  &none
+            &none          &none         &trans        &trans         &trans                 &trans  &sk_qrel LSFT   &tog NUM   &kp COMMA  &kp DOT  &kp N0                       &kp UNDER &kp RPAR   &kp LPAR        &none      &none
             >;
         };
 
