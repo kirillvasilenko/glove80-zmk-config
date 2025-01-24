@@ -864,6 +864,18 @@
             bindings = <&kp DQT &kp PLUS &kp P>;
         };
 
+        vim_plus_paste_insert_mode: vim_plus_paste_insert_mode {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(R) &kp PLUS>;
+        };
+
+        vim_y_paste_insert_mode: vim_y_paste_insert_mode {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(R) &kp N0>;
+        };
+
         vim_plus_yank: vim_plus_yank {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1073,12 +1085,6 @@
             bindings = <&tog NAV>;
             layers = <BASE BASE_RUS BASE_EXTRA>;
         };
-        combo_from_nav {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_LH_T4 POS_LH_C2R4>;
-            bindings = <&tog NAV>;
-            layers = <NAV>;
-        };
 
         // NUM
         combo_to_num {
@@ -1206,12 +1212,12 @@
 
         nav {
             bindings = <
-            &none          &none         &none         &none          &none                                                                                                   &none                    &none      &none              &none                 &none
-            &none          &none         &none         &none          &none          &none                                                                   &kp _C(LS(C))    &kp _C(LA(LEFT))         &kp G      &kp _C(LA(RIGHT))  &none                 &none
-            &none          &none         &kp _REDO     &kp _UNDO      &none          &kp _CUT                                                                &kp _C(R)        &kp _C(LA(UP))           &kp UP     &kp _C(LA(DOWN))  &kp _C(W)             &kp Q
-            &none          &kp _C(A)     &select_line  &select_word   &none          &kp _COPY                                                               &vim_plus_yank   &kp LEFT                 &kp DOWN   &kp RIGHT          &kp LC(LA(LG(SEMI)))  &none
-            &none          &select_none  &extend_line  &extend_word   &none          &kp _PASTE   &trans    &trans         &trans   &trans  &trans  &trans   &vim_plus_paste  &kp _HOME                &kp PG_UP  &kp PG_DN          &kp _END              &none
-            &none          &none         &trans        &trans         &trans                      &trans    &sk_qrel LSFT  &trans   &trans  &trans  &trans                    &vim_y_paste             &kp _C(UP) &kp _C(DOWN)       &none                 &none
+            &none          &none         &none         &none          &none                                                                                                     &none                    &none                    &none                        &none      &none
+            &none          &none         &none         &none          &none          &none                                                                     &kp _C(LS(C))    &kp _C(LA(LEFT))         &kp G                    &kp _C(LA(RIGHT))            &none      &none
+            &none          &none         &kp _REDO     &kp _UNDO      &none          &kp _CUT                                                                  &kp _C(R)        &kp _C(LA(UP))           &kp UP                   &kp _C(LA(DOWN))             &kp _C(W)  &kp Q
+            &none          &kp _C(A)     &select_line  &select_word   &none          &kp _COPY                                                                 &vim_plus_yank   &kp LEFT                 &kp DOWN                 &kp RIGHT                    &none      &none
+            &none          &select_none  &extend_line  &extend_word   &none          &kp _PASTE   &trans    &trans         &trans     &trans  &trans  &trans   &vim_plus_paste  &kp _HOME                &kp PG_UP                &kp PG_DN                    &kp _END   &none
+            &none          &none         &trans        &trans         &trans                      &trans    &sk_qrel LSFT  &tog NAV   &trans  &trans  &trans                    &vim_y_paste             &vim_y_paste_insert_mode &vim_plus_paste_insert_mode  &none      &none
             >;
         };
 
