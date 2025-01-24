@@ -1217,7 +1217,7 @@
             &none          &none         &kp _REDO     &kp _UNDO      &none          &kp _CUT                                                                  &kp _C(R)        &kp _C(LA(UP))           &kp UP                   &kp _C(LA(DOWN))             &kp _C(W)  &kp Q
             &none          &kp _C(A)     &select_line  &select_word   &none          &kp _COPY                                                                 &vim_plus_yank   &kp LEFT                 &kp DOWN                 &kp RIGHT                    &none      &none
             &none          &select_none  &extend_line  &extend_word   &none          &kp _PASTE   &trans    &trans         &trans     &trans  &trans  &trans   &vim_plus_paste  &kp _HOME                &kp PG_UP                &kp PG_DN                    &kp _END   &none
-            &none          &none         &trans        &trans         &trans                      &trans    &sk_qrel LSFT  &tog NAV   &trans  &trans  &trans                    &vim_y_paste             &vim_y_paste_insert_mode &vim_plus_paste_insert_mode  &none      &none
+            &none          &kt LGUI      &trans        &trans         &trans                      &trans    &sk_qrel LSFT  &tog NAV   &trans  &trans  &trans                    &vim_y_paste             &vim_y_paste_insert_mode &vim_plus_paste_insert_mode  &none      &none
             >;
         };
 
