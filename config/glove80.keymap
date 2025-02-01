@@ -913,13 +913,6 @@
             bindings = <&kp LC(LA(LG(SEMI))) &kp DOWN>;
         };
 
-        personal_email: personal_email {
-            compatible = "zmk,behavior-macro";
-            wait-ms = <20>;
-            #binding-cells = <0>;
-            bindings = <&kp K &kp I &kp R &kp I &kp L &kp L &kp DOT &kp A &kp M &kp U &kp R &kp S &kp K &kp I &kp Y &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
-        };
-
         //////////////////////////////////////////////////////////////////////////
         //
         // Approximation of Pascal Getreuer's Select Word macro from QMK
