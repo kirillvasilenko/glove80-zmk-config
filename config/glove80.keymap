@@ -913,6 +913,13 @@
             bindings = <&kp LC(LA(LG(SEMI))) &kp DOWN>;
         };
 
+        personal_email: personal_email {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <20>;
+            #binding-cells = <0>;
+            bindings = <&kp k &kp i &kp r &kp i &kp l &kp l &kp DOT &kp a &kp m &kp u &kp r &kp s &kp k &kp i &kp y &kp AT &kp g &kp m &kp a &kp a &kp i &kp l &kp DOT &kp c &kp o &kp m>;
+        };
+
         //////////////////////////////////////////////////////////////////////////
         //
         // Approximation of Pascal Getreuer's Select Word macro from QMK
@@ -1262,12 +1269,12 @@
 
         fun {
             bindings = <
-            &none          &none         &none         &none          &none                                                                                                                     &none          &none          &none         &none          &none
-            &none          &none         &none         &none          &none             &none                                                                                     &none         &none          &none          &none         &none          &none
-            &none          &kp C_PWR     &kp C_SLEEP         &kp K_PWR          &none             &none                                                                                     &kp C_BRI_UP  &kp F7         &kp F8         &kp F9        &kp F10        &none
-            &none          &none         &kp TAB       &kp RET        &kp SPACE         &none                                                                                     &kp C_BRI_DN  &kp F4         &kp F5         &kp F6        &kp F11        &none
-            &none          &none         &none         &none          &none             &none   &trans  &trans          &none      &kp C_PREV  &kp C_NEXT    &kp C_PP             &none         &kp F1         &kp F2         &kp F3        &kp F12        &none
-            &none          &none         &trans        &trans         &trans                    &trans  &sk_qrel LSFT   &tog FUN   &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP                       &none          &none          &none         &none          &none
+            &none          &none         &none         &none          &none                                                                                                                     &none            &none          &none         &none          &none
+            &none          &none         &none         &none          &none             &none                                                                                     &none         &none            &none          &none         &none          &none
+            &none          &kp C_PWR     &none         &none          &none             &none                                                                                     &kp C_BRI_UP  &kp F7           &kp F8         &kp F9        &kp F10        &none
+            &none          &none         &kp TAB       &kp RET        &kp SPACE         &none                                                                                     &kp C_BRI_DN  &kp F4           &kp F5         &kp F6        &kp F11        &none
+            &none          &none         &none         &none          &none             &none   &trans  &trans          &none      &kp C_PREV  &kp C_NEXT    &kp C_PP             &none         &kp F1           &kp F2         &kp F3        &kp F12        &none
+            &none          &none         &trans        &trans         &trans                    &trans  &sk_qrel LSFT   &tog FUN   &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP                       &personal_email  &none          &none         &none          &none
             >;
         };
 
