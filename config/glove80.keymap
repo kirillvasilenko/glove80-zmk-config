@@ -917,7 +917,7 @@
             compatible = "zmk,behavior-macro";
             wait-ms = <20>;
             #binding-cells = <0>;
-            bindings = <&kp k &kp i &kp r &kp i &kp l &kp l &kp DOT &kp a &kp m &kp u &kp r &kp s &kp k &kp i &kp y &kp AT &kp g &kp m &kp a &kp a &kp i &kp l &kp DOT &kp c &kp o &kp m>;
+            bindings = <&kp K &kp I &kp R &kp I &kp L &kp L &kp DOT &kp A &kp M &kp U &kp R &kp S &kp K &kp I &kp Y &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
         };
 
         //////////////////////////////////////////////////////////////////////////
