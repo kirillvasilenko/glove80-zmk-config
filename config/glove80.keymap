@@ -1079,20 +1079,20 @@
 
         // Sticky layers
         // NAV
-        combo_to_nav {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_LH_T4 POS_LH_C2R4>;
-            bindings = <&tog NAV>;
-            layers = <BASE BASE_RUS BASE_EXTRA>;
-        };
+        /* combo_to_nav { */
+        /*     timeout-ms = <COMBO_FIRING_DECAY>; */
+        /*     key-positions = <POS_LH_T4 POS_LH_C2R4>; */
+        /*     bindings = <&tog NAV>; */
+        /*     layers = <BASE BASE_RUS BASE_EXTRA>; */
+        /* }; */
 
         // NUM
-        combo_to_num {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_LH_T5 POS_LH_C2R4>;
-            bindings = <&tog NUM>;
-            layers = <BASE BASE_EXTRA>;
-        };
+        /* combo_to_num { */
+        /*     timeout-ms = <COMBO_FIRING_DECAY>; */
+        /*     key-positions = <POS_LH_T5 POS_LH_C2R4>; */
+        /*     bindings = <&tog NUM>; */
+        /*     layers = <BASE BASE_EXTRA>; */
+        /* }; */
 
         // NUM_RUS
         combo_to_num_rus {
