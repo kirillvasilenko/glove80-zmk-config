@@ -1076,84 +1076,56 @@
         #ifndef COMBO_FIRING_DECAY
         #define COMBO_FIRING_DECAY 50
         #endif
-
+        
         // Sticky layers
-        // NAV
-        /* combo_to_nav { */
-        /*     timeout-ms = <COMBO_FIRING_DECAY>; */
-        /*     key-positions = <POS_LH_T4 POS_LH_C2R4>; */
-        /*     bindings = <&tog NAV>; */
-        /*     layers = <BASE BASE_RUS BASE_EXTRA>; */
-        /* }; */
-
-        // NUM
-        /* combo_to_num { */
-        /*     timeout-ms = <COMBO_FIRING_DECAY>; */
-        /*     key-positions = <POS_LH_T5 POS_LH_C2R4>; */
-        /*     bindings = <&tog NUM>; */
-        /*     layers = <BASE BASE_EXTRA>; */
-        /* }; */
-
-        // NUM_RUS
-        combo_to_num_rus {
+        tog_nav {
             timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_LH_T5 POS_LH_C2R4>;
+            key-positions = <POS_LH_T4 POS_RH_T6>;
+            bindings = <&tog NAV>;
+            layers = <BASE BASE_RUS BASE_EXTRA>;
+        };
+        tog_num {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_LH_T5 POS_RH_T6>;
+            bindings = <&tog NUM>;
+            layers = <BASE BASE_EXTRA>;
+        };
+        tog_num_rus {
+            timeout-ms = <COMBO_FIRING_DECAY>;
+            key-positions = <POS_LH_T5 POS_RH_T6>;
             bindings = <&tog NUM_RUS>;
             layers = <BASE_RUS>;
         };
-
-        // FUN
-        combo_to_fun {
+        tog_fun {
             timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_LH_T1 POS_LH_C2R4>;
+            key-positions = <POS_LH_T1 POS_RH_T6>;
             bindings = <&tog FUN>;
             layers = <BASE BASE_EXTRA BASE_RUS>;
         };
 
-        // MOU
-        combo_to_mou {
+        combo_alt_tab {
             timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_RH_T5 POS_RH_C2R4>;
-            bindings = <&tog MOU>;
-            layers = <BASE BASE_EXTRA BASE_RUS>;
-        };
-
-        combo_alt_tab_switcher_left {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_LH_T4 POS_LH_C2R5>;
+            key-positions = <POS_LH_T4 POS_LH_T1>;
             bindings = <&mod_tab _A_TAB>;
             layers = <BASE BASE_RUS BASE_EXTRA NAV>;
         };
-        combo_ctrl_tab_switcher_left {
+        combo_ctrl_tab {
             timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_LH_T5 POS_LH_C2R5>;
+            key-positions = <POS_LH_T5 POS_LH_T4>;
             bindings = <&mod_tab LCTL>;
             layers = <BASE BASE_RUS BASE_EXTRA NAV>;
         };
 
-        combo_alt_tab_switcher_right {
+        combo_meh {
             timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_RH_T4 POS_RH_C2R5>;
-            bindings = <&mod_tab _A_TAB>;
-            layers = <BASE BASE_RUS BASE_EXTRA NAV>;
-        };
-        combo_ctrl_tab_switcher_right {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_RH_T5 POS_RH_C2R5>;
-            bindings = <&mod_tab LCTL>;
-            layers = <BASE BASE_RUS BASE_EXTRA NAV>;
-        };
-
-        combo_meh_right {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_RH_T4 POS_RH_C3R4>;
+            key-positions = <POS_RH_T4 POS_RH_T1>;
             bindings = <&sk_qrel MEH>;
             layers = <BASE BASE_RUS BASE_EXTRA>;
         };
-        combo_meh_left {
+        combo_hyper {
             timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_LH_T4 POS_LH_C3R4>;
-            bindings = <&sk_qrel MEH>;
+            key-positions = <POS_LH_T4 POS_LH_T5>;
+            bindings = <&sk_qrel HYPER>;
             layers = <BASE BASE_RUS BASE_EXTRA>;
         };
     };
@@ -1196,12 +1168,12 @@
 
         nav {
             bindings = <
-            &none          &none         &none         &none          &none                                                                                                     &none                    &none                    &none                        &none      &none
-            &none          &none         &none         &none          &none          &none                                                                     &kp _C(LS(C))    &kp _C(LA(LEFT))         &kp G                    &kp _C(LA(RIGHT))            &none      &none
-            &none          &none         &kp _REDO     &kp _UNDO      &none          &kp _CUT                                                                  &kp _C(R)        &kp _C(LA(UP))           &kp UP                   &kp _C(LA(DOWN))             &kp _C(W)  &kp Q
-            &none          &kp _C(A)     &select_line  &select_word   &none          &kp _COPY                                                                 &vim_plus_yank   &kp LEFT                 &kp DOWN                 &kp RIGHT                    &none      &none
-            &none          &select_none  &extend_line  &extend_word   &none          &kp _PASTE   &trans    &trans         &trans     &trans  &trans  &trans   &vim_plus_paste  &kp _HOME                &kp PG_UP                &kp PG_DN                    &kp _END   &none
-            &none          &kt LGUI      &trans        &trans         &trans                      &trans    &sk_qrel LSFT  &tog NAV   &trans  &trans  &trans                    &vim_y_paste             &vim_y_paste_insert_mode &vim_plus_paste_insert_mode  &none      &none
+            &none          &none         &none         &none          &none                                                                                                       &none                    &none                    &none                        &none      &none
+            &none          &none         &none         &none          &none          &none                                                                       &kp _C(LS(C))    &kp _C(LA(LEFT))         &kp G                    &kp _C(LA(RIGHT))            &none      &none
+            &none          &none         &kp _REDO     &kp _UNDO      &none          &kp _CUT                                                                    &kp _C(R)        &kp _C(LA(UP))           &kp UP                   &kp _C(LA(DOWN))             &kp _C(W)  &kp Q
+            &none          &kp _C(A)     &select_line  &select_word   &none          &kp _COPY                                                                   &vim_plus_yank   &kp LEFT                 &kp DOWN                 &kp RIGHT                    &none      &none
+            &none          &select_none  &extend_line  &extend_word   &none          &kp _PASTE   &trans    &trans         &trans     &trans    &trans  &trans   &vim_plus_paste  &kp _HOME                &kp PG_UP                &kp PG_DN                    &kp _END   &none
+            &none          &kt LGUI      &trans        &trans         &trans                      &trans    &sk_qrel LSFT  &none      &tog NAV  &trans  &trans                    &vim_y_paste             &vim_y_paste_insert_mode &vim_plus_paste_insert_mode  &none      &none
             >;
         };
 
@@ -1223,18 +1195,18 @@
             &kp EXCL       &kp LBRC       &kp SQT       &kp DQT        &kp RBRC     &kp QMARK                                                                       &none    &kp INDEX_MOD   &kp MIDDY_MOD   &kp RING_MOD   &kp PINKY_MOD   &none
             &kp HASH       &kp CARET      &kp EQUAL     &kp UNDER      &kp DLLR     &kp STAR                                                                        &none    &kp SPACE       &kp RET         &kp BSPC       &kp TAB         &none
             &kp TILDE      &kp LT         &kp PIPE      &kp MINUS      &kp GT       &kp SLASH      &kp BSLH   &kp DOT    &kp STAR   &none     &none      &none      &none    &none           &none           &kp DEL        &none           &none
-            &kp AT         &kp AMPS       &kp LBKT      &kp RBKT       &kp PLUS                    &kp PRCNT  &kp COLON  &kp SEMI   &none     &none      &tog SYM            &none           &none           &none          &none           &none
+            &kp AT         &kp AMPS       &kp LBKT      &kp RBKT       &kp PLUS                    &kp PRCNT  &kp COLON  &kp SEMI   &none     &none      &none               &none           &none           &none          &none           &none
             >;
         };
 
         sym_rus {
             bindings = <
-            &none          &none          &none         &none          &none                                                                                                 &none           &none           &none          &none           &none
-            &none          &kp GRAVE_RUS      &kp LPAR_RUS      &kp RPAR_RUS       &kp SEMI_RUS     &kp COMMA_RUS                                                                       &none    &none           &none           &none          &none           &none
-            &kp EXCL_RUS       &kp LBRC_RUS       &kp SQT_RUS       &kp DQT_RUS        &kp RBRC_RUS     &kp QMARK_RUS                                                                       &none    &kp INDEX_MOD   &kp MIDDY_MOD   &kp RING_MOD   &kp PINKY_MOD   &none
-            &kp HASH_RUS       &kp CARET_RUS      &kp EQUAL_RUS     &kp UNDER_RUS      &kp DLLR_RUS     &kp STAR_RUS                                                                        &none    &kp SPACE       &kp RET         &kp BSPC       &kp TAB         &none
-            &kp TILDE_RUS      &kp LT_RUS         &kp PIPE_RUS      &kp MINUS_RUS      &kp GT_RUS       &kp SLASH_RUS      &kp BSLH_RUS   &kp DOT_RUS    &kp STAR_RUS   &none     &none      &none      &none    &none           &none           &kp DEL        &none           &none
-            &kp AT_RUS         &kp AMPS_RUS       &kp LBKT_RUS      &kp RBKT_RUS       &kp PLUS_RUS                    &kp PRCNT_RUS  &kp COLON_RUS  &kp SEMI_RUS   &none     &none      &tog SYM_RUS               &none           &none           &none          &none           &none
+            &none          &none              &none             &none              &none                                                                                                                     &none           &none           &none          &none           &none
+            &none          &kp GRAVE_RUS      &kp LPAR_RUS      &kp RPAR_RUS       &kp SEMI_RUS     &kp COMMA_RUS                                                                                   &none    &none           &none           &none          &none           &none
+            &kp EXCL_RUS   &kp LBRC_RUS       &kp SQT_RUS       &kp DQT_RUS        &kp RBRC_RUS     &kp QMARK_RUS                                                                                   &none    &kp INDEX_MOD   &kp MIDDY_MOD   &kp RING_MOD   &kp PINKY_MOD   &none
+            &kp HASH_RUS   &kp CARET_RUS      &kp EQUAL_RUS     &kp UNDER_RUS      &kp DLLR_RUS     &kp STAR_RUS                                                                                    &none    &kp SPACE       &kp RET         &kp BSPC       &kp TAB         &none
+            &kp TILDE_RUS  &kp LT_RUS         &kp PIPE_RUS      &kp MINUS_RUS      &kp GT_RUS       &kp SLASH_RUS      &kp BSLH_RUS   &kp DOT_RUS    &kp STAR_RUS   &none     &none      &none      &none    &none           &none           &kp DEL        &none           &none
+            &kp AT_RUS     &kp AMPS_RUS       &kp LBKT_RUS      &kp RBKT_RUS       &kp PLUS_RUS                        &kp PRCNT_RUS  &kp COLON_RUS  &kp SEMI_RUS   &none     &none      &none               &none           &none           &none          &none           &none
             >;
         };
 
