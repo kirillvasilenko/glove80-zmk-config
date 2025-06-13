@@ -579,7 +579,9 @@
             ignore-modifiers;
         };
 
-        &caps_word {
+        my_caps_word: caps_word {
+            compatible = "zmk,behavior-caps-word";
+            #binding-cells = <0>;
             continue-list = <COMMA DOT SLASH SEMI GRAVE SQT LBKT>;
         };
 
