@@ -20,7 +20,7 @@
 #define MOU 2
 #define NUM 3
 #define FUN 4
-#define MAGIC 4
+#define MAGIC 5
 
 #ifndef OPERATING_SYSTEM
 //#define OPERATING_SYSTEM 'L' // linux
