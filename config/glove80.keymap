@@ -579,125 +579,6 @@
             ignore-modifiers;
         };
 
-
-        //
-        // Custom shifted pairs for the Engram layout
-        // - https://engram.dev/
-        // - https://sunaku.github.io/engram-keyboard-layout.html
-        //
-
-        engram_1: engram_1 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N1>, <&kp TILDE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        engram_2: engram_2 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LPAR>, <&kp AT>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        engram_3: engram_3 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp RPAR>, <&kp HASH>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        engram_4: engram_4 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp PIPE>, <&kp CARET>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        engram_5: engram_5 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp BSLH>, <&dllr_lbrc>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        engram_6: engram_6 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&rpar_colon>, <&rpar_space_lbrc_ret>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        engram_7: engram_7 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp AMPS>, <&kp DLLR>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        engram_0: engram_0 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N0>, <&kp GRAVE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        engram_lc1: engram_lc1 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp SLASH>, <&kp STAR>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        engram_lc2: engram_lc2 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp SEMI>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        engram_lc3: engram_lc3 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp QMARK>, <&kp EXCL>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        engram_rc1: engram_rc1 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp PLUS>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        engram_rc2: engram_rc2 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp COLON>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        engram_rb1: engram_rb1 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp UNDER>, <&kp LT>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        engram_rb2: engram_rb2 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp EQUAL>, <&rarrow>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        engram_rb3: engram_rb3 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp PRCNT>, <&kp GT>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         magic: magic_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "MAGIC_HOLD_TAP";
@@ -991,12 +872,12 @@
 
         base {
             bindings = <
-            &none                    &none                   &none                 &none                   &none                                                                                                                                                          &none                    &none                    &none                  &none                       &none
-            &none                    &engram_1               &engram_2             &engram_3               &engram_4               &engram_5                                                                                                                &engram_6     &engram_7                &kp LBKT                 &kp RBKT               &engram_0                   &none
-            &none                    &kp V                   &kp W                 &kp D                   &kp L                   &engram_lc1                                                                                                              &engram_rc1   &kp U                    &kp O                    &kp Y                  &kp B                       &none
-            &none                    &kp N                   &kp S                 &kp T                   &kp H                   &engram_lc2                                                                                                              &engram_rc2   &kp A                    &kp E                    &kp I                  &kp C                       &none
-            &none                    &kp P                   &kp F                 &kp M                   &kp R                   &engram_lc3   &th FUN ESC  &kp DEL            &tog_rus               &caps_word    &kp TAB      &kp RET                  &kp SQT       &kp K                    &kp J                    &kp X                  &kp G                       &none
-            &magic MAGIC 0           &kp Q                   &sk_qrel LCTL         &sk_qrel LALT           &sk_qrel LGUI                         &th NAV BSPC &th_mo_sk NUM LSFT &kp LC(LA(LG(SPACE)))  &scroll_down  &key_repeat  &th_no_repeat SYM SPACE                &engram_rb1              &engram_rb2              &engram_rb3            &kp Z                       &magic MAGIC 0
+            &kp F1                   &kp F3                  &kp F3                &kp F4                  &kp F5                                                                                                                                           &kp F6        &kp F7                   &kp F8                   &kp F9                 &kp F10
+            &none                    &kp N1                  &kp N2                &kp N3                  &kp N4               &kp N5                                                                                                             &kp N6   &kp N7        &kp N8                   &kp N9                   &kp N0                 &none
+            &none                    &kp Q                   &kp W                 &kp E                   &kp R                &kp T                                                                                                              &kp Y    &kp U         &kp I                    &kp O                    &kp P                  &none
+            &none                    &kp A                   &kp S                 &kp D                   &kp F                &kp G                                                                                                              &kp H    &kp J         &kp K                    &kp L                    &kp SEMI               &none
+            &none                    &kp Z                   &kp X                 &kp C                   &kp V                &kp B   &th FUN ESC  &kp DEL            &tog_rus               &caps_word    &kp TAB      &kp RET                  &kp N    &kp M         &kp COMMA                &kp DOT                  &kp SLASH              &none
+            &magic MAGIC 0           &kp GRAVE               &sk_qrel LCTL         &sk_qrel LALT           &sk_qrel LGUI                &th NAV BSPC &th_mo_sk NUM LSFT &kp LC(LA(LG(SPACE)))  &scroll_down  &key_repeat  &th_no_repeat SYM SPACE           &kp LBKT      &kp EQUAL                &kp RBKT                 &kp SQT                &magic MAGIC 0
             >;
         };
 
@@ -1047,7 +928,7 @@
         magic {
             bindings = <
             &bt BT_CLR        &none               &none           &none           &none                                                                                                           &none      &none      &none      &none      &bt BT_CLR_ALL
-            &none             &tog BASE_EXTRA     &none           &none           &none           &none                                                                                &none      &none      &none      &none      &none      &none
+            &none             &none               &none           &none           &none           &none                                                                                &none      &none      &none      &none      &none      &none
             &none             &rgb_ug RGB_SPI     &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_TOG                                                                      &none      &none      &none      &none      &none      &none
             &bootloader       &rgb_ug RGB_SPD     &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_EFF                                                                      &none      &none      &none      &none      &none      &bootloader
             &sys_reset        &none               &none           &none           &none           &none           &bt_2     &bt_3     &none            &none     &none     &none       &none      &none      &none      &none      &none      &sys_reset
