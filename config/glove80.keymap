@@ -16,16 +16,11 @@
 
 // layers
 #define BASE 0
-#define BASE_EXTRA 1
-#define BASE_RUS 2
-#define NAV 3
-#define MOU 4
-#define SYM 5
-#define SYM_RUS 6
-#define NUM 7
-#define NUM_RUS 8
-#define FUN 9
-#define MAGIC 10
+#define NAV 1
+#define MOU 2
+#define NUM 3
+#define FUN 4
+#define MAGIC 4
 
 #ifndef OPERATING_SYSTEM
 //#define OPERATING_SYSTEM 'L' // linux
@@ -384,46 +379,6 @@
                          70 53     56 73                 \
                           71 54   55 72
 
-    // Rus symbols
-    #define COLON_RUS CARET
-    #define DOT_RUS SLASH
-    #define COMMA_RUS LS(SLASH)
-    #define SEMI_RUS LS(N4)
-    #define SQT_RUS RA(O)
-    #define DQT_RUS LS(N2)
-    #define GRAVE_RUS LC(RA(GRAVE))
-    #define LBRC_RUS LS(RA(N9))
-    #define RBRC_RUS LS(RA(N0))
-    #define LBKT_RUS RA(GRAVE)
-    #define RBKT_RUS LS(RA(GRAVE))
-    #define QMARK_RUS LS(N7)
-    #define AT_RUS RA(N2)
-    #define HASH_RUS RA(N3)
-    #define EXCL_RUS EXCL
-    #define LT_RUS LS(RA(COMMA))
-    #define GT_RUS LS(RA(DOT))
-    #define AMPS_RUS RA(N7)
-    #define CARET_RUS RA(N6)
-    #define PIPE_RUS LS(RA(BSLH))
-    #define PLUS_RUS PLUS
-    #define DLLR_RUS RA(N4)
-    #define MINUS_RUS MINUS
-    #define STAR_RUS STAR
-    #define SLASH_RUS LS(BSLH)
-    #define TILDE_RUS D // did not find a way to get TILDE on rus
-    #define PRCNT_RUS PRCNT
-    #define BSLH_RUS BSLH
-    #define EQUAL_RUS EQUAL
-    #define UNDER_RUS UNDER
-    #define LPAR_RUS LPAR
-    #define RPAR_RUS RPAR
-    #define MID_DASH_RUS RA(MINUS) 
-    #define LON_DASH_RUS LS(RA(MINUS))
-    #define LQT1_RUS RA(RBKT)
-    #define RQT1_RUS LS(RA(RBKT))
-    #define LQT2_RUS LS(RA(O))
-    #define RQT2_RUS RA(LBKT)
-
     behaviors {
         th: thumb_layer_access {
             compatible = "zmk,behavior-hold-tap";
@@ -743,69 +698,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        rus_4: rus_4 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp QMARK_RUS>, <&kp EXCL_RUS>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        rus_7: rus_7 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp MINUS_RUS>, <&kp PLUS_RUS>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        rus_6: rus_6 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LON_DASH_RUS>, <&kp MID_DASH_RUS>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        rus_rb1: rus_rb1 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DOT_RUS>, <&kp COLON_RUS>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        rus_rb2: rus_rb2 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA_RUS>, <&kp SEMI_RUS>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        rus_2: rus_2 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LPAR_RUS>, <&kp LPAR_RUS>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        rus_3: rus_3 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp RPAR_RUS>, <&kp HASH_RUS>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        rus_8: rus_8 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LQT1_RUS>, <&kp LQT2_RUS>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        rus_9: rus_9 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp RQT1_RUS>, <&kp RQT2_RUS>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         magic: magic_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "MAGIC_HOLD_TAP";
@@ -880,30 +772,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp DQT &kp PLUS &kp Y>;
-        };
-
-        rarrow: right_arrow {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp MINUS &kp GT>;
-        };
-
-        rpar_colon: rpar_colon {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RPAR &kp COLON>;
-        };
-
-        dllr_lbrc: dllr_lbrc {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp DLLR &kp LBRC>;
-        };
-
-        rpar_space_lbrc_ret: rpar_space_lbrc_ret {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RPAR &kp SPACE &kp LBRC &kp RET>;
         };
 
         scroll_down: scroll_down {
@@ -1015,12 +883,6 @@
             bindings = <&kp LS(UP) &kp LS(_HOME)>;
         )
 
-        tog_rus: tog_rus_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(SPACE) &tog BASE_RUS>;
-        };
-
         rgb_ug_status_macro: rgb_ug_status_macro_0 {
             label = "RGB_UG_STATUS";
             compatible = "zmk,behavior-macro";
@@ -1082,51 +944,45 @@
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_RH_T6>;
             bindings = <&tog NAV>;
-            layers = <BASE BASE_RUS BASE_EXTRA>;
+            layers = <BASE>;
         };
         tog_num {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T5 POS_RH_T6>;
             bindings = <&tog NUM>;
-            layers = <BASE BASE_EXTRA>;
-        };
-        tog_num_rus {
-            timeout-ms = <COMBO_FIRING_DECAY>;
-            key-positions = <POS_LH_T5 POS_RH_T6>;
-            bindings = <&tog NUM_RUS>;
-            layers = <BASE_RUS>;
+            layers = <BASE>;
         };
         tog_fun {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T1 POS_RH_T6>;
             bindings = <&tog FUN>;
-            layers = <BASE BASE_EXTRA BASE_RUS>;
+            layers = <BASE>;
         };
 
         combo_alt_tab {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_T1>;
             bindings = <&mod_tab _A_TAB>;
-            layers = <BASE BASE_RUS BASE_EXTRA NAV>;
+            layers = <BASE>;
         };
         combo_ctrl_tab {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T5 POS_LH_T4>;
             bindings = <&mod_tab LCTL>;
-            layers = <BASE BASE_RUS BASE_EXTRA NAV>;
+            layers = <BASE>;
         };
 
         combo_meh {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_RH_T4 POS_RH_T1>;
             bindings = <&sk_qrel MEH>;
-            layers = <BASE BASE_RUS BASE_EXTRA>;
+            layers = <BASE>;
         };
         combo_hyper {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_T5>;
             bindings = <&sk_qrel HYPER>;
-            layers = <BASE BASE_RUS BASE_EXTRA>;
+            layers = <BASE>;
         };
     };
 
@@ -1141,28 +997,6 @@
             &none                    &kp N                   &kp S                 &kp T                   &kp H                   &engram_lc2                                                                                                              &engram_rc2   &kp A                    &kp E                    &kp I                  &kp C                       &none
             &none                    &kp P                   &kp F                 &kp M                   &kp R                   &engram_lc3   &th FUN ESC  &kp DEL            &tog_rus               &caps_word    &kp TAB      &kp RET                  &kp SQT       &kp K                    &kp J                    &kp X                  &kp G                       &none
             &magic MAGIC 0           &kp Q                   &sk_qrel LCTL         &sk_qrel LALT           &sk_qrel LGUI                         &th NAV BSPC &th_mo_sk NUM LSFT &kp LC(LA(LG(SPACE)))  &scroll_down  &key_repeat  &th_no_repeat SYM SPACE                &engram_rb1              &engram_rb2              &engram_rb3            &kp Z                       &magic MAGIC 0
-            >;
-        };
-
-        base_extra {
-            bindings = <
-            &none                    &none                   &none                 &none                   &none                                                                                                                              &none                    &none                    &none                  &none                       &none
-            &none                    &kp N1                  &none                 &none                   &none                   &none                                                                                               &none  &none                    &none                    &none                  &kp N0                      &none
-            &none                    &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                                               &kp Y  &kp U                    &kp I                    &kp O                  &kp P                       &none
-            &none                    &lp_kp_kp PINKY_MOD A   &lr_kp_kp RING_MOD S  &lm_kp_kp MIDDY_MOD D   &li_kp_kp INDEX_MOD F   &kp G                                                                                               &kp H  &ri_kp_kp INDEX_MOD J    &rm_kp_kp MIDDY_MOD K    &rr_kp_kp RING_MOD L   &rp_kp_kp PINKY_MOD SEMI    &none
-            &none                    &kp Z                   &kp X                 &kp C                   &kp V                   &kp B   &th FUN ESC  &kp DEL            &tog_rus  &caps_word  &kp TAB      &kp RET                  &kp N  &kp M                    &kp COMMA                &kp DOT                &kp FSLH                    &none
-            &magic MAGIC 0           &vim_y_paste            &sk_qrel LGUI         &scroll_down            &kp LC(LA(LG(SPACE)))           &th NAV BSPC &th_mo_sk NUM LSFT &none     &none       &key_repeat  &th_no_repeat SYM SPACE         &kp UNDER                &none                    &none                  &none                       &magic MAGIC 0
-            >;
-        };
-
-        base_rus {
-            bindings = <
-            &none                    &none                   &none                 &none                   &none                                                                                                                                         &none                    &none                    &none                  &none                       &none
-            &none                    &kp N1                  &rus_2                &rus_3                  &rus_4                  &none                                                                                                       &rus_6    &rus_7                   &rus_8                   &rus_9                 &kp N0                      &none
-            &none                    &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                                                       &kp Y     &kp U                    &kp I                    &kp O                  &kp P                       &none
-            &none                    &kp A                   &kp S                 &kp D                   &kp F                   &kp G                                                                                                       &kp H     &kp J                    &kp K                    &kp L                  &kp SEMI                    &none
-            &none                    &kp Z                   &kp X                 &kp C                   &kp V                   &kp B   &th FUN ESC  &kp DEL                 &tog_rus  &caps_word  &kp TAB      &kp RET                     &kp N     &kp M                    &kp COMMA                &kp DOT                &kp LBKT                    &none
-            &magic MAGIC 0           &kp GRAVE               &trans                &trans                  &trans                          &th NAV BSPC &th_mo_sk NUM_RUS LSFT  &trans    &trans      &key_repeat  &th_no_repeat SYM_RUS SPACE           &rus_rb1                 &rus_rb2                 &kp RBKT               &kp SQT                     &magic MAGIC 0
             >;
         };
 
@@ -1188,28 +1022,6 @@
             >;
         };
 
-        sym {
-            bindings = <
-            &none          &none          &none         &none          &none                                                                                                 &none           &none           &none          &none           &none
-            &none          &kp GRAVE      &kp LPAR      &kp RPAR       &kp SEMI     &kp COMMA                                                                       &none    &none           &none           &none          &none           &none
-            &kp EXCL       &kp LBRC       &kp SQT       &kp DQT        &kp RBRC     &kp QMARK                                                                       &none    &kp INDEX_MOD   &kp MIDDY_MOD   &kp RING_MOD   &kp PINKY_MOD   &none
-            &kp HASH       &kp CARET      &kp EQUAL     &kp UNDER      &kp DLLR     &kp STAR                                                                        &none    &kp SPACE       &kp RET         &kp BSPC       &kp TAB         &none
-            &kp TILDE      &kp LT         &kp PIPE      &kp MINUS      &kp GT       &kp SLASH      &kp BSLH   &kp DOT    &kp STAR   &none     &none      &none      &none    &none           &none           &kp DEL        &none           &none
-            &kp AT         &kp AMPS       &kp LBKT      &kp RBKT       &kp PLUS                    &kp PRCNT  &kp COLON  &kp SEMI   &none     &none      &none               &none           &none           &none          &none           &none
-            >;
-        };
-
-        sym_rus {
-            bindings = <
-            &none          &none              &none             &none              &none                                                                                                                     &none           &none           &none          &none           &none
-            &none          &kp GRAVE_RUS      &kp LPAR_RUS      &kp RPAR_RUS       &kp SEMI_RUS     &kp COMMA_RUS                                                                                   &none    &none           &none           &none          &none           &none
-            &kp EXCL_RUS   &kp LBRC_RUS       &kp SQT_RUS       &kp DQT_RUS        &kp RBRC_RUS     &kp QMARK_RUS                                                                                   &none    &kp INDEX_MOD   &kp MIDDY_MOD   &kp RING_MOD   &kp PINKY_MOD   &none
-            &kp HASH_RUS   &kp CARET_RUS      &kp EQUAL_RUS     &kp UNDER_RUS      &kp DLLR_RUS     &kp STAR_RUS                                                                                    &none    &kp SPACE       &kp RET         &kp BSPC       &kp TAB         &none
-            &kp TILDE_RUS  &kp LT_RUS         &kp PIPE_RUS      &kp MINUS_RUS      &kp GT_RUS       &kp SLASH_RUS      &kp BSLH_RUS   &kp DOT_RUS    &kp STAR_RUS   &none     &none      &none      &none    &none           &none           &kp DEL        &none           &none
-            &kp AT_RUS     &kp AMPS_RUS       &kp LBKT_RUS      &kp RBKT_RUS       &kp PLUS_RUS                        &kp PRCNT_RUS  &kp COLON_RUS  &kp SEMI_RUS   &none     &none      &none               &none           &none           &none          &none           &none
-            >;
-        };
-
         num {
             bindings = <
             &none          &none         &none         &none          &none                                                                                                      &none     &none      &none           &none      &none
@@ -1218,17 +1030,6 @@
             &none          &none         &kp TAB       &kp RET        &kp SPACE      &none                                                                       &kp PLUS        &kp N4    &kp N5     &kp N6          &kp MINUS  &none
             &none          &none         &none         &none          &none          &none   &trans  &trans          &none      &none      &none    &kp EQUAL    &kp PRCNT       &kp N1    &kp N2     &kp N3          &kp SLASH  &none
             &none          &none         &trans        &trans         &trans                 &trans  &sk_qrel LSFT   &tog NUM   &kp COMMA  &kp DOT  &kp N0                       &kp UNDER &kp RPAR   &kp LPAR        &none      &none
-            >;
-        };
-
-        num_rus {
-            bindings = <
-            &none          &none         &none         &none          &none                                                                                                                 &none         &none          &none           &none          &none
-            &none          &none         &none         &none          &none          &none                                                                                  &none           &kp CARET_RUS &kp K          &kp J           &none          &none
-            &none          &none         &none         &none          &none          &none                                                                                  &kp STAR_RUS    &kp N7        &kp N8         &kp N9          &kp LS(G)      &kp E
-            &none          &none         &kp TAB       &kp RET        &kp SPACE      &none                                                                                  &kp PLUS_RUS    &kp N4        &kp N5         &kp N6          &kp MINUS_RUS  &none
-            &none          &none         &none         &none          &none          &none   &trans  &trans         &none      &none          &none        &kp EQUAL_RUS    &kp PRCNT_RUS   &kp N1        &kp N2         &kp N3          &kp SLASH_RUS  &none
-            &none          &none         &trans        &trans         &trans                 &trans  &sk_qrel LSFT  &tog NUM   &kp COMMA_RUS  &kp DOT_RUS  &kp N0                           &kp UNDER_RUS &kp RPAR_RUS   &kp LPAR_RUS    &none          &none
             >;
         };
 
