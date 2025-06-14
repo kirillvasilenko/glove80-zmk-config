@@ -744,7 +744,7 @@
         rus_t: rus_t {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp T>, <& T>;
+            bindings = <&kp T>, <&kp T>;
             mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL)>;
             keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL)>;
         };
