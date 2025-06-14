@@ -71,13 +71,13 @@
 // The *_MOD specify which modifiers are used by home row mod keys.
 //
 #define PINKY_MOD LSFT
-#define RING_MOD LALT
+#define MIDDY_MOD LALT
 #if OPERATING_SYSTEM == 'M'
-  #define MIDDY_MOD LGUI
-  #define INDEX_MOD LCTL
-#else
-  #define MIDDY_MOD LCTL
+  #define RING_MOD LCTL
   #define INDEX_MOD LGUI
+#else
+  #define RING_MOD LGUI
+  #define INDEX_MOD LCTL
 #endif
 
 /* #define for key positions */
@@ -1057,7 +1057,7 @@
             &kp F1                   &kp F2                  &none                 &none                   &none                                                                                                                                                          &none                    &none                    &none                  &none                       &none
             &none                    &en_lc5r2               &en_lc4r2             &en_lc3r2               &en_lc2r2               &en_lc1r2                                                                                                                &en_rc1r2     &en_rc2r2                &en_rc3r2                &en_rc4r2              &en_rc5r2                   &none
             &none                    &kp V                   &kp W                 &kp D                   &kp L                   &en_lc1r3                                                                                                                &en_rc1r3     &kp U                    &kp O                    &kp Y                  &kp B                       &none
-            &kp Q                    &lp_kp_kp PINKY_MOD N   &lr_kp_kp RING_MOD S  &lm_kp_kp MIDDY_MOD T   &li_kp_kp INDEX_MOD H   &en_lc1r4                                                                                                                &en_rc1r3     &ri_kp_kp INDEX_MOD A    &rm_kp_kp MIDDY_MOD E    &rr_kp_kp RING_MOD I   &rp_kp_kp PINKY_MOD C       &kp Z
+            &kp Q                    &lp_kp_kp PINKY_MOD N   &lr_kp_kp RING_MOD S  &lm_kp_kp MIDDY_MOD T   &li_kp_kp INDEX_MOD H   &en_lc1r4                                                                                                                &en_rc1r4     &ri_kp_kp INDEX_MOD A    &rm_kp_kp MIDDY_MOD E    &rr_kp_kp RING_MOD I   &rp_kp_kp PINKY_MOD C       &kp Z
             &none                    &kp P                   &kp F                 &kp M                   &kp R                   &en_lc1r5   &th FUN ESC  &sk_qrel LGUI      &tog_rus               &caps_word    &sk_qrel LGUI  &kp RET                  &kp SQT       &kp K                    &kp J                    &kp X                  &kp G                       &none
             &magic MAGIC 0           &en_lc5r6               &en_lc4r6             &en_lc3r6               &sk_qrel LSFT                       &th NAV BSPC &th_mo_sk NUM TAB  &kp LC(LA(LG(SPACE)))  &scroll_down  &key_repeat    &th_no_repeat SYM SPACE                &sk_qrel LSFT            &en_rc3r6                &en_rc4r6              &en_rc5r6                   &magic MAGIC 0
             >;
