@@ -814,6 +814,14 @@
             keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL)>;
         };
 
+        rus_t: rus_t {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp T>, <&engram_lc1>;
+            mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL)>;
+        };
+
         magic: magic_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "MAGIC_HOLD_TAP";
@@ -1167,7 +1175,7 @@
             bindings = <
             &none                    &none                   &none                 &none                   &none                                                                                                                                         &none                    &none                    &none                  &none                       &none
             &none                    &kp N1                  &rus_2                &rus_3                  &rus_4                  &none                                                                                                       &rus_6    &rus_7                   &rus_8                   &rus_9                 &kp N0                      &none
-            &none                    &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                                                       &kp Y     &kp U                    &kp I                    &kp O                  &kp P                       &none
+            &none                    &kp Q                   &kp W                 &kp E                   &kp R                   &rus_t                                                                                                       &kp Y     &kp U                    &kp I                    &kp O                  &kp P                       &none
             &none                    &kp A                   &kp S                 &rus_d                   &kp F                   &kp G                                                                                                       &kp H     &kp J                    &kp K                    &kp L                  &kp SEMI                    &none
             &none                    &kp Z                   &kp X                 &kp C                   &kp V                   &kp B   &th FUN ESC  &kp DEL                 &tog_rus  &caps_word  &kp TAB      &kp RET                     &kp N     &kp M                    &kp COMMA                &kp DOT                &kp LBKT                    &none
             &magic MAGIC 0           &kp GRAVE               &trans                &trans                  &trans                          &th NAV BSPC &th_mo_sk NUM_RUS LSFT  &trans    &trans      &key_repeat  &th_no_repeat SYM_RUS SPACE           &rus_rb1                 &rus_rb2                 &kp RBKT               &kp SQT                     &magic MAGIC 0
