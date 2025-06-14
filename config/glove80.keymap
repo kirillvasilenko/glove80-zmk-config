@@ -811,6 +811,7 @@
             #binding-cells = <0>;
             bindings = <&kp D>, <&kp T>;
             mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL)>;
         };
 
         magic: magic_hold_tap {
