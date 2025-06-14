@@ -601,14 +601,14 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        en_rc1r3: en_lc1r3 {
+        en_rc1r3: en_rc1r3 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp MINUS>, <&kp PLUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        en_lc1r4: en_lc1r4 {
+        en_rc1r4: en_rc1r4 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp COLON>;
