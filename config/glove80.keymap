@@ -508,231 +508,231 @@
         // - https://sunaku.github.io/engram-keyboard-layout.html
         //
 
-        en_lc5r2: en_lc5r2 {
+        en_l25: en_l25 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N1>, <&kp TILDE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        en_lc4r2: en_lc4r2 {
+        en_l24: en_l24 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LPAR>, <&kp AT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        en_lc3r2: en_lc3r2 {
+        en_l23: en_l23 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RPAR>, <&kp HASH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        en_lc2r2: en_lc2r2 {
+        en_l22: en_l22 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp PIPE>, <&kp CARET>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        en_lc1r2: en_lc1r2 {
+        en_l21: en_l21 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp BSLH>, <&kp BSLH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        en_rc1r2: en_rc1r2 {
+        en_r21: en_r21 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N6>, <&kp N6>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        en_rc2r2: en_rc2r2 {
+        en_r22: en_r22 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp AMPS>, <&kp DLLR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        en_rc3r2: en_rc3r2 {
+        en_r23: en_r23 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LBKT>, <&kp LBKT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        en_rc4r2: en_rc4r2 {
+        en_r24: en_r24 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RBKT>, <&kp RBKT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        en_rc5r2: en_rc5r2 {
+        en_r25: en_r25 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N0>, <&kp GRAVE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        en_lc1r3: en_lc1r3 {
+        en_l31: en_l31 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp SLASH>, <&kp STAR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        en_lc1r4: en_lc1r4 {
+        en_l41: en_l41 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp SEMI>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        en_lc1r5: en_lc1r5 {
+        en_l51: en_l51 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp QMARK>, <&kp EXCL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        en_rc1r3: en_rc1r3 {
+        en_r31: en_r31 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp MINUS>, <&kp PLUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        en_rc1r4: en_rc1r4 {
+        en_r41: en_r41 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp COLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        en_rc3r6: en_rc3r6 {
+        en_r63: en_r63 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp EQUAL>, <&kp EQUAL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        en_rc4r6: en_rc4r6 {
+        en_r64: en_r64 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LT>, <&kp LT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        en_rc5r6: en_rc5r6 {
+        en_r65: en_r65 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp GT>, <&kp GT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        en_lc5r6: en_lc5r6 {
+        en_l65: en_l65 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LBRC>, <&kp LBRC>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        en_lc4r6: en_lc4r6 {
+        en_l64: en_l64 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RBRC>, <&kp RBRC>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        en_lc3r6: en_lc3r6 {
+        en_l63: en_l63 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp UNDER>, <&kp PRCNT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        ru_lc4r2: ru_lc4r2 {
+        ru_l24: ru_l24 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LPAR_RUS>, <&kp AT_RUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        ru_lc3r2: ru_lc3r2 {
+        ru_l23: ru_l23 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RPAR_RUS>, <&kp HASH_RUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        ru_lc2r2: ru_lc2r2 {
+        ru_l22: ru_l22 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp QMARK_RUS>, <&kp EXCL_RUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        ru_lc1r2: ru_lc1r2 {
+        ru_l21: ru_l21 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp SLASH_RUS>, <&kp STAR_RUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        ru_rc1r2: ru_rc1r2 {
+        ru_r21: ru_r21 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp PRCNT_RUS>, <&kp BSLH_RUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        ru_rc2r2: ru_rc2r2 {
+        ru_r22: ru_r22 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp MINUS_RUS>, <&kp PLUS_RUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        ru_rc3r2: ru_rc3r2 {
+        ru_r23: ru_r23 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LQT1_RUS>, <&kp LQT2_RUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        ru_rc4r2: ru_rc4r2 {
+        ru_r24: ru_r24 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RQT1_RUS>, <&kp RQT2_RUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        ru_rc5r2: ru_rc5r2 {
+        ru_r25: ru_r25 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N0>, <&kp NO_RUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        ru_rc3r6: ru_rc3r6 {
+        ru_r63: ru_r63 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp COMMA_RUS>, <&kp SEMI_RUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        ru_rc4r6: ru_rc4r6 {
+        ru_r64: ru_r64 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp DOT_RUS>, <&kp COLON_RUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        ru_lc3r4: ru_lc3r4 {
+        ru_l43: ru_l43 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp D>, <&kp T>;
@@ -1046,22 +1046,22 @@
         base {
             bindings = <
             &kp F1                   &kp F2                  &none                 &none                   &none                                                                                                                                                          &none                    &none                    &none                  &none                       &none
-            &none                    &en_lc5r2               &en_lc4r2             &en_lc3r2               &en_lc2r2               &en_lc1r2                                                                                                                &en_rc1r2     &en_rc2r2                &en_rc3r2                &en_rc4r2              &en_rc5r2                   &none
-            &none                    &kp V                   &kp W                 &kp D                   &kp L                   &en_lc1r3                                                                                                                &en_rc1r3     &kp U                    &kp O                    &kp Y                  &kp B                       &none
-            &kp Q                    &lp PINKY_MOD N         &lr RING_MOD S        &lm MIDDY_MOD T         &li INDEX_MOD H         &en_lc1r4                                                                                                                &en_rc1r4     &ri INDEX_MOD A          &rm MIDDY_MOD E          &rr RING_MOD I         &rp PINKY_MOD C             &kp Z
-            &none                    &kp P                   &kp F                 &kp M                   &kp R                   &en_lc1r5   &th FUN ESC  &sk_qrel LGUI      &tog_rus               &caps_word    &sk_qrel LGUI  &kp RET                  &kp SQT       &kp K                    &kp J                    &kp X                  &kp G                       &none
-            &magic MAGIC 0           &en_lc5r6               &en_lc4r6             &en_lc3r6               &sk_qrel LSFT                       &th NAV BSPC &th_mo_sk NUM TAB  &kp LC(LA(LG(SPACE)))  &scroll_down  &key_repeat    &th_no_repeat SYM SPACE                &sk_qrel LSFT            &en_rc3r6                &en_rc4r6              &en_rc5r6                   &magic MAGIC 0
+            &none                    &en_l25               &en_l24             &en_l23               &en_l22               &en_l21                                                                                                                &en_r21     &en_r22                &en_r23                &en_r24              &en_r25                   &none
+            &none                    &kp V                   &kp W                 &kp D                   &kp L                   &en_l31                                                                                                                &en_r31     &kp U                    &kp O                    &kp Y                  &kp B                       &none
+            &kp Q                    &lp PINKY_MOD N         &lr RING_MOD S        &lm MIDDY_MOD T         &li INDEX_MOD H         &en_l41                                                                                                                &en_r41     &ri INDEX_MOD A          &rm MIDDY_MOD E          &rr RING_MOD I         &rp PINKY_MOD C             &kp Z
+            &none                    &kp P                   &kp F                 &kp M                   &kp R                   &en_l51   &th FUN ESC  &sk_qrel LGUI      &tog_rus               &caps_word    &sk_qrel LGUI  &kp RET                  &kp SQT       &kp K                    &kp J                    &kp X                  &kp G                       &none
+            &magic MAGIC 0           &en_l65               &en_l64             &en_l63               &sk_qrel LSFT                       &th NAV BSPC &th_mo_sk NUM TAB  &kp LC(LA(LG(SPACE)))  &scroll_down  &key_repeat    &th_no_repeat SYM SPACE                &sk_qrel LSFT            &en_r63                &en_r64              &en_r65                   &magic MAGIC 0
             >;
         };
 
         base_rus {
             bindings = <
             &none                    &none                   &none                 &none                   &none                                                                                                                  &none                  &none                     &none                    &none                       &none
-            &none                    &kp N1                  &ru_lc4r2              &ru_lc3r2                &ru_lc2r2                &ru_lc1r2                                                                             &ru_rc1r2 &ru_rc2r2              &ru_rc3r2                 &ru_rc4r2                &ru_rc5r2                   &none
+            &none                    &kp N1                  &ru_l24              &ru_l23                &ru_l22                &ru_l21                                                                             &ru_r21 &ru_r22              &ru_r23                 &ru_r24                &ru_r25                   &none
             &none                    &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                                &kp Y     &kp U                  &kp I                     &kp O                    &kp P                       &kp RBKT
-            &none                    &kp A                   &kp S                 &ru_lc3r4                &kp F                   &kp G                                                                                &kp H     &kp J                  &kp K                     &kp L                    &kp SEMI                    &kp SQT
+            &none                    &kp A                   &kp S                 &ru_l43                &kp F                   &kp G                                                                                &kp H     &kp J                  &kp K                     &kp L                    &kp SEMI                    &kp SQT
             &none                    &kp Z                   &kp X                 &kp C                   &kp V                   &kp B   &trans  &trans  &tog_rus  &caps_word  &trans  &trans                         &kp N     &kp M                  &kp COMMA                 &kp DOT                  &kp LBKT                    &none
-            &magic MAGIC 0           &kp GRAVE               &trans                &trans                  &trans                          &trans  &trans  &trans    &trans      &trans  &th_no_repeat SYM_RUS SPACE              &trans                 &ru_rc3r6                 &ru_rc4r6                &trans                      &magic MAGIC 0
+            &magic MAGIC 0           &kp GRAVE               &trans                &trans                  &trans                          &trans  &trans  &trans    &trans      &trans  &th_no_repeat SYM_RUS SPACE              &trans                 &ru_r63                 &ru_r64                &trans                      &magic MAGIC 0
             >;
         };
 
