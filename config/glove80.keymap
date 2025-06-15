@@ -16,15 +16,14 @@
 
 // layers
 #define BASE 0
-#define BASE_EXTRA 1
-#define BASE_RUS 2
-#define NAV 3
-#define SYM 4
-#define SYM_RUS 5
-#define NUM 6
-#define NUM_RUS 7
-#define FUN 8
-#define MAGIC 9
+#define BASE_RUS 1
+#define NAV 2
+#define SYM 3
+#define SYM_RUS 4
+#define NUM 5
+#define NUM_RUS 6
+#define FUN 7
+#define MAGIC 8
 
 #ifndef OPERATING_SYSTEM
 //#define OPERATING_SYSTEM 'L' // linux
@@ -328,7 +327,7 @@
             bindings = <&mo>, <&sk_qrel>;
         };
 
-        li_kp_kp: homey_left_index {
+        li: homey_left_index {
             compatible = "zmk,behavior-hold-tap";
             flavor = INDEX_HOLDING_TYPE;
             hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
@@ -352,7 +351,7 @@
             bindings = <&mo>, <&kp>;
         };
 
-        ri_kp_kp: homey_right_index {
+        ri: homey_right_index {
             compatible = "zmk,behavior-hold-tap";
             flavor = INDEX_HOLDING_TYPE;
             hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
@@ -376,7 +375,7 @@
             bindings = <&mo>, <&kp>;
         };
 
-        lm_kp_kp: homey_left_middy {
+        lm: homey_left_middy {
             compatible = "zmk,behavior-hold-tap";
             flavor = MIDDY_HOLDING_TYPE;
             hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
@@ -388,7 +387,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        rm_kp_kp: homey_right_middy {
+        rm: homey_right_middy {
             compatible = "zmk,behavior-hold-tap";
             flavor = MIDDY_HOLDING_TYPE;
             hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
@@ -400,7 +399,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        lr_kp_kp: homey_left_ring {
+        lr: homey_left_ring {
             compatible = "zmk,behavior-hold-tap";
             flavor = RING_HOLDING_TYPE;
             hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
@@ -412,7 +411,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        rr_kp_kp: homey_right_ring {
+        rr: homey_right_ring {
             compatible = "zmk,behavior-hold-tap";
             flavor = RING_HOLDING_TYPE;
             hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
@@ -424,7 +423,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        lp_kp_kp: homey_left_pinky {
+        lp: homey_left_pinky {
             compatible = "zmk,behavior-hold-tap";
             flavor = PINKY_HOLDING_TYPE;
             hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
@@ -439,7 +438,7 @@
             retro-tap; // tap on standalone hold
         };
 
-        rp_kp_kp: homey_right_pinky {
+        rp: homey_right_pinky {
             compatible = "zmk,behavior-hold-tap";
             flavor = PINKY_HOLDING_TYPE;
             hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
@@ -656,95 +655,87 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        rus_2: rus_2 {
+        ru_lc4r2: ru_lc4r2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LPAR_RUS>, <&kp AT_RUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        rus_3: rus_3 {
+        ru_lc3r2: ru_lc3r2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RPAR_RUS>, <&kp HASH_RUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        rus_4: rus_4 {
+        ru_lc2r2: ru_lc2r2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp QMARK_RUS>, <&kp EXCL_RUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        rus_5: rus_5 {
+        ru_lc1r2: ru_lc1r2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp SLASH_RUS>, <&kp STAR_RUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        rus_6: rus_6 {
+        ru_rc1r2: ru_rc1r2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp PRCNT_RUS>, <&kp BSLH_RUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        rus_7: rus_7 {
+        ru_rc2r2: ru_rc2r2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp MINUS_RUS>, <&kp PLUS_RUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        rus_8: rus_8 {
+        ru_rc3r2: ru_rc3r2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LQT1_RUS>, <&kp LQT2_RUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        rus_9: rus_9 {
+        ru_rc4r2: ru_rc4r2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RQT1_RUS>, <&kp RQT2_RUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        rus_0: rus_0 {
+        ru_rc5r2: ru_rc5r2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N0>, <&kp NO_RUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        rus_rb1: rus_rb1 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DOT_RUS>, <&kp COLON_RUS>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        rus_rb2: rus_rb2 {
+        ru_rc3r6: ru_rc3r6 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp COMMA_RUS>, <&kp SEMI_RUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        rus_d: rus_d {
+        ru_rc4r6: ru_rc4r6 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOT_RUS>, <&kp COLON_RUS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ru_lc3r4: ru_lc3r4 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp D>, <&kp T>;
-            mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL)>;
-            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL)>;
-        };
-
-        rus_t: rus_t {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp T>, <&kp T>;
             mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL)>;
             keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL)>;
         };
@@ -1001,13 +992,13 @@
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_RH_T6>;
             bindings = <&tog NAV>;
-            layers = <BASE BASE_RUS BASE_EXTRA>;
+            layers = <BASE BASE_RUS>;
         };
         tog_num {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T5 POS_RH_T6>;
             bindings = <&tog NUM>;
-            layers = <BASE BASE_EXTRA>;
+            layers = <BASE>;
         };
         tog_num_rus {
             timeout-ms = <COMBO_FIRING_DECAY>;
@@ -1019,33 +1010,33 @@
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T1 POS_RH_T6>;
             bindings = <&tog FUN>;
-            layers = <BASE BASE_EXTRA BASE_RUS>;
+            layers = <BASE BASE_RUS>;
         };
 
         combo_alt_tab {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_T1>;
             bindings = <&mod_tab _A_TAB>;
-            layers = <BASE BASE_RUS BASE_EXTRA NAV>;
+            layers = <BASE BASE_RUS NAV>;
         };
         combo_ctrl_tab {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T5 POS_LH_T4>;
             bindings = <&mod_tab LCTL>;
-            layers = <BASE BASE_RUS BASE_EXTRA NAV>;
+            layers = <BASE BASE_RUS NAV>;
         };
 
         combo_meh {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_RH_T4 POS_RH_T1>;
             bindings = <&sk_qrel MEH>;
-            layers = <BASE BASE_RUS BASE_EXTRA>;
+            layers = <BASE BASE_RUS>;
         };
         combo_hyper {
             timeout-ms = <COMBO_FIRING_DECAY>;
             key-positions = <POS_LH_T4 POS_LH_T5>;
             bindings = <&sk_qrel HYPER>;
-            layers = <BASE BASE_RUS BASE_EXTRA>;
+            layers = <BASE BASE_RUS>;
         };
     };
 
@@ -1057,31 +1048,20 @@
             &kp F1                   &kp F2                  &none                 &none                   &none                                                                                                                                                          &none                    &none                    &none                  &none                       &none
             &none                    &en_lc5r2               &en_lc4r2             &en_lc3r2               &en_lc2r2               &en_lc1r2                                                                                                                &en_rc1r2     &en_rc2r2                &en_rc3r2                &en_rc4r2              &en_rc5r2                   &none
             &none                    &kp V                   &kp W                 &kp D                   &kp L                   &en_lc1r3                                                                                                                &en_rc1r3     &kp U                    &kp O                    &kp Y                  &kp B                       &none
-            &kp Q                    &lp_kp_kp PINKY_MOD N   &lr_kp_kp RING_MOD S  &lm_kp_kp MIDDY_MOD T   &li_kp_kp INDEX_MOD H   &en_lc1r4                                                                                                                &en_rc1r4     &ri_kp_kp INDEX_MOD A    &rm_kp_kp MIDDY_MOD E    &rr_kp_kp RING_MOD I   &rp_kp_kp PINKY_MOD C       &kp Z
+            &kp Q                    &lp PINKY_MOD N         &lr RING_MOD S        &lm MIDDY_MOD T         &li INDEX_MOD H         &en_lc1r4                                                                                                                &en_rc1r4     &ri INDEX_MOD A          &rm MIDDY_MOD E          &rr RING_MOD I         &rp PINKY_MOD C             &kp Z
             &none                    &kp P                   &kp F                 &kp M                   &kp R                   &en_lc1r5   &th FUN ESC  &sk_qrel LGUI      &tog_rus               &caps_word    &sk_qrel LGUI  &kp RET                  &kp SQT       &kp K                    &kp J                    &kp X                  &kp G                       &none
             &magic MAGIC 0           &en_lc5r6               &en_lc4r6             &en_lc3r6               &sk_qrel LSFT                       &th NAV BSPC &th_mo_sk NUM TAB  &kp LC(LA(LG(SPACE)))  &scroll_down  &key_repeat    &th_no_repeat SYM SPACE                &sk_qrel LSFT            &en_rc3r6                &en_rc4r6              &en_rc5r6                   &magic MAGIC 0
             >;
         };
 
-        base_extra {
-            bindings = <
-            &none                    &none                   &none                 &none                   &none                                                                                                                              &none                    &none                    &none                  &none                       &none
-            &none                    &kp N1                  &none                 &none                   &none                   &none                                                                                               &none  &none                    &none                    &none                  &kp N0                      &none
-            &none                    &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                                               &kp Y  &kp U                    &kp I                    &kp O                  &kp P                       &none
-            &none                    &lp_kp_kp PINKY_MOD A   &lr_kp_kp RING_MOD S  &lm_kp_kp MIDDY_MOD D   &li_kp_kp INDEX_MOD F   &kp G                                                                                               &kp H  &ri_kp_kp INDEX_MOD J    &rm_kp_kp MIDDY_MOD K    &rr_kp_kp RING_MOD L   &rp_kp_kp PINKY_MOD SEMI    &none
-            &none                    &kp Z                   &kp X                 &kp C                   &kp V                   &kp B   &th FUN ESC  &kp DEL            &tog_rus  &caps_word  &kp TAB      &kp RET                  &kp N  &kp M                    &kp COMMA                &kp DOT                &kp FSLH                    &none
-            &magic MAGIC 0           &vim_y_paste            &sk_qrel LGUI         &scroll_down            &kp LC(LA(LG(SPACE)))           &th NAV BSPC &th_mo_sk NUM LSFT &none     &none       &key_repeat  &th_no_repeat SYM SPACE         &kp UNDER                &none                    &none                  &none                       &magic MAGIC 0
-            >;
-        };
-
         base_rus {
             bindings = <
-            &none                    &none                   &none                 &none                   &none                                                                                                                                         &none                    &none                    &none                  &none                       &none
-            &none                    &kp N1                  &rus_2                &rus_3                  &rus_4                  &none                                                                                                       &rus_6    &rus_7                   &rus_8                   &rus_9                 &kp N0                      &none
-            &none                    &kp Q                   &kp W                 &kp E                   &kp R                   &rus_t                                                                                                       &kp Y     &kp U                    &kp I                    &kp O                  &kp P                       &none
-            &none                    &kp A                   &kp S                 &rus_d                   &kp F                   &kp G                                                                                                       &kp H     &kp J                    &kp K                    &kp L                  &kp SEMI                    &none
-            &none                    &kp Z                   &kp X                 &kp C                   &kp V                   &kp B   &th FUN ESC  &kp DEL                 &tog_rus  &caps_word  &kp TAB      &kp RET                     &kp N     &kp M                    &kp COMMA                &kp DOT                &kp LBKT                    &none
-            &magic MAGIC 0           &kp GRAVE               &trans                &trans                  &trans                          &th NAV BSPC &th_mo_sk NUM_RUS LSFT  &trans    &trans      &key_repeat  &th_no_repeat SYM_RUS SPACE           &rus_rb1                 &rus_rb2                 &kp RBKT               &kp SQT                     &magic MAGIC 0
+            &none                    &none                   &none                 &none                   &none                                                                                                                  &none                  &none                     &none                    &none                       &none
+            &none                    &kp N1                  &ru_c4r2              &ru_c3r2                &ru_c2r2                &ru_c1r2                                                                             &ru_rc1r2 &ru_rc2r2              &ru_rc3r2                 &ru_rc4r2                &ru_rc5r2                   &none
+            &none                    &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                                &kp Y     &kp U                  &kp I                     &kp O                    &kp P                       &kp RBKT
+            &none                    &kp A                   &kp S                 &ru_c3r4                &kp F                   &kp G                                                                                &kp H     &kp J                  &kp K                     &kp L                    &kp SEMI                    &kp SQT
+            &none                    &kp Z                   &kp X                 &kp C                   &kp V                   &kp B   &trans  &trans  &tog_rus  &caps_word  &trans  &trans                         &kp N     &kp M                  &kp COMMA                 &kp DOT                  &kp LBKT                    &none
+            &magic MAGIC 0           &kp GRAVE               &trans                &trans                  &trans                          &trans  &trans  &trans    &trans      &trans  &th_no_repeat SYM_RUS SPACE              &trans                 &ru_rc3r6                 &ru_rc4r6                &trans                      &magic MAGIC 0
             >;
         };
 
@@ -1154,7 +1134,7 @@
         magic {
             bindings = <
             &bt BT_CLR        &none               &none           &none           &none                                                                                                           &none      &none      &none      &none      &bt BT_CLR_ALL
-            &none             &tog BASE_EXTRA     &none           &none           &none           &none                                                                                &none      &none      &none      &none      &none      &none
+            &none             &none               &none           &none           &none           &none                                                                                &none      &none      &none      &none      &none      &none
             &none             &rgb_ug RGB_SPI     &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_TOG                                                                      &none      &none      &none      &none      &none      &none
             &bootloader       &rgb_ug RGB_SPD     &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_EFF                                                                      &none      &none      &none      &none      &none      &bootloader
             &sys_reset        &none               &none           &none           &none           &none           &bt_2     &bt_3     &none            &none     &none     &none       &none      &none      &none      &none      &none      &sys_reset
