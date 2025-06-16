@@ -788,7 +788,7 @@
                 , <&macro_press &mod_tab MACRO_PLACEHOLDER>
                 , <&macro_pause_for_release>
                 , <&macro_param_1to1>
-                , <&macro_release &god_tab MACRO_PLACEHOLDER>
+                , <&macro_release &mod_tab MACRO_PLACEHOLDER>
                 , <&macro_param_2to1>
                 , <&macro_release &mo MACRO_PLACEHOLDER>
                 ;
@@ -1042,8 +1042,8 @@
             &none                    &kp N1                  &ru_l24               &ru_l23                 &ru_l22                 &ru_l21                                                                              &ru_r21   &ru_r22                &ru_r23                   &ru_r24                  &ru_r25                     &none
             &none                    &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                                &kp Y     &kp U                  &kp I                     &kp O                    &kp P                       &kp RBKT
             &kp GRAVE                &kp A                   &kp S                 &ru_l43                 &kp F                   &kp G                                                                                &kp H     &kp J                  &kp K                     &kp L                    &kp SEMI                    &kp SQT
-            &none                    &kp Z                   &ru_l54               &kp C                   &kp V                   &kp B   &trans  &trans  &tog_rus  &caps_word  &trans  &trans                         &kp N     &kp M                  &kp COMMA                 &kp DOT                  &kp LBKT                    &none
-            &magic MAGIC 0           &trans                  &trans                &trans                  &trans                          &trans  &trans  &trans    &trans      &trans  &th_no_repeat SYM_RUS SPACE              &trans                 &ru_r63                   &ru_r64                  &trans                      &magic MAGIC 0
+            &none                    &kp Z                   &ru_l54               &kp C                   &kp V                   &kp B   &trans  &trans  &trans    &trans      &trans  &trans                         &kp N     &kp M                  &kp COMMA                 &kp DOT                  &kp LBKT                    &none
+            &magic MAGIC 0           &none                   &none                 &none                   &trans                          &trans  &trans  &trans    &trans      &trans  &th_no_repeat SYM_RUS SPACE              &trans                 &ru_r63                   &ru_r64                  &trans                      &magic MAGIC 0
             >;
         };
 
