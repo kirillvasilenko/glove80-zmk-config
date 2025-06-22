@@ -69,14 +69,14 @@
 //
 // The *_MOD specify which modifiers are used by home row mod keys.
 //
-#define PINKY_MOD LSFT
-#define MIDDY_MOD LALT
+#define RING_MOD LALT
+#define INDEX_MOD LSHFT
 #if OPERATING_SYSTEM == 'M'
-  #define RING_MOD LCTL
-  #define INDEX_MOD LGUI
+  #define PINKY_MOD LCTRL
+  #define MIDDY_MOD LGUI
 #else
-  #define RING_MOD LGUI
-  #define INDEX_MOD LCTL
+  #define PINKY_MOD LGUI
+  #define MIDDY_MOD LCTRL
 #endif
 
 /* #define for key positions */
@@ -511,70 +511,77 @@
         en_l25: en_l25 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N1>, <&kp TILDE>;
+            bindings = <&kp N1>, <&kp AT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         en_l24: en_l24 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LPAR>, <&kp AT>;
+            bindings = <&kp LPAR>, <&kp LT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         en_l23: en_l23 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RPAR>, <&kp HASH>;
+            bindings = <&kp RPAR>, <&kp GT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         en_l22: en_l22 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp PIPE>, <&kp CARET>;
+            bindings = <&kp QMARK>, <&kp EXCL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         en_l21: en_l21 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp BSLH>, <&kp BSLH>;
+            bindings = <&kp PIPE>, <&kp CARET>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         en_r21: en_r21 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N6>, <&kp N6>;
+            bindings = <&kp AMPS>, <&kp DLLR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         en_r22: en_r22 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp AMPS>, <&kp DLLR>;
+            bindings = <&kp SQT>, <&kp DQT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         en_r23: en_r23 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LBKT>, <&kp LBKT>;
+            bindings = <&kp LBKT>, <&kp LBRC>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         en_r24: en_r24 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RBKT>, <&kp RBKT>;
+            bindings = <&kp RBKT>, <&kp RBRC>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         en_r25: en_r25 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N0>, <&kp GRAVE>;
+            bindings = <&kp N0>, <&kp HASH>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        en_r36: en_r36 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE>, <&kp TILDE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -588,21 +595,21 @@
         en_l41: en_l41 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp SEMI>;
+            bindings = <&kp MINUS>, <&kp PLUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         en_l51: en_l51 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp QMARK>, <&kp EXCL>;
+            bindings = <&kp UNDER>, <&kp PRCNT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         en_r31: en_r31 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp PLUS>;
+            bindings = <&kp COMMA>, <&kp SEMI>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -613,45 +620,10 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        en_r63: en_r63 {
+        en_r51: en_r51 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL>, <&kp EQUAL>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        en_r64: en_r64 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LT>, <&kp LT>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        en_r65: en_r65 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp GT>, <&kp GT>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        en_l65: en_l65 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LBRC>, <&kp LBRC>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        en_l64: en_l64 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp RBRC>, <&kp RBRC>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        en_l63: en_l63 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp UNDER>, <&kp PRCNT>;
+            bindings = <&kp EQUAL>, <&kp BSLH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -1029,10 +1001,10 @@
             bindings = <
             &kp F1                   &kp F2                  &none                 &none                   &none                                                                                                                                                          &none                    &none                    &none                  &none                       &none
             &none                    &en_l25                 &en_l24               &en_l23                 &en_l22                 &en_l21                                                                                                                  &en_r21       &en_r22                  &en_r23                  &en_r24                &en_r25                     &none
-            &none                    &kp V                   &kp W                 &kp D                   &kp L                   &en_l31                                                                                                                  &en_r31       &kp U                    &kp O                    &kp Y                  &kp B                       &none
-            &kp Q                    &lp PINKY_MOD N         &lr RING_MOD S        &lm MIDDY_MOD T         &li INDEX_MOD H         &en_l41                                                                                                                  &en_r41       &ri INDEX_MOD A          &rm MIDDY_MOD E          &rr RING_MOD I         &rp PINKY_MOD C             &kp Z
-            &none                    &kp P                   &kp F                 &kp M                   &kp R                   &en_l51     &th FUN ESC  &sk_qrel LGUI      &tog_rus               &caps_word    &sk_qrel LGUI  &kp RET                  &kp SQT       &kp K                    &kp J                    &kp X                  &kp G                       &none
-            &magic MAGIC 0           &en_l65                 &en_l64                 &en_l63               &sk_qrel LSFT                       &th NAV BSPC &th_mo_sk NUM TAB  &kp LC(LA(LG(SPACE)))  &scroll_down  &key_repeat    &th_no_repeat SYM SPACE                &sk_qrel LSFT            &en_r63                  &en_r64                &en_r65                     &magic MAGIC 0
+            &en_l36                  &kp V                   &kp W                 &kp D                   &kp L                   &en_l31                                                                                                                  &en_r31       &kp U                    &kp O                    &kp Y                  &kp B                       &none
+            &kp Q                    &kp N                   &kp S                 &kp T                   &kp H                   &en_l41                                                                                                                  &en_r41       &kp A                    &kp E                    &kp I                  &kp C                       &kp Z
+            &none                    &kp P                   &kp F                 &kp M                   &kp R                   &en_l51     &th FUN ESC  &caps_word         &tog_rus               &caps_word    &kp TAB        &kp RET                  &en_r51       &kp K                    &kp J                    &kp X                  &kp G                       &none
+            &magic MAGIC 0           &sk_qrel PINKY_MOD      &sk_qrel RING_MOD     &sk_qrel MIDDY_MOD      &sk_qrel INDEX_MOD                  &th NAV BSPC &th_mo_sk NUM DEL  &kp LC(LA(LG(SPACE)))  &scroll_down  &key_repeat    &th_no_repeat SYM SPACE                &sk_qrel INDEX_MOD       &sk_qrel MIDDY_MOD       &sk_qrel RING_MOD      &sk_qrel PINKY_MOD          &magic MAGIC 0
             >;
         };
 
