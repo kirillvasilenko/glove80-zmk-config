@@ -578,7 +578,7 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        en_r36: en_r36 {
+        en_l36: en_l36 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp GRAVE>, <&kp TILDE>;
