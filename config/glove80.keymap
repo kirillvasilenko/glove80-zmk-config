@@ -627,17 +627,24 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        ru_l25: ru_l25 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N1>, <&kp AT_RUS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         ru_l24: ru_l24 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LPAR_RUS>, <&kp AT_RUS>;
+            bindings = <&kp LPAR_RUS>, <&kp PRCNT_RUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         ru_l23: ru_l23 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RPAR_RUS>, <&kp HASH_RUS>;
+            bindings = <&kp RPAR_RUS>, <&kp NO_RUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -658,14 +665,14 @@
         ru_r21: ru_r21 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp PRCNT_RUS>, <&kp BSLH_RUS>;
+            bindings = <&kp MINUS_RUS>, <&kp PLUS_RUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         ru_r22: ru_r22 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp MINUS_RUS>, <&kp PLUS_RUS>;
+            bindings = <&kp DOT_RUS>, <&kp COLON_RUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -686,38 +693,15 @@
         ru_r25: ru_r25 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N0>, <&kp NO_RUS>;
+            bindings = <&kp N0>, <&kp HASH_RUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        ru_r63: ru_r63 {
+        ru_r55: ru_r55 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp COMMA_RUS>, <&kp SEMI_RUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        ru_r64: ru_r64 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DOT_RUS>, <&kp COLON_RUS>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        ru_l43: ru_l43 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp D>, <&kp T>;
-            mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL)>;
-            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL)>;
-        };
-
-        ru_l54: ru_l54 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp X>, <&kp F>;
-            mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL)>;
-            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL)>;
         };
 
         magic: magic_hold_tap {
@@ -908,7 +892,7 @@
         tog_rus: tog_rus_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(SPACE) &tog BASE_RUS>;
+            bindings = <&kp GLOBE &tog BASE_RUS>;
         };
 
         rgb_ug_status_macro: rgb_ug_status_macro_0 {
@@ -1011,11 +995,11 @@
         base_rus {
             bindings = <
             &none                    &none                   &none                 &none                   &none                                                                                                                  &none                  &none                     &none                    &none                       &none
-            &none                    &kp N1                  &ru_l24               &ru_l23                 &ru_l22                 &ru_l21                                                                              &ru_r21   &ru_r22                &ru_r23                   &ru_r24                  &ru_r25                     &none
-            &none                    &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                                &kp Y     &kp U                  &kp I                     &kp O                    &kp P                       &kp RBKT
-            &kp GRAVE                &kp A                   &kp S                 &ru_l43                 &kp F                   &kp G                                                                                &kp H     &kp J                  &kp K                     &kp L                    &kp SEMI                    &kp SQT
-            &none                    &kp Z                   &ru_l54               &kp C                   &kp V                   &kp B   &trans  &trans  &trans    &trans      &trans  &trans                         &kp N     &kp M                  &kp COMMA                 &kp DOT                  &kp LBKT                    &none
-            &magic MAGIC 0           &none                   &none                 &none                   &trans                          &trans  &trans  &trans    &trans      &trans  &th_no_repeat SYM_RUS SPACE              &trans                 &ru_r63                   &ru_r64                  &trans                      &magic MAGIC 0
+            &none                    &ru_l25                 &ru_l24               &ru_l23                 &ru_l22                 &ru_l21                                                                              &ru_r21   &ru_r22                &ru_r23                   &ru_r24                  &ru_r25                     &kp RBKT
+            &none                    &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                                &kp Y     &kp U                  &kp I                     &kp O                    &kp P                       &kp LBKT
+            &kp GRAVE                &kp A                   &kp S                 &kp D                   &kp F                   &kp G                                                                                &kp H     &kp J                  &kp K                     &kp L                    &kp SEMI                    &kp SQT
+            &none                    &kp Z                   &kp X                 &kp C                   &kp V                   &kp B   &trans  &trans  &trans    &trans      &trans  &trans                         &kp N     &kp M                  &kp COMMA                 &kp DOT                  &kp SLASH                   &none
+            &magic MAGIC 0           &trans                  &trans                &trans                  &trans                          &trans  &trans  &trans    &trans      &trans  &th_no_repeat SYM_RUS SPACE              &trans                 &trans                    &trans                   &trans                      &magic MAGIC 0
             >;
         };
 
