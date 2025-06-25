@@ -1155,12 +1155,12 @@
 
         fun {
             bindings = <
-            &none          &none   &none         &none               &none                                                                                                                     &none            &none               &none         &none          &none
-            &none          &none   &none         &kp LS(_C(RA(F4)))  &none             &none                                                                                     &none         &none            &none               &none         &none          &none
-            &none          &none   &kp C_PWR     &kp _C(F2)          &kp LS(LC(D))     &none                                                                                     &kp C_BRI_UP  &kp F7           &kp F8              &kp F9        &kp F10        &none
-            &none          &none   &kp TAB       &kp RET             &kp SPACE         &none                                                                                     &kp C_BRI_DN  &kp F4           &kp F5              &kp F6        &kp F11        &none
-            &none          &none   &none         &none               &none             &none   &trans  &trans          &none      &kp C_PREV  &kp C_NEXT    &kp C_PP             &none         &kp F1           &kp F2              &kp F3        &kp F12        &none
-            &none          &none   &trans        &trans              &trans                    &trans  &sk_qrel LSFT   &tog FUN   &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP                       &kp _C(F8)       &kp LS(RA(_C(F8)))  &kp _C(F4)    &kp _C(LS(F4)) &none
+            &none          &none   &none         &none               &none                                                                                                                      &none            &none               &none         &none          &none
+            &none          &none   &none         &kp LS(_C(RA(F4)))  &none             &none                                                                                     &none          &kp LG(EQUAL)    &kp LG(MINUS)       &kp LG(N0)    &none          &none
+            &none          &none   &kp C_PWR     &kp _C(F2)          &kp LS(LC(D))     &none                                                                                     &kp C_BRI_UP   &kp F7           &kp F8              &kp F9        &kp F10        &none
+            &none          &none   &kp TAB       &kp RET             &kp SPACE         &none                                                                                     &kp C_BRI_DN   &kp F4           &kp F5              &kp F6        &kp F11        &none
+            &none          &none   &none         &none               &none             &none   &trans  &trans          &none      &kp C_PREV  &kp C_NEXT    &kp C_PP             &kp LG(LS(N5)) &kp F1           &kp F2              &kp F3        &kp F12        &none
+            &none          &none   &trans        &trans              &trans                    &trans  &sk_qrel LSFT   &tog FUN   &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP                        &kp _C(F8)       &kp LS(RA(_C(F8)))  &kp _C(F4)    &kp _C(LS(F4)) &none
             >;
         };
 
