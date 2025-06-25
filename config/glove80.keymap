@@ -733,6 +733,30 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        ru_d_t: ru_d_t {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp D>, <&kp T>;
+            mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL)>;
+        };
+
+        ru_x_f: ru_x_f {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp X>, <&kp F>;
+            mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL)>;
+        };
+
+        ru_v_r: ru_v_r {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp V>, <&kp R>;
+            mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL)>;
+        };
+
         magic: magic_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "MAGIC_HOLD_TAP";
@@ -1068,8 +1092,8 @@
             &none                    &none                   &none                 &none                   &none                                                                                                                        &none                  &none                     &none                    &none                       &none
             &none                    &ru_l25                 &ru_l24               &ru_l23                 &ru_l22                 &ru_l21                                                                                    &ru_r21   &ru_r22                &ru_r23                   &ru_r24                  &kp RBKT                    &none
             &none                    &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                                      &kp Y     &kp U                  &kp I                     &kp O                    &kp P                       &kp LBKT
-            &kp GRAVE                &kp A                   &kp S                 &kp D                   &kp F                   &kp G                                                                                      &kp H     &kp J                  &kp K                     &kp L                    &kp SEMI                    &kp SQT
-            &trans                   &kp Z                   &kp X                 &kp C                   &kp V                   &kp B   &trans  &trans  &trans          &trans      &trans  &trans                         &kp N     &kp M                  &kp COMMA                 &kp DOT                  &kp SLASH                   &none
+            &kp GRAVE                &kp A                   &kp S                 &ru_d_t                 &kp F                   &kp G                                                                                      &kp H     &kp J                  &kp K                     &kp L                    &kp SEMI                    &kp SQT
+            &trans                   &kp Z                   &ru_x_f               &kp C                   &ru_v_r                 &kp B   &trans  &trans  &trans          &trans      &trans  &trans                         &kp N     &kp M                  &kp COMMA                 &kp DOT                  &kp SLASH                   &none
             &magic MAGIC 0           &trans                  &trans                &trans                  &trans                          &trans  &trans  &ru_hr_click    &trans      &trans  &th_no_repeat SYM_RUS SPACE              &trans                 &trans                    &trans                   &trans                      &magic MAGIC 0
             >;
         };
