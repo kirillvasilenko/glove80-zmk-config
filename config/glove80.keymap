@@ -311,13 +311,12 @@
             bindings = <&mo>, <&kp>;
         };
 
-        th_mo_equal_under: th_mo_equal_under {
+        en_lt5: en_lt5 {
             compatible = "zmk,behavior-hold-tap";
             flavor = THUMB_HOLDING_TYPE;
             tapping-term-ms = <THUMB_HOLDING_TIME>;
-            quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
             #binding-cells = <2>;
-            bindings = <&mo>, <&equal_under>;
+            bindings = <&mo>, <&under_arrow>;
         };
 
         th_no_repeat: thumb_layer_access_no_repeat {
@@ -517,10 +516,31 @@
         // - https://sunaku.github.io/engram-keyboard-layout.html
         //
 
-        equal_under: equal_under {
+        under_arrow: under_arrow {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL>, <&kp UNDER>;
+            bindings = <&kp UNDER>, <&arrow>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        equal_colon2: equal_colon2 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL>, <&colon2>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        lt2_star2: lt2_star2 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&lt2>, <&star2>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        gt2_plus2: gt2_plus2 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&gt2>, <&plus2>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -904,6 +924,42 @@
             bindings = <&kp LA(SPACE) &tog BASE_RUS>;
         };
 
+        arrow: arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS &kp GT>;
+        };
+
+        colon2: colon2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp COLON>;
+        };
+
+        lt2: lt2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LT &kp LT>;
+        };
+
+        gt2: gt2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GT &kp GT>;
+        };
+
+        plus2: plus2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PLUS &kp PLUS>;
+        };
+
+        star2: star2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp STAR &kp STAR>;
+        };
+
         rgb_ug_status_macro: rgb_ug_status_macro_0 {
             label = "RGB_UG_STATUS";
             compatible = "zmk,behavior-macro";
@@ -992,12 +1048,12 @@
 
         base {
             bindings = <
-            &kp F1                   &kp F2                  &none                 &none                   &none                                                                                                                                                          &none                    &none                    &none                  &none                       &none
-            &none                    &en_l25                 &en_l24               &en_l23                 &en_l22                 &en_l21                                                                                                                  &en_r21       &en_r22                  &en_r23                  &en_r24                &en_r25                     &none
-            &none                    &kp Q                   &kp W                 &kp D                   &kp L                   &en_l31                                                                                                                  &en_r31       &kp U                    &kp O                    &kp Y                  &kp Z                       &none
-            &kp V                    &kp N                   &kp S                 &kp T                   &kp H                   &en_l41                                                                                                                  &en_r41       &kp A                    &kp E                    &kp I                  &kp C                       &kp B
-            &tog_rus                 &kp P                   &kp F                 &kp M                   &kp R                   &en_l51     &th FUN ESC              &caps_word          &none                  &caps_word    &kp TAB        &kp RET                  &en_r51       &kp K                    &kp J                    &kp X                  &kp G                       &none
-            &magic MAGIC 0           &sk_qrel PINKY_MOD      &sk_qrel RING_MOD     &sk_qrel MIDDY_MOD      &sk_qrel INDEX_MOD                  &th_mo_sk NAV BSPC       &th_mo_equal_under NUM 0 &kp LC(LA(LG(SPACE)))  &scroll_down  &key_repeat    &th_no_repeat SYM SPACE                &sk_qrel INDEX_MOD       &sk_qrel MIDDY_MOD       &sk_qrel RING_MOD      &sk_qrel PINKY_MOD          &magic MAGIC 0
+            &kp F1                   &kp F2                  &none                 &none                   &none                                                                                                                                                                  &none                    &none                    &none                  &none                       &none
+            &none                    &en_l25                 &en_l24               &en_l23                 &en_l22                 &en_l21                                                                                                                          &en_r21       &en_r22                  &en_r23                  &en_r24                &en_r25                     &none
+            &lt2_star2               &kp Q                   &kp W                 &kp D                   &kp L                   &en_l31                                                                                                                          &en_r31       &kp U                    &kp O                    &kp Y                  &kp Z                       &gt2_plus2
+            &kp V                    &kp N                   &kp S                 &kp T                   &kp H                   &en_l41                                                                                                                          &en_r41       &kp A                    &kp E                    &kp I                  &kp C                       &kp B
+            &tog_rus                 &kp P                   &kp F                 &kp M                   &kp R                   &en_l51     &th FUN ESC              &equal_colon2  &none                  &caps_word    &kp TAB        &kp RET                  &en_r51       &kp K                    &kp J                    &kp X                  &kp G                       &caps_word
+            &magic MAGIC 0           &sk_qrel PINKY_MOD      &sk_qrel RING_MOD     &sk_qrel MIDDY_MOD      &sk_qrel INDEX_MOD                  &th_mo_sk NAV BSPC       &en_lt5 NUM 0  &kp LC(LA(LG(SPACE)))  &scroll_down  &key_repeat    &th_no_repeat SYM SPACE                &sk_qrel INDEX_MOD       &sk_qrel MIDDY_MOD       &sk_qrel RING_MOD      &sk_qrel PINKY_MOD          &magic MAGIC 0
             >;
         };
 
