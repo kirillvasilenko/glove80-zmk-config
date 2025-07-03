@@ -316,7 +316,7 @@
             flavor = THUMB_HOLDING_TYPE;
             tapping-term-ms = <THUMB_HOLDING_TIME>;
             #binding-cells = <2>;
-            bindings = <&mo>, <&under_arrow>;
+            bindings = <&mo>, <&under_colon2>;
         };
 
         th_no_repeat: thumb_layer_access_no_repeat {
@@ -516,38 +516,17 @@
         // - https://sunaku.github.io/engram-keyboard-layout.html
         //
 
-        under_arrow: under_arrow {
+        under_colon2: under_colon2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp UNDER>, <&arrow>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        equal_colon2: equal_colon2 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp EQUAL>, <&colon2>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        plus2_lbkt_rbkt: plus2_lbkt_rbkt {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&plus2>, <&lbkt_rbkt>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        star2_star2: star2_star2 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&star2>, <&star2>;
+            bindings = <&kp UNDER>, <&colon2>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         en_l25: en_l25 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N0>, <&kp CARET>;
+            bindings = <&kp LT>, <&kp CARET>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -568,49 +547,49 @@
         en_l22: en_l22 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LT>, <&kp BSLH>;
+            bindings = <&kp GT>, <&kp BSLH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         en_l21: en_l21 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp GT>, <&kp TILDE>;
+            bindings = <&kp PIPE>, <&star2>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         en_r21: en_r21 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp PRCNT>, <&kp GRAVE>;
+            bindings = <&kp AMPS>, <&plus2>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         en_r22: en_r22 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp AMPS>, <&kp PIPE>;
+            bindings = <&kp LBKT>, <&kp PRCNT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         en_r23: en_r23 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LBRC>, <&kp LBKT>;
+            bindings = <&kp LBRC>, <&kp TILDE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         en_r24: en_r24 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RBRC>, <&kp RBKT>;
+            bindings = <&kp RBRC>, <&kp GRAVE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         en_r25: en_r25 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N1>, <&kp DLLR>;
+            bindings = <&kp RBKT>, <&kp DLLR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -1111,9 +1090,9 @@
             bindings = <
             &kp F1                   &kp F2                  &none                 &none                   &none                                                                                                                                                                  &none                    &none                    &none                  &none                       &none
             &none                    &en_l25                 &en_l24               &en_l23                 &en_l22                 &en_l21                                                                                                                          &en_r21       &en_r22                  &en_r23                  &en_r24                &en_r25                     &none
-            &star2_star2             &kp Q                   &kp W                 &kp D                   &kp L                   &en_l31                                                                                                                          &en_r31       &kp U                    &kp O                    &kp Y                  &kp Z                       &plus2_lbkt_rbkt
+            &kp N0                   &kp Q                   &kp W                 &kp D                   &kp L                   &en_l31                                                                                                                          &en_r31       &kp U                    &kp O                    &kp Y                  &kp Z                       &kp N1
             &kp V                    &kp N                   &kp S                 &kp T                   &kp H                   &en_l41                                                                                                                          &en_r41       &kp A                    &kp E                    &kp I                  &kp C                       &kp B
-            &tog_lang                &kp P                   &kp F                 &kp M                   &kp R                   &en_l51     &th FUN ESC              &equal_colon2  &none                  &caps_word    &kp TAB        &kp RET                  &en_r51       &kp K                    &kp J                    &kp X                  &kp G                       &caps_word
+            &tog_lang                &kp P                   &kp F                 &kp M                   &kp R                   &en_l51     &th FUN ESC              &kp EQUAL      &none                  &caps_word    &kp TAB        &kp RET                  &en_r51       &kp K                    &kp J                    &kp X                  &kp G                       &caps_word
             &magic MAGIC 0           &sk_qrel PINKY_MOD      &sk_qrel RING_MOD     &sk_qrel MIDDY_MOD      &sk_qrel INDEX_MOD                  &th_mo_sk NAV BSPC       &en_lt5 NUM 0  &kp LC(LA(LG(SPACE)))  &scroll_down  &key_repeat    &th_no_repeat SYM SPACE                &sk_qrel INDEX_MOD       &sk_qrel MIDDY_MOD       &sk_qrel RING_MOD      &sk_qrel PINKY_MOD          &magic MAGIC 0
             >;
         };
