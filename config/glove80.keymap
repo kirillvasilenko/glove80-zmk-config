@@ -933,6 +933,12 @@
             bindings = <&tog_lang &kp LC(LA(LG(SPACE)))>;
         };
 
+        ru_hr_scroll: ru_hr_scroll{
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog_lang &scroll_down>;
+        };
+
         ru_meh: ru_meh {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1099,12 +1105,12 @@
 
         base_rus {
             bindings = <
-            &none                    &none                   &none                 &none                   &none                                                                                                                        &none                  &none                     &none                    &none                       &none
-            &none                    &ru_l25                 &ru_l24               &ru_l23                 &ru_l22                 &ru_l21                                                                                    &ru_r21   &ru_r22                &ru_r23                   &ru_r24                  &kp RBKT                    &none
-            &none                    &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                                      &kp Y     &kp U                  &kp I                     &kp O                    &kp P                       &kp LBKT
-            &kp GRAVE                &kp A                   &kp S                 &ru_d_t                 &kp F                   &kp G                                                                                      &kp H     &kp J                  &kp K                     &kp L                    &kp SEMI                    &kp SQT
-            &trans                   &kp Z                   &ru_x_f               &kp C                   &ru_v_r                 &kp B   &trans  &trans  &trans          &trans      &trans  &trans                         &kp N     &kp M                  &kp COMMA                 &kp DOT                  &kp SLASH                   &none
-            &magic MAGIC 0           &trans                  &trans                &trans                  &trans                          &trans  &trans  &ru_hr_click    &trans      &trans  &th_no_repeat SYM_RUS SPACE              &trans                 &trans                    &trans                   &trans                      &magic MAGIC 0
+            &none                    &none                   &none                 &none                   &none                                                                                                                          &none                  &none                     &none                    &none                       &none
+            &none                    &ru_l25                 &ru_l24               &ru_l23                 &ru_l22                 &ru_l21                                                                                      &ru_r21   &ru_r22                &ru_r23                   &ru_r24                  &kp RBKT                    &none
+            &none                    &kp Q                   &kp W                 &kp E                   &kp R                   &kp T                                                                                        &kp Y     &kp U                  &kp I                     &kp O                    &kp P                       &kp LBKT
+            &kp GRAVE                &kp A                   &kp S                 &ru_d_t                 &kp F                   &kp G                                                                                        &kp H     &kp J                  &kp K                     &kp L                    &kp SEMI                    &kp SQT
+            &trans                   &kp Z                   &ru_x_f               &kp C                   &ru_v_r                 &kp B   &trans  &trans  &trans          &trans        &trans  &trans                         &kp N     &kp M                  &kp COMMA                 &kp DOT                  &kp SLASH                   &none
+            &magic MAGIC 0           &trans                  &trans                &trans                  &trans                          &trans  &trans  &ru_hr_click    &ru_hr_scroll &trans  &th_no_repeat SYM_RUS SPACE              &trans                 &trans                    &trans                   &trans                      &magic MAGIC 0
             >;
         };
 
