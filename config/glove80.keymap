@@ -924,7 +924,7 @@
         tog_lang: tog_lang {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(SPACE) &tog BASE_RUS>;
+            bindings = <&kp LC(LA(SPACE)) &tog BASE_RUS>;
         };
 
         ru_hr_click: ru_hr_click {
